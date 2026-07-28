@@ -1,0 +1,17 @@
+/* =====================================================================
+ * App-level layout shell (header/footer/main)
+ * ===================================================================== */
+
+main {
+  padding-bottom: var(--s-8);
+}
+
+footer {
+  padding: var(--s-7) 0;
+  text-align: center;
+  color: var(--clay-ink-faint);
+  font-size: 0.85rem;
+}
+
+/* Old CRA styles kept neutral so they don't bleed into new pages */
+.App-logo, .App-header, .App-link { display: none; }

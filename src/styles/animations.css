@@ -1,0 +1,119 @@
+/* =====================================================================
+ * Animation primitives (reactbits-style, hand-built, no external deps)
+ * Use: add className="fx-rise fx-stagger" etc. to any element.
+ * ===================================================================== */
+
+/* --- Keyframes ------------------------------------------------------*/
+
+@keyframes fx-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fx-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fx-pop {
+  0%   { opacity: 0; transform: scale(0.9); }
+  60%  { opacity: 1; transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fx-slide-right {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fx-slide-left {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fx-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+@keyframes fx-pulse-glow {
+  0%, 100% { box-shadow: var(--clay-shadow-out); }
+  50%      { box-shadow: var(--clay-shadow-out-lg); }
+}
+
+@keyframes fx-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fx-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fx-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+@keyframes fx-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- Reusable animation classes -------------------------------------*/
+
+.fx-rise      { animation: fx-rise var(--t-slow) var(--ease-clay) both; }
+.fx-fade      { animation: fx-fade var(--t-base) var(--ease-clay) both; }
+.fx-pop       { animation: fx-pop var(--t-base) var(--ease-snap) both; }
+.fx-slide-r   { animation: fx-slide-right var(--t-slow) var(--ease-clay) both; }
+.fx-slide-l   { animation: fx-slide-left var(--t-slow) var(--ease-clay) both; }
+.fx-float     { animation: fx-float 4s ease-in-out infinite; }
+.fx-pulse     { animation: fx-pulse-glow 2.6s ease-in-out infinite; }
+.fx-blink     { animation: fx-blink 1.6s ease-in-out infinite; }
+.fx-spin      { animation: fx-spin 1s linear infinite; }
+
+/* --- Staggered children ---------------------------------------------*/
+/* Apply .fx-stagger to a parent; each direct child animates in order.   */
+.fx-stagger > *           { animation: fx-rise var(--t-slow) var(--ease-clay) both; }
+.fx-stagger > *:nth-child(1) { animation-delay: 60ms; }
+.fx-stagger > *:nth-child(2) { animation-delay: 140ms; }
+.fx-stagger > *:nth-child(3) { animation-delay: 220ms; }
+.fx-stagger > *:nth-child(4) { animation-delay: 300ms; }
+.fx-stagger > *:nth-child(5) { animation-delay: 380ms; }
+.fx-stagger > *:nth-child(6) { animation-delay: 460ms; }
+.fx-stagger > *:nth-child(7) { animation-delay: 540ms; }
+.fx-stagger > *:nth-child(8) { animation-delay: 620ms; }
+.fx-stagger > *:nth-child(n+9) { animation-delay: 700ms; }
+
+/* --- Shimmer (for skeleton/loading states) --------------------------*/
+
+.fx-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.0) 0%,
+    rgba(255,255,255,0.65) 50%,
+    rgba(255,255,255,0.0) 100%
+  );
+  background-size: 200% 100%;
+  animation: fx-shimmer 1.8s linear infinite;
+}
+
+/* --- Marquee (for ribbon of model names) -----------------------------*/
+
+.fx-marquee {
+  display: flex;
+  width: max-content;
+  animation: fx-marquee 38s linear infinite;
+}
+.fx-marquee:hover { animation-play-state: paused; }
+
+/* --- Scroll-reveal helper --------------------------------------------
+ * Pair with data-reveal="rise|pop|fade" + .fx-reveal class.
+ * JS hook in useReveal.js toggles .is-revealed when in viewport.        */
+
+.fx-reveal         { opacity: 0; transform: translateY(18px); transition: opacity var(--t-slow) var(--ease-clay), transform var(--t-slow) var(--ease-clay); }
+.fx-reveal.is-revealed   { opacity: 1; transform: translateY(0); }
+.fx-reveal--pop    { transform: scale(0.92); }
+.fx-reveal--pop.is-revealed { transform: scale(1); }
+.fx-reveal--left   { transform: translateX(-24px); }
+.fx-reveal--left.is-revealed { transform: translateX(0); }
