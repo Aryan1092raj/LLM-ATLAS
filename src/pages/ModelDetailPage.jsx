@@ -151,13 +151,8 @@ function Metric({ label, value, hint }) {
 function DiagramSlot({ model }) {
   const [Comp, setComp] = React.useState(null);
   const [tried, setTried] = React.useState(false);
-  const closed = model?.architecture_specs?.disclosure === "closed_undisclosed";
 
   React.useEffect(() => {
-    if (closed) {
-      setTried(true);
-      return;
-    }
     let cancelled = false;
     getDiagramComponent(model).then((C) => {
       if (cancelled) return;
@@ -165,21 +160,10 @@ function DiagramSlot({ model }) {
       setTried(true);
     });
     return () => { cancelled = true; };
-  }, [model, closed]);
+  }, [model]);
 
   if (!tried) {
     return <div className="diagram-slot fx-shimmer" style={{ height: 280, borderRadius: 22 }} aria-hidden="true" />;
-  }
-
-  if (closed) {
-    return (
-      <div className="clay clay--inset" style={{ padding: 28, textAlign: "center", color: "var(--clay-ink-soft)" }}>
-        <p style={{ fontWeight: 600, color: "var(--clay-ink)" }}>Architecture diagram unavailable</p>
-        <p style={{ marginTop: 6, fontSize: "0.88rem", color: "var(--clay-ink-faint)" }}>
-          Official block layout, attention routing, and layer specifications for {model.name} have not been disclosed by {model.companyName}.
-        </p>
-      </div>
-    );
   }
 
   if (!Comp) {
