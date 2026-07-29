@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-07-29T02:01:49Z",
+  "last_updated": "2026-07-29",
   "sources": {
     "primary": [
       {
@@ -16,7 +16,7 @@
         "url": "https://openrouter.ai/api/v1/models"
       },
       {
-        "name": "Epoch AI — Notable Models",
+        "name": "Epoch AI \u2014 Notable Models",
         "url": "https://epochai.org/data/notable-models"
       }
     ]
@@ -2665,7 +2665,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Balanced tier — middle of the Claude family on both axes."
+          "why": "Balanced tier \u2014 middle of the Claude family on both axes."
         },
         {
           "id": "anthropic/claude-3-haiku",
@@ -3738,7 +3738,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Among cheapest credible closed models with very long context — strong on the value axis."
+          "why": "Among cheapest credible closed models with very long context \u2014 strong on the value axis."
         },
         {
           "id": "google/gemini-3.6-flash",
@@ -4149,134 +4149,6 @@
               "provider": "openrouter",
               "input_price_per_m": 1.5,
               "output_price_per_m": 7.5,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "google/gemma-4-26b-a4b-it",
-          "name": "Google: Gemma 4 26B A4B ",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "google/gemma-4-26b-a4b-it",
-            "Google: Gemma 4 26B A4B "
-          ],
-          "features": {
-            "Developer": "Google"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.15,
-              "output_price_per_m": 0.6,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "google/gemma-4-26b-a4b-it:free",
-          "name": "Google: Gemma 4 26B A4B  (free)",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "google/gemma-4-26b-a4b-it:free",
-            "Google: Gemma 4 26B A4B  (free)"
-          ],
-          "features": {
-            "Developer": "Google"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.0,
-              "output_price_per_m": 0.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "google/gemma-4-31b-it",
-          "name": "Google: Gemma 4 31B",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "google/gemma-4-31b-it",
-            "Google: Gemma 4 31B"
-          ],
-          "features": {
-            "Developer": "Google"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.09999999999999999,
-              "output_price_per_m": 0.33999999999999997,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "google/gemma-4-31b-it:free",
-          "name": "Google: Gemma 4 31B (free)",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "google/gemma-4-31b-it:free",
-            "Google: Gemma 4 31B (free)"
-          ],
-          "features": {
-            "Developer": "Google"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.0,
-              "output_price_per_m": 0.0,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -4879,38 +4751,6 @@
           "_added_from": "openrouter"
         },
         {
-          "id": "google/gemma-3n-e4b-it",
-          "name": "Google: Gemma 3n 4B",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "google/gemma-3n-e4b-it",
-            "Google: Gemma 3n 4B"
-          ],
-          "features": {
-            "Developer": "Google"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.06,
-              "output_price_per_m": 0.12,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
           "id": "google/gemini-2.5-pro-preview-05-06",
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
           "family": "multimodal",
@@ -4935,6 +4775,172 @@
               "provider": "openrouter",
               "input_price_per_m": 1.25,
               "output_price_per_m": 10.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        }
+      ]
+    },
+    "google-open": {
+      "name": "Google (Open)",
+      "image": "./images/google.webp",
+      "models": [
+        {
+          "id": "google/gemma-4-26b-a4b-it",
+          "name": "Google: Gemma 4 26B A4B ",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-4-26b-a4b-it",
+            "Google: Gemma 4 26B A4B "
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.15,
+              "output_price_per_m": 0.6,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "google/gemma-4-26b-a4b-it:free",
+          "name": "Google: Gemma 4 26B A4B  (free)",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-4-26b-a4b-it:free",
+            "Google: Gemma 4 26B A4B  (free)"
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.0,
+              "output_price_per_m": 0.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "google/gemma-4-31b-it",
+          "name": "Google: Gemma 4 31B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-4-31b-it",
+            "Google: Gemma 4 31B"
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.09999999999999999,
+              "output_price_per_m": 0.33999999999999997,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "google/gemma-4-31b-it:free",
+          "name": "Google: Gemma 4 31B (free)",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-4-31b-it:free",
+            "Google: Gemma 4 31B (free)"
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.0,
+              "output_price_per_m": 0.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "google/gemma-3n-e4b-it",
+          "name": "Google: Gemma 3n 4B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-3n-e4b-it",
+            "Google: Gemma 3n 4B"
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.06,
+              "output_price_per_m": 0.12,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -5040,16 +5046,17 @@
         },
         {
           "id": "google/gemma-2-27b-it",
-          "name": "Google: Gemma 2 27B",
+          "name": "Gemma 2 27B IT",
           "family": "dense",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
-            "google/gemma-2-27b-it",
-            "Google: Gemma 2 27B"
+            "gemma-2-27b",
+            "gemma2-27b"
           ],
           "features": {
-            "Developer": "Google"
+            "Developer": "Google",
+            "Architecture": "Dense, sliding-window attention variant."
           },
           "architecture_specs": {
             "disclosure": "open_weight",
@@ -5074,14 +5081,12 @@
           "pricing": [
             {
               "provider": "openrouter",
-              "input_price_per_m": 0.65,
-              "output_price_per_m": 0.65,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
+              "input_price_per_m": 0.27,
+              "output_price_per_m": 0.27,
+              "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
+          "why": "Mix of local and sliding-window attention \u2014 strong efficiency at 27B."
         }
       ]
     },
@@ -5402,6 +5407,262 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
+        },
+        {
+          "id": "deepseek/deepseek-r1-distill-llama-70b",
+          "name": "DeepSeek: R1 Distill Llama 70B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek/deepseek-r1-distill-llama-70b",
+            "DeepSeek: R1 Distill Llama 70B"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.7999999999999999,
+              "output_price_per_m": 0.7999999999999999,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+          "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+            "deepseek-ai/DeepSeek-R1-Distill-Llama-70B"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:48Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.7999999999999999,
+              "output_price_per_m": 0.7999999999999999,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:48Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "aion-labs/aion-rp-llama-3.1-8b",
+          "name": "AionLabs: Aion-RP 1.0 (8B)",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "aion-labs/aion-rp-llama-3.1-8b",
+            "AionLabs: Aion-RP 1.0 (8B)"
+          ],
+          "features": {
+            "Developer": "Aion-Labs"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.7999999999999999,
+              "output_price_per_m": 1.5999999999999999,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "nousresearch/hermes-3-llama-3.1-70b",
+          "name": "Nous: Hermes 3 70B Instruct",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "nousresearch/hermes-3-llama-3.1-70b",
+            "Nous: Hermes 3 70B Instruct"
+          ],
+          "features": {
+            "Developer": "Nousresearch"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.7,
+              "output_price_per_m": 0.7,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "nousresearch/hermes-3-llama-3.1-405b",
+          "name": "Nous: Hermes 3 405B Instruct",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "nousresearch/hermes-3-llama-3.1-405b",
+            "Nous: Hermes 3 405B Instruct"
+          ],
+          "features": {
+            "Developer": "Nousresearch"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 1.0,
+              "output_price_per_m": 1.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "sao10k/l3.3-euryale-70b",
+          "name": "Sao10K: Llama 3.3 Euryale 70B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "sao10k/l3.3-euryale-70b",
+            "Sao10K: Llama 3.3 Euryale 70B"
+          ],
+          "features": {
+            "Developer": "Sao10K"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.65,
+              "output_price_per_m": 0.75,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "sao10k/l3.1-euryale-70b",
+          "name": "Sao10K: Llama 3.1 Euryale 70B v2.2",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "sao10k/l3.1-euryale-70b",
+            "Sao10K: Llama 3.1 Euryale 70B v2.2"
+          ],
+          "features": {
+            "Developer": "Sao10K"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.85,
+              "output_price_per_m": 0.85,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "sao10k/l3-lunaris-8b",
+          "name": "Sao10K: Llama 3 8B Lunaris",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "sao10k/l3-lunaris-8b",
+            "Sao10K: Llama 3 8B Lunaris"
+          ],
+          "features": {
+            "Developer": "Sao10K"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.04,
+              "output_price_per_m": 0.049999999999999996,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
         }
       ]
     },
@@ -5451,7 +5712,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "MoE with ~5.5% active params — explains why hosted price is far below dense frontier peers at comparable Arena ELO."
+          "why": "MoE with ~5.5% active params \u2014 explains why hosted price is far below dense frontier peers at comparable Arena ELO."
         },
         {
           "id": "deepseek/deepseek-r1",
@@ -5774,38 +6035,6 @@
           "_added_from": "openrouter"
         },
         {
-          "id": "deepseek/deepseek-r1-distill-llama-70b",
-          "name": "DeepSeek: R1 Distill Llama 70B",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "deepseek/deepseek-r1-distill-llama-70b",
-            "DeepSeek: R1 Distill Llama 70B"
-          ],
-          "features": {
-            "Developer": "Deepseek"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.7999999999999999,
-              "output_price_per_m": 0.7999999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
           "id": "deepseek/deepseek-chat",
           "name": "DeepSeek: DeepSeek V3",
           "family": "moe",
@@ -5900,44 +6129,12 @@
           "why": "Auto-added by ingestion pipeline from huggingface.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "huggingface"
-        },
-        {
-          "id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-          "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-            "deepseek-ai/DeepSeek-R1-Distill-Llama-70B"
-          ],
-          "features": {
-            "Developer": "Deepseek"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:48Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.7999999999999999,
-              "output_price_per_m": 0.7999999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:48Z",
-          "_added_from": "huggingface"
         }
       ]
     },
     "mistral": {
       "name": "Mistral AI",
-      "image": "./images/all_models.png",
+      "image": "./images/meta.png",
       "models": [
         {
           "id": "mistralai/mixtral-8x7b-instruct",
@@ -5951,7 +6148,7 @@
           ],
           "features": {
             "Developer": "Mistral AI",
-            "Architecture": "Sparse MoE, 8 experts × 7B."
+            "Architecture": "Sparse MoE, 8 experts \u00d7 7B."
           },
           "architecture_specs": {
             "disclosure": "open_weight",
@@ -5981,7 +6178,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Apache-licensed MoE — high efficiency score because active params are ~13B but quality approaches 70B dense."
+          "why": "Apache-licensed MoE \u2014 high efficiency score because active params are ~13B but quality approaches 70B dense."
         },
         {
           "id": "mistralai/mistral-medium-3-5",
@@ -6597,6 +6794,38 @@
               "provider": "openrouter",
               "input_price_per_m": 0.5,
               "output_price_per_m": 1.5,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
+          "name": "Venice: Uncensored",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "cognitivecomputations/dolphin-mistral-24b-venice-edition",
+            "Venice: Uncensored"
+          ],
+          "features": {
+            "Developer": "Cognitivecomputations"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.19999999999999998,
+              "output_price_per_m": 0.8999999999999999,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -8408,56 +8637,6 @@
         }
       ]
     },
-    "google-open": {
-      "name": "Google (Open)",
-      "image": "./images/google.webp",
-      "models": [
-        {
-          "id": "google/gemma-2-27b-it",
-          "name": "Gemma 2 27B IT",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "complete",
-          "aliases": [
-            "gemma-2-27b",
-            "gemma2-27b"
-          ],
-          "features": {
-            "Developer": "Google",
-            "Architecture": "Dense, sliding-window attention variant."
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "params_total": 27000000000,
-            "params_active": 27000000000,
-            "attention_type": "hybrid",
-            "num_hidden_layers": 46,
-            "context_window": 8192,
-            "license": "Gemma Terms of Use",
-            "source_url": "https://huggingface.co/google/gemma-2-27b-it",
-            "fetched_at": "2026-07-29"
-          },
-          "benchmarks": [
-            {
-              "benchmark_name": "Arena-ELO",
-              "score": 1218,
-              "source": "LMArena mirror",
-              "source_url": "https://lmarena.ai",
-              "fetched_at": "2026-07-29"
-            }
-          ],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.27,
-              "output_price_per_m": 0.27,
-              "fetched_at": "2026-07-28"
-            }
-          ],
-          "why": "Mix of local and sliding-window attention — strong efficiency at 27B."
-        }
-      ]
-    },
     "falcon": {
       "name": "TII (Falcon)",
       "image": "./images/falcon.jpeg",
@@ -8548,65 +8727,29 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "One of the few public hybrid SSM+attention releases — useful for understanding long-context tradeoffs vs. pure attention."
+          "why": "One of the few public hybrid SSM+attention releases \u2014 useful for understanding long-context tradeoffs vs. pure attention."
         }
       ]
     },
-    "nanbeige": {
-      "name": "Nanbeige (looped)",
-      "image": "./images/all_models.png",
+    "microsoft": {
+      "name": "Microsoft",
+      "image": "./images/google.webp",
       "models": [
         {
-          "id": "nanbeige/nanbeige4.2-3b",
-          "name": "Nanbeige4.2-3B",
-          "family": "looped",
+          "id": "microsoft/phi-4",
+          "name": "Microsoft: Phi 4",
+          "family": "dense",
           "disclosure": "open_weight",
           "status": "auto_added",
           "aliases": [
-            "nanbeige4.2-3b",
-            "nanbeige-4.2-3b"
+            "microsoft/phi-4",
+            "Microsoft: Phi 4"
           ],
           "features": {
-            "Developer": "Nanbeige",
-            "Architecture": "Looped transformer — recurrent application of a shared block."
+            "Developer": "Microsoft"
           },
           "architecture_specs": {
             "disclosure": "open_weight",
-            "params_total": 3000000000,
-            "params_active": 3000000000,
-            "attention_type": "MHA",
-            "num_hidden_layers": 22,
-            "num_loops": 2,
-            "context_window": 8192,
-            "license": "Check HF repo",
-            "source_url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
-            "fetched_at": "2026-07-28"
-          },
-          "benchmarks": [],
-          "pricing": [],
-          "why": "Looped transformer with num_loops=2 — unusual architecture; benchmarks pending (recent release)."
-        }
-      ]
-    },
-    "inclusionai": {
-      "name": "Inclusionai",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "inclusionai/ling-3.0-flash:free",
-          "name": "Ling-3.0-flash (free)",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "inclusionai/ling-3.0-flash:free",
-            "Ling-3.0-flash (free)"
-          ],
-          "features": {
-            "Developer": "Inclusionai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
             "context_window": null,
             "license": "Proprietary (API)",
             "fetched_at": "2026-07-29T02:01:47Z"
@@ -8615,8 +8758,8 @@
           "pricing": [
             {
               "provider": "openrouter",
-              "input_price_per_m": 0.0,
-              "output_price_per_m": 0.0,
+              "input_price_per_m": 0.07,
+              "output_price_per_m": 0.14,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -8625,20 +8768,20 @@
           "_added_from": "openrouter"
         },
         {
-          "id": "inclusionai/ring-2.6-1t",
-          "name": "inclusionAI: Ring-2.6-1T",
+          "id": "microsoft/wizardlm-2-8x22b",
+          "name": "WizardLM-2 8x22B",
           "family": "dense",
-          "disclosure": "closed_undisclosed",
+          "disclosure": "open_weight",
           "status": "auto_added",
           "aliases": [
-            "inclusionai/ring-2.6-1t",
-            "inclusionAI: Ring-2.6-1T"
+            "microsoft/wizardlm-2-8x22b",
+            "WizardLM-2 8x22B"
           ],
           "features": {
-            "Developer": "Inclusionai"
+            "Developer": "Microsoft"
           },
           "architecture_specs": {
-            "disclosure": "closed_undisclosed",
+            "disclosure": "open_weight",
             "context_window": null,
             "license": "Proprietary (API)",
             "fetched_at": "2026-07-29T02:01:47Z"
@@ -8647,8 +8790,8 @@
           "pricing": [
             {
               "provider": "openrouter",
-              "input_price_per_m": 0.075,
-              "output_price_per_m": 0.625,
+              "input_price_per_m": 0.62,
+              "output_price_per_m": 0.62,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -8657,84 +8800,20 @@
           "_added_from": "openrouter"
         },
         {
-          "id": "inclusionai/ling-2.6-1t",
-          "name": "inclusionAI: Ling-2.6-1T",
+          "id": "microsoft/phi-2",
+          "name": "microsoft/phi-2",
           "family": "dense",
-          "disclosure": "closed_undisclosed",
+          "disclosure": "open_weight",
           "status": "auto_added",
           "aliases": [
-            "inclusionai/ling-2.6-1t",
-            "inclusionAI: Ling-2.6-1T"
+            "microsoft/phi-2",
+            "microsoft/phi-2"
           ],
           "features": {
-            "Developer": "Inclusionai"
+            "Developer": "Microsoft"
           },
           "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.075,
-              "output_price_per_m": 0.625,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "inclusionai/ling-2.6-flash",
-          "name": "inclusionAI: Ling-2.6-flash",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "inclusionai/ling-2.6-flash",
-            "inclusionAI: Ling-2.6-flash"
-          ],
-          "features": {
-            "Developer": "Inclusionai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.01,
-              "output_price_per_m": 0.03,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "inclusionAI/Ling-2.6-1T",
-          "name": "inclusionAI/Ling-2.6-1T",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "inclusionAI/Ling-2.6-1T",
-            "inclusionAI/Ling-2.6-1T"
-          ],
-          "features": {
-            "Developer": "Inclusionai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
+            "disclosure": "open_weight",
             "context_window": null,
             "license": "Unknown",
             "fetched_at": "2026-07-29T02:01:47Z"
@@ -8743,8 +8822,8 @@
           "pricing": [
             {
               "provider": "openrouter",
-              "input_price_per_m": 0.075,
-              "output_price_per_m": 0.625,
+              "input_price_per_m": 0.07,
+              "output_price_per_m": 0.14,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -8753,20 +8832,20 @@
           "_added_from": "huggingface"
         },
         {
-          "id": "inclusionAI/Ling-2.6-flash",
-          "name": "inclusionAI/Ling-2.6-flash",
+          "id": "microsoft/phi-1_5",
+          "name": "microsoft/phi-1_5",
           "family": "dense",
-          "disclosure": "closed_undisclosed",
+          "disclosure": "open_weight",
           "status": "auto_added",
           "aliases": [
-            "inclusionAI/Ling-2.6-flash",
-            "inclusionAI/Ling-2.6-flash"
+            "microsoft/phi-1_5",
+            "microsoft/phi-1_5"
           ],
           "features": {
-            "Developer": "Inclusionai"
+            "Developer": "Microsoft"
           },
           "architecture_specs": {
-            "disclosure": "closed_undisclosed",
+            "disclosure": "open_weight",
             "context_window": null,
             "license": "Unknown",
             "fetched_at": "2026-07-29T02:01:47Z"
@@ -8775,238 +8854,8 @@
           "pricing": [
             {
               "provider": "openrouter",
-              "input_price_per_m": 0.01,
-              "output_price_per_m": 0.03,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "huggingface"
-        },
-        {
-          "id": "inclusionAI/Ring-2.6-1T",
-          "name": "inclusionAI/Ring-2.6-1T",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "inclusionAI/Ring-2.6-1T",
-            "inclusionAI/Ring-2.6-1T"
-          ],
-          "features": {
-            "Developer": "Inclusionai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:48Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.075,
-              "output_price_per_m": 0.625,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:48Z",
-          "_added_from": "huggingface"
-        }
-      ]
-    },
-    "poolside": {
-      "name": "Poolside",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "poolside/laguna-s-2.1",
-          "name": "Poolside: Laguna S 2.1",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "poolside/laguna-s-2.1",
-            "Poolside: Laguna S 2.1"
-          ],
-          "features": {
-            "Developer": "Poolside"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.09999999999999999,
-              "output_price_per_m": 0.19999999999999998,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "poolside/laguna-s-2.1:free",
-          "name": "Poolside: Laguna S 2.1 (free)",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "poolside/laguna-s-2.1:free",
-            "Poolside: Laguna S 2.1 (free)"
-          ],
-          "features": {
-            "Developer": "Poolside"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.0,
-              "output_price_per_m": 0.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "poolside/laguna-xs-2.1",
-          "name": "Poolside: Laguna XS 2.1",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "poolside/laguna-xs-2.1",
-            "Poolside: Laguna XS 2.1"
-          ],
-          "features": {
-            "Developer": "Poolside"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.06,
-              "output_price_per_m": 0.12,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "poolside/laguna-xs-2.1:free",
-          "name": "Poolside: Laguna XS 2.1 (free)",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "poolside/laguna-xs-2.1:free",
-            "Poolside: Laguna XS 2.1 (free)"
-          ],
-          "features": {
-            "Developer": "Poolside"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.0,
-              "output_price_per_m": 0.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "poolside/Laguna-S-2.1",
-          "name": "poolside/Laguna-S-2.1",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "poolside/Laguna-S-2.1",
-            "poolside/Laguna-S-2.1"
-          ],
-          "features": {
-            "Developer": "Poolside"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.09999999999999999,
-              "output_price_per_m": 0.19999999999999998,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "huggingface"
-        },
-        {
-          "id": "poolside/Laguna-XS-2.1",
-          "name": "poolside/Laguna-XS-2.1",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "poolside/Laguna-XS-2.1",
-            "poolside/Laguna-XS-2.1"
-          ],
-          "features": {
-            "Developer": "Poolside"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.06,
-              "output_price_per_m": 0.12,
+              "input_price_per_m": 0.07,
+              "output_price_per_m": 0.14,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -9016,647 +8865,9 @@
         }
       ]
     },
-    "meituan": {
-      "name": "Meituan",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "meituan/longcat-2.0",
-          "name": "Meituan: LongCat 2.0",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "meituan/longcat-2.0",
-            "Meituan: LongCat 2.0"
-          ],
-          "features": {
-            "Developer": "Meituan"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.3,
-              "output_price_per_m": 1.2,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
-    "thinkingmachines": {
-      "name": "Thinkingmachines",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "thinkingmachines/inkling",
-          "name": "Thinking Machines: Inkling",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "thinkingmachines/inkling",
-            "Thinking Machines: Inkling"
-          ],
-          "features": {
-            "Developer": "Thinkingmachines"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 1.0,
-              "output_price_per_m": 4.05,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
-    "openrouter": {
-      "name": "Openrouter",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "openrouter/auto-beta",
-          "name": "Auto Router (Beta)",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "openrouter/auto-beta",
-            "Auto Router (Beta)"
-          ],
-          "features": {
-            "Developer": "Openrouter"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": -1000000.0,
-              "output_price_per_m": -1000000.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "openrouter/fusion",
-          "name": "OpenRouter: Fusion",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "openrouter/fusion",
-            "OpenRouter: Fusion"
-          ],
-          "features": {
-            "Developer": "Openrouter"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": -1000000.0,
-              "output_price_per_m": -1000000.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "openrouter/pareto-code",
-          "name": "Pareto Code Router",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "openrouter/pareto-code",
-            "Pareto Code Router"
-          ],
-          "features": {
-            "Developer": "Openrouter"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": -1000000.0,
-              "output_price_per_m": -1000000.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "openrouter/free",
-          "name": "Free Models Router",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "openrouter/free",
-            "Free Models Router"
-          ],
-          "features": {
-            "Developer": "Openrouter"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.0,
-              "output_price_per_m": 0.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "openrouter/bodybuilder",
-          "name": "Body Builder (beta)",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "openrouter/bodybuilder",
-            "Body Builder (beta)"
-          ],
-          "features": {
-            "Developer": "Openrouter"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": -1000000.0,
-              "output_price_per_m": -1000000.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "openrouter/auto",
-          "name": "Auto Router",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "openrouter/auto",
-            "Auto Router"
-          ],
-          "features": {
-            "Developer": "Openrouter"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": -1000000.0,
-              "output_price_per_m": -1000000.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
-    "moonshotai": {
-      "name": "Moonshotai",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "MoonshotAI: Kimi K3",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/kimi-k3",
-            "MoonshotAI: Kimi K3"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 3.0,
-              "output_price_per_m": 15.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "moonshotai/kimi-k2.7-code",
-          "name": "MoonshotAI: Kimi K2.7 Code",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/kimi-k2.7-code",
-            "MoonshotAI: Kimi K2.7 Code"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.73,
-              "output_price_per_m": 3.5,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "moonshotai/kimi-k2.6",
-          "name": "MoonshotAI: Kimi K2.6",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/kimi-k2.6",
-            "MoonshotAI: Kimi K2.6"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.646,
-              "output_price_per_m": 2.7199999999999998,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "moonshotai/kimi-k2.5",
-          "name": "MoonshotAI: Kimi K2.5",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/kimi-k2.5",
-            "MoonshotAI: Kimi K2.5"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.5700000000000001,
-              "output_price_per_m": 2.8499999999999996,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "moonshotai/kimi-k2-thinking",
-          "name": "MoonshotAI: Kimi K2 Thinking",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/kimi-k2-thinking",
-            "MoonshotAI: Kimi K2 Thinking"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.6,
-              "output_price_per_m": 2.5,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "moonshotai/kimi-k2-0905",
-          "name": "MoonshotAI: Kimi K2 0905",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/kimi-k2-0905",
-            "MoonshotAI: Kimi K2 0905"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.6,
-              "output_price_per_m": 2.5,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "moonshotai/kimi-k2",
-          "name": "MoonshotAI: Kimi K2 0711",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/kimi-k2",
-            "MoonshotAI: Kimi K2 0711"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.6,
-              "output_price_per_m": 2.5,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "moonshotai/Kimi-K2-Thinking",
-          "name": "moonshotai/Kimi-K2-Thinking",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "moonshotai/Kimi-K2-Thinking",
-            "moonshotai/Kimi-K2-Thinking"
-          ],
-          "features": {
-            "Developer": "Moonshotai"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:48Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.6,
-              "output_price_per_m": 2.5,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:48Z",
-          "_added_from": "huggingface"
-        }
-      ]
-    },
-    "kwaipilot": {
-      "name": "Kwaipilot",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "kwaipilot/kat-coder-air-v2.5",
-          "name": "Kwaipilot: KAT-Coder-Air V2.5",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "kwaipilot/kat-coder-air-v2.5",
-            "Kwaipilot: KAT-Coder-Air V2.5"
-          ],
-          "features": {
-            "Developer": "Kwaipilot"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.15,
-              "output_price_per_m": 0.6,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "kwaipilot/kat-coder-pro-v2.5",
-          "name": "Kwaipilot: KAT-Coder-Pro V2.5",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "kwaipilot/kat-coder-pro-v2.5",
-            "Kwaipilot: KAT-Coder-Pro V2.5"
-          ],
-          "features": {
-            "Developer": "Kwaipilot"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.74,
-              "output_price_per_m": 2.96,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "kwaipilot/kat-coder-pro-v2",
-          "name": "Kwaipilot: KAT-Coder-Pro V2",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "kwaipilot/kat-coder-pro-v2",
-            "Kwaipilot: KAT-Coder-Pro V2"
-          ],
-          "features": {
-            "Developer": "Kwaipilot"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.74,
-              "output_price_per_m": 2.96,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
-    "x-ai": {
-      "name": "X-Ai",
-      "image": "./images/all_models.png",
+    "xai": {
+      "name": "xAI",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "x-ai/grok-4.5",
@@ -9817,13 +9028,7 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
-        }
-      ]
-    },
-    "~x-ai": {
-      "name": "~X-Ai",
-      "image": "./images/all_models.png",
-      "models": [
+        },
         {
           "id": "~x-ai/grok-latest",
           "name": "xAI: Grok Latest",
@@ -9858,22 +9063,22 @@
         }
       ]
     },
-    "aion-labs": {
-      "name": "Aion-Labs",
-      "image": "./images/all_models.png",
+    "ai21": {
+      "name": "AI21 Labs",
+      "image": "./images/google.webp",
       "models": [
         {
-          "id": "aion-labs/aion-3.0-mini",
-          "name": "AionLabs: Aion-3.0-Mini",
-          "family": "dense",
+          "id": "ai21/jamba-large-1.7",
+          "name": "AI21: Jamba Large 1.7",
+          "family": "hybrid_attention_ssm",
           "disclosure": "closed_undisclosed",
           "status": "auto_added",
           "aliases": [
-            "aion-labs/aion-3.0-mini",
-            "AionLabs: Aion-3.0-Mini"
+            "ai21/jamba-large-1.7",
+            "AI21: Jamba Large 1.7"
           ],
           "features": {
-            "Developer": "Aion-Labs"
+            "Developer": "Ai21"
           },
           "architecture_specs": {
             "disclosure": "closed_undisclosed",
@@ -9885,410 +9090,8 @@
           "pricing": [
             {
               "provider": "openrouter",
-              "input_price_per_m": 0.7,
-              "output_price_per_m": 1.4,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "aion-labs/aion-3.0",
-          "name": "AionLabs: Aion-3.0",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "aion-labs/aion-3.0",
-            "AionLabs: Aion-3.0"
-          ],
-          "features": {
-            "Developer": "Aion-Labs"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 3.0,
-              "output_price_per_m": 6.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "aion-labs/aion-2.0",
-          "name": "AionLabs: Aion-2.0",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "aion-labs/aion-2.0",
-            "AionLabs: Aion-2.0"
-          ],
-          "features": {
-            "Developer": "Aion-Labs"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 3.0,
-              "output_price_per_m": 6.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "aion-labs/aion-rp-llama-3.1-8b",
-          "name": "AionLabs: Aion-RP 1.0 (8B)",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "aion-labs/aion-rp-llama-3.1-8b",
-            "AionLabs: Aion-RP 1.0 (8B)"
-          ],
-          "features": {
-            "Developer": "Aion-Labs"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.7999999999999999,
-              "output_price_per_m": 1.5999999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
-    "tencent": {
-      "name": "Tencent",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "tencent/hy3",
-          "name": "Tencent: Hy3",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "tencent/hy3",
-            "Tencent: Hy3"
-          ],
-          "features": {
-            "Developer": "Tencent"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.13199999999999998,
-              "output_price_per_m": 0.5279999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "tencent/hy3-preview",
-          "name": "Tencent: Hy3 preview",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "tencent/hy3-preview",
-            "Tencent: Hy3 preview"
-          ],
-          "features": {
-            "Developer": "Tencent"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.063,
-              "output_price_per_m": 0.21,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "tencent/hunyuan-a13b-instruct",
-          "name": "Tencent: Hunyuan A13B Instruct",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "tencent/hunyuan-a13b-instruct",
-            "Tencent: Hunyuan A13B Instruct"
-          ],
-          "features": {
-            "Developer": "Tencent"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.14,
-              "output_price_per_m": 0.5700000000000001,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "tencent/Hy3",
-          "name": "tencent/Hy3",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "tencent/Hy3",
-            "tencent/Hy3"
-          ],
-          "features": {
-            "Developer": "Tencent"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.13199999999999998,
-              "output_price_per_m": 0.5279999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "huggingface"
-        }
-      ]
-    },
-    "nex-agi": {
-      "name": "Nex-Agi",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "nex-agi/nex-n2-mini",
-          "name": "Nex AGI: Nex-N2-Mini",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "nex-agi/nex-n2-mini",
-            "Nex AGI: Nex-N2-Mini"
-          ],
-          "features": {
-            "Developer": "Nex-Agi"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.024999999999999998,
-              "output_price_per_m": 0.09999999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "nex-agi/nex-n2-pro",
-          "name": "Nex AGI: Nex-N2-Pro",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "nex-agi/nex-n2-pro",
-            "Nex AGI: Nex-N2-Pro"
-          ],
-          "features": {
-            "Developer": "Nex-Agi"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.25,
-              "output_price_per_m": 1.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "nex-agi/Nex-N2-mini",
-          "name": "nex-agi/Nex-N2-mini",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "nex-agi/Nex-N2-mini",
-            "nex-agi/Nex-N2-mini"
-          ],
-          "features": {
-            "Developer": "Nex-Agi"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.024999999999999998,
-              "output_price_per_m": 0.09999999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "huggingface"
-        },
-        {
-          "id": "nex-agi/Nex-N2-Pro",
-          "name": "nex-agi/Nex-N2-Pro",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "nex-agi/Nex-N2-Pro",
-            "nex-agi/Nex-N2-Pro"
-          ],
-          "features": {
-            "Developer": "Nex-Agi"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.25,
-              "output_price_per_m": 1.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "huggingface"
-        }
-      ]
-    },
-    "sakana": {
-      "name": "Sakana",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "sakana/fugu-ultra",
-          "name": "Sakana: Fugu Ultra",
-          "family": "dense",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "sakana/fugu-ultra",
-            "Sakana: Fugu Ultra"
-          ],
-          "features": {
-            "Developer": "Sakana"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 5.0,
-              "output_price_per_m": 30.0,
+              "input_price_per_m": 2.0,
+              "output_price_per_m": 8.0,
               "fetched_at": "2026-07-29T02:00:48+00:00"
             }
           ],
@@ -10300,7 +9103,7 @@
     },
     "cohere": {
       "name": "Cohere",
-      "image": "./images/all_models.png",
+      "image": "./images/google.webp",
       "models": [
         {
           "id": "cohere/north-mini-code:free",
@@ -10464,9 +9267,45 @@
         }
       ]
     },
-    "z-ai": {
-      "name": "Z-Ai",
-      "image": "./images/all_models.png",
+    "nanbeige": {
+      "name": "Nanbeige (looped)",
+      "image": "./images/qwen1.png",
+      "models": [
+        {
+          "id": "nanbeige/nanbeige4.2-3b",
+          "name": "Nanbeige4.2-3B",
+          "family": "looped",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "nanbeige4.2-3b",
+            "nanbeige-4.2-3b"
+          ],
+          "features": {
+            "Developer": "Nanbeige",
+            "Architecture": "Looped transformer \u2014 recurrent application of a shared block."
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "params_total": 3000000000,
+            "params_active": 3000000000,
+            "attention_type": "MHA",
+            "num_hidden_layers": 22,
+            "num_loops": 2,
+            "context_window": 8192,
+            "license": "Check HF repo",
+            "source_url": "https://huggingface.co/Nanbeige/Nanbeige4.2-3B",
+            "fetched_at": "2026-07-28"
+          },
+          "benchmarks": [],
+          "pricing": [],
+          "why": "Looped transformer with num_loops=2 \u2014 unusual architecture; benchmarks pending (recent release)."
+        }
+      ]
+    },
+    "zai": {
+      "name": "Z-AI (GLM)",
+      "image": "./images/qwen1.png",
       "models": [
         {
           "id": "z-ai/glm-5.2",
@@ -10854,9 +9693,1483 @@
         }
       ]
     },
+    "inclusionai": {
+      "name": "Inclusionai",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "inclusionai/ling-3.0-flash:free",
+          "name": "Ling-3.0-flash (free)",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "inclusionai/ling-3.0-flash:free",
+            "Ling-3.0-flash (free)"
+          ],
+          "features": {
+            "Developer": "Inclusionai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.0,
+              "output_price_per_m": 0.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "inclusionai/ring-2.6-1t",
+          "name": "inclusionAI: Ring-2.6-1T",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "inclusionai/ring-2.6-1t",
+            "inclusionAI: Ring-2.6-1T"
+          ],
+          "features": {
+            "Developer": "Inclusionai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.075,
+              "output_price_per_m": 0.625,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "inclusionai/ling-2.6-1t",
+          "name": "inclusionAI: Ling-2.6-1T",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "inclusionai/ling-2.6-1t",
+            "inclusionAI: Ling-2.6-1T"
+          ],
+          "features": {
+            "Developer": "Inclusionai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.075,
+              "output_price_per_m": 0.625,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "inclusionai/ling-2.6-flash",
+          "name": "inclusionAI: Ling-2.6-flash",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "inclusionai/ling-2.6-flash",
+            "inclusionAI: Ling-2.6-flash"
+          ],
+          "features": {
+            "Developer": "Inclusionai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.01,
+              "output_price_per_m": 0.03,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "inclusionAI/Ling-2.6-1T",
+          "name": "inclusionAI/Ling-2.6-1T",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "inclusionAI/Ling-2.6-1T",
+            "inclusionAI/Ling-2.6-1T"
+          ],
+          "features": {
+            "Developer": "Inclusionai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.075,
+              "output_price_per_m": 0.625,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "inclusionAI/Ling-2.6-flash",
+          "name": "inclusionAI/Ling-2.6-flash",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "inclusionAI/Ling-2.6-flash",
+            "inclusionAI/Ling-2.6-flash"
+          ],
+          "features": {
+            "Developer": "Inclusionai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.01,
+              "output_price_per_m": 0.03,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "inclusionAI/Ring-2.6-1T",
+          "name": "inclusionAI/Ring-2.6-1T",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "inclusionAI/Ring-2.6-1T",
+            "inclusionAI/Ring-2.6-1T"
+          ],
+          "features": {
+            "Developer": "Inclusionai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:48Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.075,
+              "output_price_per_m": 0.625,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:48Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "poolside": {
+      "name": "Poolside",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "poolside/laguna-s-2.1",
+          "name": "Poolside: Laguna S 2.1",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "poolside/laguna-s-2.1",
+            "Poolside: Laguna S 2.1"
+          ],
+          "features": {
+            "Developer": "Poolside"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.09999999999999999,
+              "output_price_per_m": 0.19999999999999998,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "poolside/laguna-s-2.1:free",
+          "name": "Poolside: Laguna S 2.1 (free)",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "poolside/laguna-s-2.1:free",
+            "Poolside: Laguna S 2.1 (free)"
+          ],
+          "features": {
+            "Developer": "Poolside"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.0,
+              "output_price_per_m": 0.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "poolside/laguna-xs-2.1",
+          "name": "Poolside: Laguna XS 2.1",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "poolside/laguna-xs-2.1",
+            "Poolside: Laguna XS 2.1"
+          ],
+          "features": {
+            "Developer": "Poolside"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.06,
+              "output_price_per_m": 0.12,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "poolside/laguna-xs-2.1:free",
+          "name": "Poolside: Laguna XS 2.1 (free)",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "poolside/laguna-xs-2.1:free",
+            "Poolside: Laguna XS 2.1 (free)"
+          ],
+          "features": {
+            "Developer": "Poolside"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.0,
+              "output_price_per_m": 0.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "poolside/Laguna-S-2.1",
+          "name": "poolside/Laguna-S-2.1",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "poolside/Laguna-S-2.1",
+            "poolside/Laguna-S-2.1"
+          ],
+          "features": {
+            "Developer": "Poolside"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.09999999999999999,
+              "output_price_per_m": 0.19999999999999998,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "poolside/Laguna-XS-2.1",
+          "name": "poolside/Laguna-XS-2.1",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "poolside/Laguna-XS-2.1",
+            "poolside/Laguna-XS-2.1"
+          ],
+          "features": {
+            "Developer": "Poolside"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.06,
+              "output_price_per_m": 0.12,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "meituan": {
+      "name": "Meituan",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "meituan/longcat-2.0",
+          "name": "Meituan: LongCat 2.0",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "meituan/longcat-2.0",
+            "Meituan: LongCat 2.0"
+          ],
+          "features": {
+            "Developer": "Meituan"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.3,
+              "output_price_per_m": 1.2,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        }
+      ]
+    },
+    "thinkingmachines": {
+      "name": "Thinkingmachines",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "thinkingmachines/inkling",
+          "name": "Thinking Machines: Inkling",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "thinkingmachines/inkling",
+            "Thinking Machines: Inkling"
+          ],
+          "features": {
+            "Developer": "Thinkingmachines"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 1.0,
+              "output_price_per_m": 4.05,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        }
+      ]
+    },
+    "openrouter": {
+      "name": "Openrouter",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "openrouter/auto-beta",
+          "name": "Auto Router (Beta)",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "openrouter/auto-beta",
+            "Auto Router (Beta)"
+          ],
+          "features": {
+            "Developer": "Openrouter"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": -1000000.0,
+              "output_price_per_m": -1000000.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "openrouter/fusion",
+          "name": "OpenRouter: Fusion",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "openrouter/fusion",
+            "OpenRouter: Fusion"
+          ],
+          "features": {
+            "Developer": "Openrouter"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": -1000000.0,
+              "output_price_per_m": -1000000.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "openrouter/pareto-code",
+          "name": "Pareto Code Router",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "openrouter/pareto-code",
+            "Pareto Code Router"
+          ],
+          "features": {
+            "Developer": "Openrouter"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": -1000000.0,
+              "output_price_per_m": -1000000.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "openrouter/free",
+          "name": "Free Models Router",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "openrouter/free",
+            "Free Models Router"
+          ],
+          "features": {
+            "Developer": "Openrouter"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.0,
+              "output_price_per_m": 0.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "openrouter/bodybuilder",
+          "name": "Body Builder (beta)",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "openrouter/bodybuilder",
+            "Body Builder (beta)"
+          ],
+          "features": {
+            "Developer": "Openrouter"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": -1000000.0,
+              "output_price_per_m": -1000000.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "openrouter/auto",
+          "name": "Auto Router",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "openrouter/auto",
+            "Auto Router"
+          ],
+          "features": {
+            "Developer": "Openrouter"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": -1000000.0,
+              "output_price_per_m": -1000000.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        }
+      ]
+    },
+    "moonshotai": {
+      "name": "Moonshotai",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "MoonshotAI: Kimi K3",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/kimi-k3",
+            "MoonshotAI: Kimi K3"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 3.0,
+              "output_price_per_m": 15.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "moonshotai/kimi-k2.7-code",
+          "name": "MoonshotAI: Kimi K2.7 Code",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/kimi-k2.7-code",
+            "MoonshotAI: Kimi K2.7 Code"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.73,
+              "output_price_per_m": 3.5,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "moonshotai/kimi-k2.6",
+          "name": "MoonshotAI: Kimi K2.6",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/kimi-k2.6",
+            "MoonshotAI: Kimi K2.6"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.646,
+              "output_price_per_m": 2.7199999999999998,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "moonshotai/kimi-k2.5",
+          "name": "MoonshotAI: Kimi K2.5",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/kimi-k2.5",
+            "MoonshotAI: Kimi K2.5"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.5700000000000001,
+              "output_price_per_m": 2.8499999999999996,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "moonshotai/kimi-k2-thinking",
+          "name": "MoonshotAI: Kimi K2 Thinking",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/kimi-k2-thinking",
+            "MoonshotAI: Kimi K2 Thinking"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.6,
+              "output_price_per_m": 2.5,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "moonshotai/kimi-k2-0905",
+          "name": "MoonshotAI: Kimi K2 0905",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/kimi-k2-0905",
+            "MoonshotAI: Kimi K2 0905"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.6,
+              "output_price_per_m": 2.5,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "moonshotai/kimi-k2",
+          "name": "MoonshotAI: Kimi K2 0711",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/kimi-k2",
+            "MoonshotAI: Kimi K2 0711"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.6,
+              "output_price_per_m": 2.5,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "moonshotai/Kimi-K2-Thinking",
+          "name": "moonshotai/Kimi-K2-Thinking",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "moonshotai/Kimi-K2-Thinking",
+            "moonshotai/Kimi-K2-Thinking"
+          ],
+          "features": {
+            "Developer": "Moonshotai"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:48Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.6,
+              "output_price_per_m": 2.5,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:48Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "kwaipilot": {
+      "name": "Kwaipilot",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "kwaipilot/kat-coder-air-v2.5",
+          "name": "Kwaipilot: KAT-Coder-Air V2.5",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "kwaipilot/kat-coder-air-v2.5",
+            "Kwaipilot: KAT-Coder-Air V2.5"
+          ],
+          "features": {
+            "Developer": "Kwaipilot"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.15,
+              "output_price_per_m": 0.6,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "kwaipilot/kat-coder-pro-v2.5",
+          "name": "Kwaipilot: KAT-Coder-Pro V2.5",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "kwaipilot/kat-coder-pro-v2.5",
+            "Kwaipilot: KAT-Coder-Pro V2.5"
+          ],
+          "features": {
+            "Developer": "Kwaipilot"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.74,
+              "output_price_per_m": 2.96,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "kwaipilot/kat-coder-pro-v2",
+          "name": "Kwaipilot: KAT-Coder-Pro V2",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "kwaipilot/kat-coder-pro-v2",
+            "Kwaipilot: KAT-Coder-Pro V2"
+          ],
+          "features": {
+            "Developer": "Kwaipilot"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.74,
+              "output_price_per_m": 2.96,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        }
+      ]
+    },
+    "aion-labs": {
+      "name": "Aion-Labs",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "aion-labs/aion-3.0-mini",
+          "name": "AionLabs: Aion-3.0-Mini",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "aion-labs/aion-3.0-mini",
+            "AionLabs: Aion-3.0-Mini"
+          ],
+          "features": {
+            "Developer": "Aion-Labs"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.7,
+              "output_price_per_m": 1.4,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "aion-labs/aion-3.0",
+          "name": "AionLabs: Aion-3.0",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "aion-labs/aion-3.0",
+            "AionLabs: Aion-3.0"
+          ],
+          "features": {
+            "Developer": "Aion-Labs"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 3.0,
+              "output_price_per_m": 6.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "aion-labs/aion-2.0",
+          "name": "AionLabs: Aion-2.0",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "aion-labs/aion-2.0",
+            "AionLabs: Aion-2.0"
+          ],
+          "features": {
+            "Developer": "Aion-Labs"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 3.0,
+              "output_price_per_m": 6.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        }
+      ]
+    },
+    "tencent": {
+      "name": "Tencent",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "tencent/hy3",
+          "name": "Tencent: Hy3",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "tencent/hy3",
+            "Tencent: Hy3"
+          ],
+          "features": {
+            "Developer": "Tencent"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.13199999999999998,
+              "output_price_per_m": 0.5279999999999999,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "tencent/hy3-preview",
+          "name": "Tencent: Hy3 preview",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "tencent/hy3-preview",
+            "Tencent: Hy3 preview"
+          ],
+          "features": {
+            "Developer": "Tencent"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.063,
+              "output_price_per_m": 0.21,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "tencent/hunyuan-a13b-instruct",
+          "name": "Tencent: Hunyuan A13B Instruct",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "tencent/hunyuan-a13b-instruct",
+            "Tencent: Hunyuan A13B Instruct"
+          ],
+          "features": {
+            "Developer": "Tencent"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.14,
+              "output_price_per_m": 0.5700000000000001,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "tencent/Hy3",
+          "name": "tencent/Hy3",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "tencent/Hy3",
+            "tencent/Hy3"
+          ],
+          "features": {
+            "Developer": "Tencent"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.13199999999999998,
+              "output_price_per_m": 0.5279999999999999,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "nex-agi": {
+      "name": "Nex-Agi",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "nex-agi/nex-n2-mini",
+          "name": "Nex AGI: Nex-N2-Mini",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "nex-agi/nex-n2-mini",
+            "Nex AGI: Nex-N2-Mini"
+          ],
+          "features": {
+            "Developer": "Nex-Agi"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.024999999999999998,
+              "output_price_per_m": 0.09999999999999999,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "nex-agi/nex-n2-pro",
+          "name": "Nex AGI: Nex-N2-Pro",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "nex-agi/nex-n2-pro",
+            "Nex AGI: Nex-N2-Pro"
+          ],
+          "features": {
+            "Developer": "Nex-Agi"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.25,
+              "output_price_per_m": 1.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        },
+        {
+          "id": "nex-agi/Nex-N2-mini",
+          "name": "nex-agi/Nex-N2-mini",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "nex-agi/Nex-N2-mini",
+            "nex-agi/Nex-N2-mini"
+          ],
+          "features": {
+            "Developer": "Nex-Agi"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.024999999999999998,
+              "output_price_per_m": 0.09999999999999999,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "nex-agi/Nex-N2-Pro",
+          "name": "nex-agi/Nex-N2-Pro",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "nex-agi/Nex-N2-Pro",
+            "nex-agi/Nex-N2-Pro"
+          ],
+          "features": {
+            "Developer": "Nex-Agi"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 0.25,
+              "output_price_per_m": 1.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "sakana": {
+      "name": "Sakana",
+      "image": "./images/gpt.png",
+      "models": [
+        {
+          "id": "sakana/fugu-ultra",
+          "name": "Sakana: Fugu Ultra",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "sakana/fugu-ultra",
+            "Sakana: Fugu Ultra"
+          ],
+          "features": {
+            "Developer": "Sakana"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Proprietary (API)",
+            "fetched_at": "2026-07-29T02:01:47Z"
+          },
+          "benchmarks": [],
+          "pricing": [
+            {
+              "provider": "openrouter",
+              "input_price_per_m": 5.0,
+              "output_price_per_m": 30.0,
+              "fetched_at": "2026-07-29T02:00:48+00:00"
+            }
+          ],
+          "why": "Auto-added by ingestion pipeline from openrouter.",
+          "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "openrouter"
+        }
+      ]
+    },
     "nvidia": {
       "name": "Nvidia",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "nvidia/nemotron-3.5-content-safety:free",
@@ -11182,7 +11495,7 @@
     },
     "minimax": {
       "name": "Minimax",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "minimax/minimax-m3",
@@ -11476,7 +11789,7 @@
     },
     "stepfun": {
       "name": "Stepfun",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "stepfun/step-3.7-flash",
@@ -11546,7 +11859,7 @@
     },
     "perceptron": {
       "name": "Perceptron",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "perceptron/perceptron-mk1",
@@ -11584,7 +11897,7 @@
     },
     "ibm-granite": {
       "name": "Ibm-Granite",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "ibm-granite/granite-4.1-8b",
@@ -11654,7 +11967,7 @@
     },
     "~moonshotai": {
       "name": "~Moonshotai",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "~moonshotai/kimi-latest",
@@ -11692,7 +12005,7 @@
     },
     "xiaomi": {
       "name": "Xiaomi",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "xiaomi/mimo-v2.5-pro",
@@ -11762,7 +12075,7 @@
     },
     "arcee-ai": {
       "name": "Arcee-Ai",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "arcee-ai/trinity-large-thinking",
@@ -11832,7 +12145,7 @@
     },
     "rekaai": {
       "name": "Rekaai",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "rekaai/reka-edge",
@@ -11902,7 +12215,7 @@
     },
     "bytedance-seed": {
       "name": "Bytedance-Seed",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "bytedance-seed/seed-2.0-lite",
@@ -12036,7 +12349,7 @@
     },
     "inception": {
       "name": "Inception",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "inception/mercury-2",
@@ -12074,7 +12387,7 @@
     },
     "upstage": {
       "name": "Upstage",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "upstage/solar-pro-3",
@@ -12112,7 +12425,7 @@
     },
     "writer": {
       "name": "Writer",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "writer/palmyra-x5",
@@ -12150,7 +12463,7 @@
     },
     "relace": {
       "name": "Relace",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "relace/relace-search",
@@ -12220,7 +12533,7 @@
     },
     "amazon": {
       "name": "Amazon",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "amazon/nova-2-lite-v1",
@@ -12386,7 +12699,7 @@
     },
     "allenai": {
       "name": "Allenai",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "allenai/olmo-3-32b-think",
@@ -12424,7 +12737,7 @@
     },
     "deepcogito": {
       "name": "Deepcogito",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "deepcogito/cogito-v2.1-671b",
@@ -12462,7 +12775,7 @@
     },
     "perplexity": {
       "name": "Perplexity",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "perplexity/sonar-pro-search",
@@ -12628,7 +12941,7 @@
     },
     "thedrummer": {
       "name": "Thedrummer",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "thedrummer/cydonia-24b-v4.1",
@@ -12762,7 +13075,7 @@
     },
     "nousresearch": {
       "name": "Nousresearch",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "nousresearch/hermes-4-70b",
@@ -12827,114 +13140,12 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
-        },
-        {
-          "id": "nousresearch/hermes-3-llama-3.1-70b",
-          "name": "Nous: Hermes 3 70B Instruct",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "nousresearch/hermes-3-llama-3.1-70b",
-            "Nous: Hermes 3 70B Instruct"
-          ],
-          "features": {
-            "Developer": "Nousresearch"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.7,
-              "output_price_per_m": 0.7,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "nousresearch/hermes-3-llama-3.1-405b",
-          "name": "Nous: Hermes 3 405B Instruct",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "nousresearch/hermes-3-llama-3.1-405b",
-            "Nous: Hermes 3 405B Instruct"
-          ],
-          "features": {
-            "Developer": "Nousresearch"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 1.0,
-              "output_price_per_m": 1.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
-    "ai21": {
-      "name": "Ai21",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "ai21/jamba-large-1.7",
-          "name": "AI21: Jamba Large 1.7",
-          "family": "hybrid_attention_ssm",
-          "disclosure": "closed_undisclosed",
-          "status": "auto_added",
-          "aliases": [
-            "ai21/jamba-large-1.7",
-            "AI21: Jamba Large 1.7"
-          ],
-          "features": {
-            "Developer": "Ai21"
-          },
-          "architecture_specs": {
-            "disclosure": "closed_undisclosed",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 2.0,
-              "output_price_per_m": 8.0,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
         }
       ]
     },
     "bytedance": {
       "name": "Bytedance",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "bytedance/ui-tars-1.5-7b",
@@ -12970,47 +13181,9 @@
         }
       ]
     },
-    "cognitivecomputations": {
-      "name": "Cognitivecomputations",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
-          "name": "Venice: Uncensored",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "cognitivecomputations/dolphin-mistral-24b-venice-edition",
-            "Venice: Uncensored"
-          ],
-          "features": {
-            "Developer": "Cognitivecomputations"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.19999999999999998,
-              "output_price_per_m": 0.8999999999999999,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
     "morph": {
       "name": "Morph",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "morph/morph-v3-large",
@@ -13080,7 +13253,7 @@
     },
     "baidu": {
       "name": "Baidu",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "baidu/ernie-4.5-vl-424b-a47b",
@@ -13116,245 +13289,9 @@
         }
       ]
     },
-    "microsoft": {
-      "name": "Microsoft",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "microsoft/phi-4",
-          "name": "Microsoft: Phi 4",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "microsoft/phi-4",
-            "Microsoft: Phi 4"
-          ],
-          "features": {
-            "Developer": "Microsoft"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.07,
-              "output_price_per_m": 0.14,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "microsoft/wizardlm-2-8x22b",
-          "name": "WizardLM-2 8x22B",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "microsoft/wizardlm-2-8x22b",
-            "WizardLM-2 8x22B"
-          ],
-          "features": {
-            "Developer": "Microsoft"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.62,
-              "output_price_per_m": 0.62,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "microsoft/phi-2",
-          "name": "microsoft/phi-2",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "microsoft/phi-2",
-            "microsoft/phi-2"
-          ],
-          "features": {
-            "Developer": "Microsoft"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.07,
-              "output_price_per_m": 0.14,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "huggingface"
-        },
-        {
-          "id": "microsoft/phi-1_5",
-          "name": "microsoft/phi-1_5",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "microsoft/phi-1_5",
-            "microsoft/phi-1_5"
-          ],
-          "features": {
-            "Developer": "Microsoft"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Unknown",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.07,
-              "output_price_per_m": 0.14,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from huggingface.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "huggingface"
-        }
-      ]
-    },
-    "sao10k": {
-      "name": "Sao10K",
-      "image": "./images/all_models.png",
-      "models": [
-        {
-          "id": "sao10k/l3.3-euryale-70b",
-          "name": "Sao10K: Llama 3.3 Euryale 70B",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "sao10k/l3.3-euryale-70b",
-            "Sao10K: Llama 3.3 Euryale 70B"
-          ],
-          "features": {
-            "Developer": "Sao10K"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.65,
-              "output_price_per_m": 0.75,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "sao10k/l3.1-euryale-70b",
-          "name": "Sao10K: Llama 3.1 Euryale 70B v2.2",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "sao10k/l3.1-euryale-70b",
-            "Sao10K: Llama 3.1 Euryale 70B v2.2"
-          ],
-          "features": {
-            "Developer": "Sao10K"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.85,
-              "output_price_per_m": 0.85,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        },
-        {
-          "id": "sao10k/l3-lunaris-8b",
-          "name": "Sao10K: Llama 3 8B Lunaris",
-          "family": "dense",
-          "disclosure": "open_weight",
-          "status": "auto_added",
-          "aliases": [
-            "sao10k/l3-lunaris-8b",
-            "Sao10K: Llama 3 8B Lunaris"
-          ],
-          "features": {
-            "Developer": "Sao10K"
-          },
-          "architecture_specs": {
-            "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
-          },
-          "benchmarks": [],
-          "pricing": [
-            {
-              "provider": "openrouter",
-              "input_price_per_m": 0.04,
-              "output_price_per_m": 0.049999999999999996,
-              "fetched_at": "2026-07-29T02:00:48+00:00"
-            }
-          ],
-          "why": "Auto-added by ingestion pipeline from openrouter.",
-          "_added_at": "2026-07-29T02:01:47Z",
-          "_added_from": "openrouter"
-        }
-      ]
-    },
     "anthracite-org": {
       "name": "Anthracite-Org",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "anthracite-org/magnum-v4-72b",
@@ -13392,7 +13329,7 @@
     },
     "mancer": {
       "name": "Mancer",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "mancer/weaver",
@@ -13430,7 +13367,7 @@
     },
     "undi95": {
       "name": "Undi95",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "undi95/remm-slerp-l2-13b",
@@ -13468,7 +13405,7 @@
     },
     "gryphe": {
       "name": "Gryphe",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "gryphe/mythomax-l2-13b",

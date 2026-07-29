@@ -9,8 +9,6 @@ across architecture family (dense / MoE / hybrid-SSM / looped), benchmark scores
 Built as a **fork** of [Devisri-B/LLM-Architectures](https://github.com/Devisri-B/LLM-Architectures)
 (MIT) — we keep the React Flow architecture diagrams and extend them with a real data layer.
 
-See [`docs/PRD.md`](docs/PRD.md), [`docs/TRD.md`](docs/TRD.md), [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for full scope, requirements, and system design.
-
 ## Stack
 
 | Layer | Choice |
@@ -41,8 +39,7 @@ src/
   styles/            # animations.css (keyframes + utility classes)
   architectures/     # React Flow diagrams (forked upstream + DiagramRegistry)
 public/
-  data.json          # canonical model records (schema per docs/TRD.md §4)
-docs/                # PRD, TRD, ARCHITECTURE
+  data.json          # canonical model records
 scripts/             # seed-data.js (rebuilds data.json from scratch)
 ```
 

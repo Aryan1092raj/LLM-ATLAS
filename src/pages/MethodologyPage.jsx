@@ -57,7 +57,7 @@ export default function MethodologyPage() {
       </Section>
 
       <Section title="Sources">
-        <p style={{ marginTop: 0 }}>Four primary sources, all accessed via official APIs or sanctioned mirrors. Per TRD §7, we never scrape sites that disallow it.</p>
+        <p style={{ marginTop: 0 }}>Four primary sources, all accessed via official APIs or sanctioned mirrors. We never scrape sites that disallow it.</p>
         <table className="methodology-table">
           <thead>
             <tr>
@@ -114,7 +114,7 @@ export default function MethodologyPage() {
 
       <Section title="Two flavors of &quot;incomplete&quot;">
         <p style={{ marginTop: 0 }}>
-          We never show a blank field. We distinguish two cases per FR-9:
+          We never show a blank field. We distinguish two cases:
         </p>
         <ul>
           <li>
@@ -141,7 +141,7 @@ export default function MethodologyPage() {
             dataset dense and curated rather than encyclopedic.
           </li>
           <li>
-            <strong>Fine-tunes / quantizations:</strong> filtered out of the primary list per TRD §5.3.
+            <strong>Fine-tunes / quantizations:</strong> filtered out of the primary list.
             They're recorded as aliases of the base model where possible, not as separate entries.
           </li>
           <li>
