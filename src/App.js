@@ -61,8 +61,7 @@ function Shell() {
     { id: "compare", label: "Compare", onClick: () => navigate("/compare") },
     { id: "families", label: "Families", onClick: () => navigate("/families") },
     { id: "timeline", label: "Timeline", onClick: () => navigate("/timeline") },
-    { id: "methodology", label: "Methodology", onClick: () => navigate("/methodology") },
-    { id: "changelog", label: "Changelog", onClick: () => navigate("/changelog") }
+    { id: "methodology", label: "Methodology", onClick: () => navigate("/methodology") }
   ];
 
   const activeId = (() => {

@@ -31,7 +31,7 @@
   "companies": {
     "openai": {
       "name": "OpenAI",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "openai/gpt-4o",
@@ -2557,7 +2557,7 @@
     },
     "anthropic": {
       "name": "Anthropic",
-      "image": "./images/cluade.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "anthropic/claude-3-opus",
@@ -3624,7 +3624,7 @@
     },
     "google": {
       "name": "Google",
-      "image": "./images/google.webp",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "google/gemini-1.5-pro",
@@ -5029,7 +5029,7 @@
     },
     "meta": {
       "name": "Meta",
-      "image": "./images/meta.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "meta-llama/llama-3.1-405b-instruct",
@@ -5336,7 +5336,7 @@
     },
     "deepseek": {
       "name": "DeepSeek",
-      "image": "./images/deepseek.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "deepseek/deepseek-v3",
@@ -5853,7 +5853,7 @@
     },
     "mistral": {
       "name": "Mistral AI",
-      "image": "./images/meta.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "mistralai/mixtral-8x7b-instruct",
@@ -6511,7 +6511,7 @@
     },
     "qwen": {
       "name": "Alibaba (Qwen)",
-      "image": "./images/qwen1.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "qwen/qwen-2.5-72b-instruct",
@@ -8300,7 +8300,7 @@
     },
     "google-open": {
       "name": "Google (Open)",
-      "image": "./images/google.webp",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "google/gemma-2-27b-it",
@@ -8350,7 +8350,7 @@
     },
     "falcon": {
       "name": "TII (Falcon)",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "tiiuae/falcon3-10b-base",
@@ -8444,7 +8444,7 @@
     },
     "nanbeige": {
       "name": "Nanbeige (looped)",
-      "image": "./images/qwen1.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nanbeige/nanbeige4.2-3b",
@@ -8480,7 +8480,7 @@
     },
     "inclusionai": {
       "name": "Inclusionai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "inclusionai/ling-3.0-flash:free",
@@ -8710,7 +8710,7 @@
     },
     "poolside": {
       "name": "Poolside",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "poolside/laguna-s-2.1",
@@ -8908,7 +8908,7 @@
     },
     "meituan": {
       "name": "Meituan",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "meituan/longcat-2.0",
@@ -8946,7 +8946,7 @@
     },
     "thinkingmachines": {
       "name": "Thinkingmachines",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "thinkingmachines/inkling",
@@ -8984,7 +8984,7 @@
     },
     "openrouter": {
       "name": "Openrouter",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "openrouter/auto-beta",
@@ -9182,7 +9182,7 @@
     },
     "moonshotai": {
       "name": "Moonshotai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "moonshotai/kimi-k3",
@@ -9444,7 +9444,7 @@
     },
     "kwaipilot": {
       "name": "Kwaipilot",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "kwaipilot/kat-coder-air-v2.5",
@@ -9546,7 +9546,7 @@
     },
     "x-ai": {
       "name": "X-Ai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "x-ai/grok-4.5",
@@ -9712,7 +9712,7 @@
     },
     "~x-ai": {
       "name": "~X-Ai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "~x-ai/grok-latest",
@@ -9750,7 +9750,7 @@
     },
     "aion-labs": {
       "name": "Aion-Labs",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "aion-labs/aion-3.0-mini",
@@ -9884,7 +9884,7 @@
     },
     "tencent": {
       "name": "Tencent",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "tencent/hy3",
@@ -10018,7 +10018,7 @@
     },
     "nex-agi": {
       "name": "Nex-Agi",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nex-agi/nex-n2-mini",
@@ -10152,7 +10152,7 @@
     },
     "sakana": {
       "name": "Sakana",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "sakana/fugu-ultra",
@@ -10190,7 +10190,7 @@
     },
     "cohere": {
       "name": "Cohere",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "cohere/north-mini-code:free",
@@ -10356,7 +10356,7 @@
     },
     "z-ai": {
       "name": "Z-Ai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "z-ai/glm-5.2",
@@ -10746,7 +10746,7 @@
     },
     "nvidia": {
       "name": "Nvidia",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nvidia/nemotron-3.5-content-safety:free",
@@ -11072,7 +11072,7 @@
     },
     "minimax": {
       "name": "Minimax",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "minimax/minimax-m3",
@@ -11366,7 +11366,7 @@
     },
     "stepfun": {
       "name": "Stepfun",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "stepfun/step-3.7-flash",
@@ -11436,7 +11436,7 @@
     },
     "perceptron": {
       "name": "Perceptron",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "perceptron/perceptron-mk1",
@@ -11474,7 +11474,7 @@
     },
     "ibm-granite": {
       "name": "Ibm-Granite",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "ibm-granite/granite-4.1-8b",
@@ -11544,7 +11544,7 @@
     },
     "~moonshotai": {
       "name": "~Moonshotai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "~moonshotai/kimi-latest",
@@ -11582,7 +11582,7 @@
     },
     "xiaomi": {
       "name": "Xiaomi",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "xiaomi/mimo-v2.5-pro",
@@ -11652,7 +11652,7 @@
     },
     "arcee-ai": {
       "name": "Arcee-Ai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "arcee-ai/trinity-large-thinking",
@@ -11722,7 +11722,7 @@
     },
     "rekaai": {
       "name": "Rekaai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "rekaai/reka-edge",
@@ -11792,7 +11792,7 @@
     },
     "bytedance-seed": {
       "name": "Bytedance-Seed",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "bytedance-seed/seed-2.0-lite",
@@ -11926,7 +11926,7 @@
     },
     "inception": {
       "name": "Inception",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "inception/mercury-2",
@@ -11964,7 +11964,7 @@
     },
     "upstage": {
       "name": "Upstage",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "upstage/solar-pro-3",
@@ -12002,7 +12002,7 @@
     },
     "writer": {
       "name": "Writer",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "writer/palmyra-x5",
@@ -12040,7 +12040,7 @@
     },
     "relace": {
       "name": "Relace",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "relace/relace-search",
@@ -12110,7 +12110,7 @@
     },
     "amazon": {
       "name": "Amazon",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "amazon/nova-2-lite-v1",
@@ -12276,7 +12276,7 @@
     },
     "allenai": {
       "name": "Allenai",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "allenai/olmo-3-32b-think",
@@ -12314,7 +12314,7 @@
     },
     "deepcogito": {
       "name": "Deepcogito",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "deepcogito/cogito-v2.1-671b",
@@ -12352,7 +12352,7 @@
     },
     "perplexity": {
       "name": "Perplexity",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "perplexity/sonar-pro-search",
@@ -12518,7 +12518,7 @@
     },
     "thedrummer": {
       "name": "Thedrummer",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "thedrummer/cydonia-24b-v4.1",
@@ -12652,7 +12652,7 @@
     },
     "nousresearch": {
       "name": "Nousresearch",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nousresearch/hermes-4-70b",
@@ -12786,7 +12786,7 @@
     },
     "ai21": {
       "name": "Ai21",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "ai21/jamba-large-1.7",
@@ -12824,7 +12824,7 @@
     },
     "bytedance": {
       "name": "Bytedance",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "bytedance/ui-tars-1.5-7b",
@@ -12862,7 +12862,7 @@
     },
     "cognitivecomputations": {
       "name": "Cognitivecomputations",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
@@ -12900,7 +12900,7 @@
     },
     "morph": {
       "name": "Morph",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "morph/morph-v3-large",
@@ -12970,7 +12970,7 @@
     },
     "baidu": {
       "name": "Baidu",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "baidu/ernie-4.5-vl-424b-a47b",
@@ -13008,7 +13008,7 @@
     },
     "microsoft": {
       "name": "Microsoft",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "microsoft/phi-4",
@@ -13142,7 +13142,7 @@
     },
     "sao10k": {
       "name": "Sao10K",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "sao10k/l3.3-euryale-70b",
@@ -13244,7 +13244,7 @@
     },
     "anthracite-org": {
       "name": "Anthracite-Org",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "anthracite-org/magnum-v4-72b",
@@ -13282,7 +13282,7 @@
     },
     "mancer": {
       "name": "Mancer",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "mancer/weaver",
@@ -13320,7 +13320,7 @@
     },
     "undi95": {
       "name": "Undi95",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "undi95/remm-slerp-l2-13b",
@@ -13358,7 +13358,7 @@
     },
     "gryphe": {
       "name": "Gryphe",
-      "image": "./images/falcon.jpeg",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "gryphe/mythomax-l2-13b",

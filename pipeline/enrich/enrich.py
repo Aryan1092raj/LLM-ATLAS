@@ -298,7 +298,7 @@ def _ensure_company(idx_data: dict, vendor_key: str, vendor_label: str) -> str:
         return vendor_key
     companies[vendor_key] = {
         "name": vendor_label,
-        "image": "./images/falcon.jpeg",  # placeholder; commit step can refine later
+        "image": "./images/all_models.png",
         "models": [],
     }
     return vendor_key
