@@ -221,7 +221,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 0 var(--s-4);
 }
 
-.section { padding: var(--s-7) 0; }
+.section { padding: calc(var(--s-7) + 16px) 0 var(--s-7) 0; }
 
 /* --- Focus ring (accessibility) -------------------------------------*/
 

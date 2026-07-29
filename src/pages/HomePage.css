@@ -84,6 +84,55 @@
   box-shadow: var(--clay-shadow-in-sm);
 }
 
+/* --- Company tabs -------------------------------------------------- */
+
+.company-ribbon {
+  margin-top: var(--s-4);
+  padding: var(--s-3) var(--s-4);
+  background: var(--clay-surface-raised);
+  border-radius: var(--r-md);
+  box-shadow: var(--clay-shadow-out-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.company-ribbon::-webkit-scrollbar { height: 6px; }
+
+.company-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 0;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--clay-ink-soft);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-clay);
+  flex-shrink: 0;
+}
+.company-tab:hover {
+  background: rgba(255,255,255,0.55);
+  color: var(--clay-ink);
+}
+.company-tab.is-active {
+  background: var(--clay-surface-raised);
+  color: var(--clay-accent);
+  box-shadow: var(--clay-shadow-in-sm);
+}
+.company-tab__count {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  background: rgba(160, 152, 195, 0.18);
+  padding: 1px 6px;
+  border-radius: var(--r-pill);
+}
+
 /* --- Model grid ---------------------------------------------------- */
 
 .model-grid {

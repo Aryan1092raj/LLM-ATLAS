@@ -17,13 +17,55 @@ export default function HomePage() {
   const { allModels } = useContext(DataContext);
   const [q, setQ] = useState("");
   const [family, setFamily] = useState("all");
+  const [companyTab, setCompanyTab] = useState("all");
 
-  useRevealLive([q, family]);
+  // Dynamically group companies: > 3 models get own tab, <= 3 models under "Others" tab
+  const { minorCompanyKeys, companyTabs } = useMemo(() => {
+    const counts = new Map();
+    const names = new Map();
+    for (const m of allModels) {
+      const key = m.companyKey || "other";
+      const name = m.companyName || "Other";
+      counts.set(key, (counts.get(key) || 0) + 1);
+      names.set(key, name);
+    }
+
+    const major = [];
+    const minorKeys = new Set();
+    let minorTotal = 0;
+
+    for (const [key, cnt] of counts.entries()) {
+      if (cnt > 3) {
+        major.push({ key, name: names.get(key), count: cnt });
+      } else {
+        minorKeys.add(key);
+        minorTotal += cnt;
+      }
+    }
+    major.sort((a, b) => b.count - a.count);
+
+    const tabs = [
+      { id: "all", label: "All Companies", count: allModels.length },
+      ...major.map((c) => ({ id: c.key, label: c.name, count: c.count })),
+      ...(minorTotal > 0 ? [{ id: "others", label: "Others", count: minorTotal }] : [])
+    ];
+
+    return { minorCompanyKeys: minorKeys, companyTabs: tabs };
+  }, [allModels]);
+
+  useRevealLive([q, family, companyTab]);
 
   const filtered = useMemo(() => {
     const ql = q.trim().toLowerCase();
     return allModels.filter((m) => {
       if (family !== "all" && m.family !== family) return false;
+      if (companyTab !== "all") {
+        if (companyTab === "others") {
+          if (!minorCompanyKeys.has(m.companyKey)) return false;
+        } else if (m.companyKey !== companyTab) {
+          return false;
+        }
+      }
       if (!ql) return true;
       return (
         m.name.toLowerCase().includes(ql) ||
@@ -31,7 +73,7 @@ export default function HomePage() {
         (m.aliases || []).some((a) => a.toLowerCase().includes(ql))
       );
     });
-  }, [allModels, q, family]);
+  }, [allModels, q, family, companyTab, minorCompanyKeys]);
 
   const stats = useMemo(() => {
     const total = allModels.length;
@@ -100,6 +142,23 @@ export default function HomePage() {
             aria-pressed={family === f.id}
           >
             {f.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Company Category Tabs */}
+      <div className="company-ribbon fx-rise" role="tablist" aria-label="Company categories">
+        {companyTabs.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            role="tab"
+            aria-selected={companyTab === t.id}
+            className={`company-tab ${companyTab === t.id ? "is-active" : ""}`}
+            onClick={() => setCompanyTab(t.id)}
+          >
+            <span>{t.label}</span>
+            <span className="company-tab__count">{t.count}</span>
           </button>
         ))}
       </div>
