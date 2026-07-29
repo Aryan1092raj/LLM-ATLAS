@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 import { fmtParams, fmtContext, fmtPrice, familyLabel, disclosureLabel } from "../lib/format";
 import "./ModelCard.css";
 
@@ -33,7 +34,6 @@ export function DisclosureChip({ d }) {
 }
 
 export default function ModelCard({ model, onClick }) {
-  const initials = (model.companyName || "?").slice(0, 1).toUpperCase();
   const params = model.architecture_specs?.params_active;
   const ctx = model.architecture_specs?.context_window;
   const price = model.pricing?.[0];
@@ -45,7 +45,7 @@ export default function ModelCard({ model, onClick }) {
   return (
     <Wrapper className="model-card" {...wrapperProps}>
       <div className="model-card__head">
-        <div className="model-card__logo" aria-hidden="true">{initials}</div>
+        <div className="model-card__logo" aria-hidden="true"><Logo size={48} /></div>
         <StatusChip status={model.status} />
       </div>
 

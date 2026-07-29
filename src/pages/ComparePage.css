@@ -35,6 +35,54 @@
 }
 .compare-slot__remove:hover { box-shadow: var(--clay-shadow-press); }
 
+.compare-slots { padding: 20px; margin-bottom: 32px; }
+
+/* ----- Sections (the new comparison blocks) ----------------------------- */
+
+.compare-section {
+  margin-top: 40px;
+  scroll-margin-top: 96px;
+}
+
+.compare-section__title {
+  font-size: 1.4rem;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+  color: var(--clay-ink);
+}
+
+.compare-section__lede {
+  margin: 0 0 var(--s-4);
+  font-size: 0.92rem;
+  color: var(--clay-ink-soft);
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+.compare-diagrams {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: 1fr;
+}
+
+.compare-efficiency {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .compare-diagrams { grid-template-columns: repeat(2, 1fr); }
+  .compare-efficiency { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  .compare-diagrams { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .compare-efficiency { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+}
+
+/* ----- Existing table preservation ------------------------------------- */
+
 .model-card.picker {
   cursor: pointer;
 }

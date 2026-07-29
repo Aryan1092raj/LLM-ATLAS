@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Logo from "./Logo";
 import "./Navbar.css";
 
 /**
@@ -6,7 +7,7 @@ import "./Navbar.css";
  *
  * Props:
  *   items:     [{ id, label, onClick }]   — primary nav items
- *   brand:     { name, onClick, logoText } — brand block
+ *   brand:     { name, onClick } — brand block (logo is rendered from <Logo/>)
  *   cta:       ReactNode                   — right-side call-to-action
  *   activeId:  string                      — id of current section/page
  */
@@ -59,8 +60,8 @@ export default function Navbar({ items = [], brand, cta, activeId }) {
           onClick={brand?.onClick}
           aria-label={`${brand?.name || "Home"} — go to top`}
         >
-          <span className="nav__logo" aria-hidden="true">{brand?.logoText || "L"}</span>
-          <span>{brand?.name || "LLM Explorer"}</span>
+          <span className="nav__logo" aria-hidden="true"><Logo size={36} /></span>
+          <span>{brand?.name || "LLM Atlas"}</span>
         </button>
 
         <div className="nav__links" role="menubar">

@@ -1,7 +1,6 @@
 {
-  "name": "LLM Atlas",
-  "short_name": "LLM Atlas",
-  "description": "Every LLM, explained honestly. Architecture + raw benchmarks + cost.",
+  "name": "MyWebSite",
+  "short_name": "MySite",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,9 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#e8ecf6",
-  "background_color": "#e8ecf6",
-  "display": "standalone",
-  "start_url": "/",
-  "scope": "/"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

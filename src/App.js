@@ -84,7 +84,7 @@ function Shell() {
       <Navbar
         items={navItems}
         activeId={activeId}
-        brand={{ name: "LLM Atlas", logoText: "L", onClick: () => navigate("/") }}
+        brand={{ name: "LLM Atlas", onClick: () => navigate("/") }}
         cta={
           <button
             className="btn btn--accent"

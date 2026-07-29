@@ -1,0 +1,57 @@
+.radar {
+  padding: var(--s-4);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.radar__head { display: flex; flex-direction: column; gap: 2px; }
+.radar__head h3 { margin: 0; font-size: 1.05rem; }
+.radar__sub { margin: 0; font-size: 0.78rem; color: var(--clay-ink-soft); }
+
+.radar__chart { width: 100%; height: 360px; }
+
+.radar__note {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--clay-ink-faint);
+  font-style: italic;
+}
+
+.radar__tooltip {
+  background: var(--clay-surface-raised);
+  box-shadow: var(--clay-shadow-out);
+  border-radius: var(--r-md);
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  min-width: 180px;
+}
+.radar__tooltipTitle {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--clay-ink);
+  text-transform: capitalize;
+}
+.radar__tooltipRow {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 2px 0;
+}
+.radar__tooltipDot { width: 10px; height: 10px; border-radius: 50%; }
+.radar__tooltipName { color: var(--clay-ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.radar__tooltipVal { font-family: var(--font-mono); font-weight: 700; color: var(--clay-ink); }
+
+.radar--empty {
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.radar__emptyIcon { font-size: 2.4rem; color: var(--clay-ink-faint); }
+.radar__emptyTitle { margin: 0; font-size: 1.05rem; }
+.radar__emptyBody { margin: 0; max-width: 420px; color: var(--clay-ink-soft); font-size: 0.9rem; line-height: 1.5; }

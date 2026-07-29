@@ -1,0 +1,70 @@
+.vf {
+  padding: var(--s-4);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.vf__head { display: flex; flex-direction: column; gap: 2px; }
+.vf__head h3 { margin: 0; font-size: 1.05rem; }
+.vf__sub { margin: 0; font-size: 0.78rem; color: var(--clay-ink-soft); }
+
+.vf__chart { width: 100%; }
+
+.vf__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+  font-size: 0.82rem;
+  color: var(--clay-ink-soft);
+  padding-top: var(--s-2);
+  border-top: 1px solid rgba(140, 120, 180, 0.12);
+}
+.vf__legendItem { display: inline-flex; align-items: center; gap: 6px; }
+.vf__legendDot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--clay-ink-faint);
+}
+.vf__legendDot--frontier { background: #66c4b8; border: 2px solid #4a9c91; box-shadow: 0 0 0 2px rgba(102, 196, 184, 0.25); }
+.vf__legendDot--interior { background: #c9bef0; border: 1px solid #8b7cf6; }
+
+.vf__tooltip {
+  background: var(--clay-surface-raised);
+  box-shadow: var(--clay-shadow-out);
+  border-radius: var(--r-md);
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  min-width: 180px;
+}
+.vf__tooltipTitle { font-weight: 700; margin-bottom: 6px; color: var(--clay-ink); }
+.vf__tooltipRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2px 0;
+  color: var(--clay-ink-soft);
+}
+.vf__tooltipVal { font-family: var(--font-mono); font-weight: 700; color: var(--clay-ink); }
+.vf__tooltipStatus {
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: var(--r-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+}
+.vf__tooltipStatus.is-frontier { background: rgba(102, 196, 184, 0.18); color: #4a9c91; }
+.vf__tooltipStatus.is-interior { background: rgba(139, 124, 246, 0.12); color: var(--clay-ink-soft); }
+
+.vf--empty {
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.vf__emptyIcon { font-size: 2.4rem; color: var(--clay-ink-faint); }
+.vf__emptyTitle { margin: 0; font-size: 1.05rem; }
+.vf__emptyBody { margin: 0; max-width: 420px; color: var(--clay-ink-soft); font-size: 0.9rem; line-height: 1.5; }

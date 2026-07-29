@@ -104,3 +104,14 @@ export function disclosureLabel(d) {
     partial: "Partial disclosure"
   }[d] || d;
 }
+
+/**
+ * Format a raw benchmark score for display. ELO/normalised scales detect by range.
+ */
+export function fmtScore(score, name = "") {
+  if (score == null || Number.isNaN(score)) return "—";
+  if (/arena[-_ ]?elo/i.test(name)) return String(Math.round(score));
+  if (score <= 1) return (score * 100).toFixed(2);
+  if (score < 10) return score.toFixed(2);
+  return score.toFixed(1);
+}

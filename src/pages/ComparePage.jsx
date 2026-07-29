@@ -2,7 +2,23 @@ import React, { useContext, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 import { useRevealLive } from "../hooks/useReveal";
-import { fmtParams, fmtContext, fmtPrice, familyLabel, efficiencyScore, pickHeadlineBenchmark, blendedCost, valueFrontier } from "../lib/format";
+import {
+  fmtParams,
+  fmtContext,
+  fmtPrice,
+  familyLabel,
+  efficiencyScore,
+  pickHeadlineBenchmark,
+  blendedCost,
+  disclosureLabel,
+  fmtScore
+} from "../lib/format";
+import Logo from "../components/Logo";
+import ComparisonDiagram from "../components/ComparisonDiagram";
+import BenchmarkRadar from "../components/BenchmarkRadar";
+import CostBarChart from "../components/CostBarChart";
+import ValueFrontierChart from "../components/ValueFrontierChart";
+import EfficiencyScoreCard from "../components/EfficiencyScoreCard";
 import "./ComparePage.css";
 
 const MAX_SLOTS = 4;
@@ -25,6 +41,14 @@ export default function ComparePage() {
   );
 
   const frontier = useMemo(() => valueFrontier(allModels), [allModels]);
+
+  const efficiencyRanked = useMemo(() => {
+    const scored = selected
+      .map((m) => ({ m, e: efficiencyScore(m) }))
+      .filter((x) => x.e != null)
+      .sort((a, b) => b.e - a.e);
+    return scored.map((x) => x.m);
+  }, [selected]);
 
   const updateIds = (next) => {
     setIds(next);
@@ -50,41 +74,114 @@ export default function ComparePage() {
       <header className="fx-rise" style={{ marginBottom: 24 }}>
         <h1>Compare models</h1>
         <p style={{ color: "var(--clay-ink-soft)", marginTop: 6, maxWidth: 640 }}>
-          Pick up to {MAX_SLOTS} models. We render architecture, benchmarks and pricing side by side — no composites, no blending.
+          Pick up to {MAX_SLOTS} models. Architecture, raw benchmarks, and pricing side by side — no composites, no blending.
         </p>
       </header>
 
       {selected.length === 0 ? (
         <EmptyState />
       ) : (
-        <div className="clay clay--lg fx-rise" style={{ padding: 20, marginBottom: 32 }}>
-          <div className="compare-slot-grid">
-            {Array.from({ length: MAX_SLOTS }).map((_, i) => {
-              const m = selected[i];
-              if (m) {
+        <>
+          <div className="clay clay--lg fx-rise compare-slots">
+            <div className="compare-slot-grid">
+              {Array.from({ length: MAX_SLOTS }).map((_, i) => {
+                const m = selected[i];
+                if (m) {
+                  return (
+                    <div key={m.id} className="compare-slot compare-slot--filled">
+                      <button className="compare-slot__remove" onClick={() => removeAt(i)} aria-label={`Remove ${m.name}`}>×</button>
+                      <div className="compare-slot__title">{m.name}</div>
+                      <div className="compare-slot__org">{m.companyName}</div>
+                      {frontier.has(m.id) && (
+                        <span className="chip chip--ok" style={{ marginTop: 8 }}>Value frontier</span>
+                      )}
+                    </div>
+                  );
+                }
                 return (
-                  <div key={m.id} className="compare-slot compare-slot--filled">
-                    <button className="compare-slot__remove" onClick={() => removeAt(i)} aria-label={`Remove ${m.name}`}>×</button>
-                    <div className="compare-slot__title">{m.name}</div>
-                    <div className="compare-slot__org">{m.companyName}</div>
-                    {frontier.has(m.id) && (
-                      <span className="chip chip--ok" style={{ marginTop: 8 }}>Value frontier</span>
-                    )}
+                  <div key={`empty-${i}`} className="compare-slot compare-slot--empty">
+                    <span>Empty slot</span>
                   </div>
                 );
-              }
-              return (
-                <div key={`empty-${i}`} className="compare-slot compare-slot--empty">
-                  <span>Empty slot</span>
-                </div>
-              );
-            })}
+              })}
+            </div>
           </div>
-        </div>
-      )}
 
-      {selected.length > 0 && (
-        <CompareTable models={selected} frontier={frontier} />
+          <section className="compare-section fx-rise" aria-labelledby="arch-head">
+            <h2 id="arch-head" className="compare-section__title">Architecture</h2>
+            <p className="compare-section__lede">
+              Drawn from each model's published specs. Closed / undisclosed models show as a dashed block — no inventing.
+            </p>
+            <div className="compare-diagrams">
+              {selected.map((m) => (
+                <ComparisonDiagram
+                  key={m.id}
+                  model={m}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="compare-section fx-rise" aria-labelledby="es-head">
+            <h2 id="es-head" className="compare-section__title">Efficiency score</h2>
+            <p className="compare-section__lede">
+              benchmark score ÷ active parameters (in billions). Rewards sparse / efficient designs, not brute-force scale.
+            </p>
+            <div className="compare-efficiency">
+              {efficiencyRanked.length > 0 ? (
+                efficiencyRanked.map((m, i) => (
+                  <EfficiencyScoreCard
+                    key={m.id}
+                    model={m}
+                    rank={i}
+                    total={efficiencyRanked.length}
+                  />
+                ))
+              ) : (
+                selected.map((m) => (
+                  <EfficiencyScoreCard
+                    key={m.id}
+                    model={m}
+                    rank={0}
+                    total={selected.length}
+                  />
+                ))
+              )}
+            </div>
+          </section>
+
+          <section className="compare-section fx-rise" aria-labelledby="bench-head">
+            <h2 id="bench-head" className="compare-section__title">Benchmarks</h2>
+            <p className="compare-section__lede">
+              Radar of raw benchmark scores. Each axis is normalized to the best score in this selection.
+            </p>
+            <BenchmarkRadar models={selected} />
+          </section>
+
+          <section className="compare-section fx-rise" aria-labelledby="cost-head">
+            <h2 id="cost-head" className="compare-section__title">Cost</h2>
+            <p className="compare-section__lede">
+              USD per 1M tokens, log scale. Blended = 25% input + 75% output. Latency isn't measured yet.
+            </p>
+            <CostBarChart models={selected} />
+          </section>
+
+          <section className="compare-section fx-rise" aria-labelledby="vf-head">
+            <h2 id="vf-head" className="compare-section__title">Value frontier</h2>
+            <p className="compare-section__lede">
+              Pareto set over quality vs. cost. Circled points are undominated — nothing in the selection beats them on both axes.
+            </p>
+            <ValueFrontierChart models={selected} frontier={frontier} />
+          </section>
+
+          <section className="compare-section fx-rise" aria-labelledby="specs-head">
+            <h2 id="specs-head" className="compare-section__title">Specs (raw)</h2>
+            <p className="compare-section__lede">
+              Every published field, no normalization. Numbers come straight from the source.
+            </p>
+            <CompareTable models={selected} frontier={frontier} />
+          </section>
+        </>
       )}
 
       <section style={{ marginTop: 40 }}>
@@ -124,6 +221,10 @@ function CompareTable({ models, frontier }) {
             {models.map((m) => <td key={m.id}>{familyLabel(m.family)}</td>)}
           </tr>
           <tr>
+            <td>Disclosure</td>
+            {models.map((m) => <td key={m.id}>{disclosureLabel(m.disclosure)}</td>)}
+          </tr>
+          <tr>
             <td>Total params</td>
             {models.map((m) => <td key={m.id}>{fmtParams(m.architecture_specs?.params_total)}</td>)}
           </tr>
@@ -144,7 +245,7 @@ function CompareTable({ models, frontier }) {
             {models.map((m) => <td key={m.id} style={{ fontSize: "0.85rem", color: "var(--clay-ink-soft)" }}>{m.architecture_specs?.license ?? "—"}</td>)}
           </tr>
 
-          <tr className="row-label"><td>Derived metrics</td>{models.map(() => <td key={Math.random()}></td>)}</tr>
+          <tr className="row-label"><td>Derived metrics</td>{models.map((m) => <td key={m.id}></td>)}</tr>
           <tr>
             <td>Efficiency score</td>
             {models.map((m) => {
@@ -156,7 +257,8 @@ function CompareTable({ models, frontier }) {
             <td>Headline score</td>
             {models.map((m) => {
               const h = pickHeadlineBenchmark(m.benchmarks || []);
-              return <td key={m.id} style={{ fontFamily: "var(--font-mono)", fontWeight: 700 }}>{h != null ? Math.round(h) : "—"}</td>;
+              const bn = (m.benchmarks || []).find((b) => b.score === h)?.benchmark_name || "";
+              return <td key={m.id} style={{ fontFamily: "var(--font-mono)", fontWeight: 700 }}>{h != null ? fmtScore(h, bn) : "—"}</td>;
             })}
           </tr>
           <tr>
@@ -170,7 +272,7 @@ function CompareTable({ models, frontier }) {
             ))}
           </tr>
 
-          <tr className="row-label"><td>Pricing (USD / 1M tokens)</td>{models.map(() => <td key={Math.random()}></td>)}</tr>
+          <tr className="row-label"><td>Pricing (USD / 1M tokens)</td>{models.map((m) => <td key={m.id}></td>)}</tr>
           <tr>
             <td>Input</td>
             {models.map((m) => <td key={m.id} style={{ fontFamily: "var(--font-mono)" }}>{m.pricing?.[0] ? fmtPrice(m.pricing[0].input_price_per_m) : "—"}</td>)}
@@ -187,7 +289,7 @@ function CompareTable({ models, frontier }) {
             })}
           </tr>
 
-          <tr className="row-label"><td>Benchmarks (raw)</td>{models.map(() => <td key={Math.random()}></td>)}</tr>
+          <tr className="row-label"><td>Benchmarks (raw)</td>{models.map((m) => <td key={m.id}></td>)}</tr>
           {unionBenchmarks(models).map((bn) => (
             <tr key={bn}>
               <td>{bn}</td>
@@ -195,7 +297,7 @@ function CompareTable({ models, frontier }) {
                 const b = (m.benchmarks || []).find((x) => x.benchmark_name === bn);
                 return (
                   <td key={m.id} style={{ fontFamily: "var(--font-mono)", fontWeight: 600 }}>
-                    {b ? formatScore(b.score, bn) : <span style={{ color: "var(--clay-ink-faint)" }}>—</span>}
+                    {b ? fmtScore(b.score, bn) : <span style={{ color: "var(--clay-ink-faint)" }}>—</span>}
                   </td>
                 );
               })}
@@ -207,17 +309,30 @@ function CompareTable({ models, frontier }) {
   );
 }
 
+function valueFrontier(models) {
+  const pts = models
+    .map((m) => ({ id: m.id, cost: blendedCost(m), quality: pickHeadlineBenchmark(m.benchmarks || []) }))
+    .filter((p) => p.cost != null && p.quality != null);
+
+  const frontier = new Set();
+  for (const p of pts) {
+    let dominated = false;
+    for (const q of pts) {
+      if (q === p) continue;
+      if (q.cost <= p.cost && q.quality >= p.quality && (q.cost < p.cost || q.quality > p.quality)) {
+        dominated = true;
+        break;
+      }
+    }
+    if (!dominated) frontier.add(p.id);
+  }
+  return frontier;
+}
+
 function unionBenchmarks(models) {
   const set = new Set();
   models.forEach((m) => (m.benchmarks || []).forEach((b) => set.add(b.benchmark_name)));
   return Array.from(set).sort();
-}
-
-function formatScore(score, name) {
-  if (/arena[-_ ]?elo/i.test(name)) return Math.round(score);
-  if (score <= 1) return (score * 100).toFixed(2);
-  if (score < 10) return score.toFixed(2);
-  return score.toFixed(1);
 }
 
 function ModelPickerGrid({ allModels, selectedIds, onToggle, disabled }) {
@@ -255,7 +370,7 @@ function ModelPickerGrid({ allModels, selectedIds, onToggle, disabled }) {
               aria-pressed={isSel}
             >
               <div className="model-card__head">
-                <div className="model-card__logo" aria-hidden="true">{(m.companyName || "?").slice(0, 1).toUpperCase()}</div>
+                <div className="model-card__logo" aria-hidden="true"><Logo size={48} /></div>
                 {isSel && <span className="chip chip--ok">Selected</span>}
               </div>
               <div>
@@ -276,7 +391,7 @@ function EmptyState() {
       <div style={{ fontSize: "2.4rem", marginBottom: 12 }} aria-hidden="true">⚖️</div>
       <h3>Pick up to 4 models to compare</h3>
       <p style={{ color: "var(--clay-ink-soft)", marginTop: 8, maxWidth: 480, margin: "8px auto 0" }}>
-        Tap a model card below. We'll line up architecture, raw benchmarks and pricing side by side.
+        Tap a model card below. We'll line up architecture, raw benchmarks, efficiency, value frontier, and pricing — side by side.
       </p>
     </div>
   );

@@ -34,13 +34,9 @@
 .nav__logo {
   width: 36px; height: 36px;
   display: grid; place-items: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #b3a7ff 0%, #84e3d2 100%);
-  color: #fff;
-  font-weight: 800;
-  box-shadow: var(--clay-shadow-out-sm);
-  font-family: var(--font-mono);
+  flex-shrink: 0;
 }
+.nav__logo svg { display: block; }
 
 .nav__links {
   display: flex;
