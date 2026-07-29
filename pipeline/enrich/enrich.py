@@ -62,13 +62,12 @@ def classify_family(name: str, config: dict | None, raw: dict | None) -> str:
             return "looped"
 
     # Name-pattern fallbacks.
-    if "mamba" in n or "falcon3-mamba" in n:
-        return "hybrid_attention_ssm"
-    if "mixtral" in n or "moe" in n or "deepseek-v" in n and "lite" not in n:
-        # DeepSeek V3 / R1 are MoE; cheap dense variants are exceptions.
-        if "lite" not in n and "tiny" not in n:
+    if any(k in n for k in ("mixtral", "moe", "dbrx", "deepseek-v3", "deepseek v3", "deepseek-r1", "deepseek r1", "deepseek-v4", "deepseek v4")) or __import__("re").search(r'\d+b[_-]?a\d+b', n):
+        if not any(k in n for k in ("lite", "tiny", "distill", "math-7b", "math-1.5b")):
             return "moe"
-    if any(k in n for k in ("nanbeige", "rwkv", "mamba")):
+    if "mamba" in n or "falcon3-mamba" in n or "jamba" in n:
+        return "hybrid_attention_ssm"
+    if any(k in n for k in ("nanbeige", "rwkv")):
         return "looped" if "nanbeige" in n else "hybrid_attention_ssm"
     if any(k in n for k in ("gpt-4o", "claude", "gemini", "4o", "vision")):
         return "multimodal"

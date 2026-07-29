@@ -1,0 +1,4 @@
+/data.json
+  Cache-Control: no-cache
+/pipeline_runs.jsonl
+  Cache-Control: no-cache

@@ -28,6 +28,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_RAW = ROOT / "data" / "raw"
 DATA_PROCESSED = ROOT / "data" / "processed"
 PIPELINE_LOG = DATA_PROCESSED / "pipeline_runs.jsonl"
+PUBLIC_PIPELINE_LOG = ROOT / "public" / "pipeline_runs.jsonl"
 # Canonical dataset lives in public/ (what the frontend serves) and is the
 # source of truth. Pipeline writes back to it after enrichment.
 CANONICAL_PATH = ROOT / "public" / "data.json"
@@ -98,11 +99,17 @@ class RunStats:
 
 
 def write_run(stats: RunStats) -> None:
-    """Append a run record to pipeline_runs.jsonl (one JSON object per line)."""
+    """Append a run record to pipeline_runs.jsonl (one JSON object per line) and sync to public/."""
     stats.finished_at = now()
     DATA_PROCESSED.mkdir(parents=True, exist_ok=True)
     with PIPELINE_LOG.open("a", encoding="utf-8") as f:
         f.write(json.dumps(stats.to_dict(), ensure_ascii=False) + "\n")
+    try:
+        import shutil
+        PUBLIC_PIPELINE_LOG.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(PIPELINE_LOG, PUBLIC_PIPELINE_LOG)
+    except Exception as e:
+        log.warning("failed to sync pipeline_runs.jsonl to public/: %s", e)
     log.info("run logged: %s (new=%d matched=%d errors=%d)",
              stats.source, stats.new_models_found, stats.matched_to_existing, len(stats.errors))
 

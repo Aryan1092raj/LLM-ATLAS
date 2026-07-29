@@ -21,8 +21,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "validate-ids": "python3 scripts/validate_curated_ids.py",
+    "prebuild": "python3 scripts/validate_curated_ids.py",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "seed": "node scripts/seed-data.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

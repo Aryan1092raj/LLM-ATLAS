@@ -41,15 +41,21 @@ jobs:
           python run.py
         continue-on-error: false
 
-      - name: check pipeline_runs.jsonl
+      - name: check and sync pipeline_runs.jsonl
         if: always()
         run: |
           if [ ! -s data/processed/pipeline_runs.jsonl ]; then
             echo "::error::pipeline_runs.jsonl is missing or empty"
             exit 1
           fi
+          cp data/processed/pipeline_runs.jsonl public/pipeline_runs.jsonl
           echo "pipeline_runs.jsonl last entry:"
           tail -1 data/processed/pipeline_runs.jsonl
+
+      - name: validate curated model ids
+        if: always() && steps.run.outcome == 'success'
+        run: |
+          python scripts/validate_curated_ids.py
 
       - name: detect anomalies
         if: always() && steps.run.outcome == 'success'
@@ -76,7 +82,7 @@ jobs:
         run: |
           git config user.name "pipeline-bot"
           git config user.email "noreply@commandcode.ai"
-          git add public/data.json data/processed/ data/raw/
+          git add public/data.json public/pipeline_runs.jsonl data/processed/ data/raw/
           if git diff --cached --quiet; then
             echo "no changes to commit"
             exit 0
@@ -84,6 +90,7 @@ jobs:
           git commit -m "pipeline: daily ingestion $(date -u +%Y-%m-%d)
 
           - updated public/data.json with auto-discovered models
+          - synced public/pipeline_runs.jsonl
           - raw snapshots under data/raw/<source>/<date>.json
           - pipeline run log appended to data/processed/pipeline_runs.jsonl
 

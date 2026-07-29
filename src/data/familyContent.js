@@ -54,7 +54,7 @@ export const FAMILY_CONTENT = {
       "Routing introduces tail-latency and load-balancing variance between requests",
       "Harder to fine-tune on small datasets — router can collapse to a few experts"
     ],
-    signatureModelIds: ["mistralai/mixtral-8x7b-instruct", "deepseek/deepseek-chat-v3", "qwen/qwen3-235b-a22b"]
+    signatureModelIds: ["mistralai/mixtral-8x7b-instruct", "deepseek/deepseek-chat-v3.1", "qwen/qwen3-235b-a22b"]
   },
 
   hybrid_attention_ssm: {
@@ -75,7 +75,7 @@ export const FAMILY_CONTENT = {
       "Newer paradigm — less mature serving infrastructure than dense/MoE",
       "Recurrent state makes some batching / parallelism patterns harder"
     ],
-    signatureModelIds: ["ai21/jamba-1.5-large", "qwen/qwen3-next-80b-a3b-instruct", "meta-llama/llama-4-scout"]
+    signatureModelIds: ["ai21/jamba-large-1.7", "qwen/qwen3-next-80b-a3b-instruct", "meta-llama/llama-4-scout"]
   },
 
   looped: {
@@ -96,7 +96,7 @@ export const FAMILY_CONTENT = {
       "Loop-depth hyperparameter adds a tuning axis most dense stacks don't have",
       "Limited evidence at the >7B scale — design still mostly confined to small models"
     ],
-    signatureModelIds: ["nanbeige/nanbeige4-3b"]
+    signatureModelIds: ["nanbeige/nanbeige4.2-3b"]
   },
 
   multimodal: {
@@ -117,7 +117,7 @@ export const FAMILY_CONTENT = {
       "Adapter design varies wildly across vendors (no standard)",
       "Closed multimodal models usually have undisclosed modality encoder details"
     ],
-    signatureModelIds: ["openai/gpt-4o", "anthropic/claude-3.5-sonnet", "google/gemini-2.5-pro"]
+    signatureModelIds: ["openai/gpt-4o", "anthropic/claude-3-sonnet", "google/gemini-2.5-pro"]
   }
 };
 
