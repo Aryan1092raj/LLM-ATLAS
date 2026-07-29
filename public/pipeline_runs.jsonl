@@ -1,0 +1,6 @@
+{"source": "openrouter", "started_at": "2026-07-29T02:00:48Z", "finished_at": "2026-07-29T02:00:48Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-29T02:00:48Z", "finished_at": "2026-07-29T02:01:05Z", "new_models_found": 0, "matched_to_existing": 3000, "errors": []}
+{"source": "leaderboard", "started_at": "2026-07-29T02:01:05Z", "finished_at": "2026-07-29T02:01:22Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "arena", "started_at": "2026-07-29T02:01:22Z", "finished_at": "2026-07-29T02:01:46Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: arena mirror unreachable (GET https://api.wulong.dev/v1/leaderboard failed after 3 attempts: HTTP Error 404: Not Found)"]}
+{"source": "normalize", "started_at": "2026-07-29T02:01:46Z", "finished_at": "2026-07-29T02:01:47Z", "new_models_found": 1783, "matched_to_existing": 16, "errors": []}
+{"source": "enrich", "started_at": "2026-07-29T02:01:47Z", "finished_at": "2026-07-29T02:01:49Z", "new_models_found": 379, "matched_to_existing": 0, "errors": []}

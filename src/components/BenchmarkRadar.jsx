@@ -10,14 +10,10 @@ import {
   ResponsiveContainer
 } from "recharts";
 import { fmtScore } from "../lib/format";
+import { seriesColors } from "../lib/palette";
 import "./BenchmarkRadar.css";
 
-const PALETTE = [
-  "#8b7cf6",
-  "#66c4b8",
-  "#ff9aa8",
-  "#f6b66b"
-];
+const PALETTE = seriesColors(4);
 
 const SHORT = {
   "mmlu": "MMLU",

@@ -10,7 +10,13 @@ import {
   ResponsiveContainer
 } from "recharts";
 import { fmtPrice, pickHeadlineBenchmark } from "../lib/format";
+import { CB_PALETTE } from "../lib/palette";
 import "./ValueFrontierChart.css";
+
+const COLOR_INTERIOR = CB_PALETTE[7]; // grey
+const COLOR_INTERIOR_STROKE = CB_PALETTE[4]; // blue
+const COLOR_FRONTIER = CB_PALETTE[2]; // bluish green
+const COLOR_FRONTIER_STROKE = "#00724a";
 
 /**
  * Pareto plot of quality (Y) vs blended cost (X). Frontier points are circled.
@@ -92,18 +98,18 @@ export default function ValueFrontierChart({ models, frontier }) {
             <Scatter
               name="Interior"
               data={interiorPts}
-              fill="#c9bef0"
+              fill={COLOR_INTERIOR}
               fillOpacity={0.7}
-              stroke="#8b7cf6"
+              stroke={COLOR_INTERIOR_STROKE}
               strokeWidth={1}
               isAnimationActive={false}
             />
             <Scatter
               name="Frontier"
               data={frontierPts}
-              fill="#66c4b8"
+              fill={COLOR_FRONTIER}
               fillOpacity={0.85}
-              stroke="#4a9c91"
+              stroke={COLOR_FRONTIER_STROKE}
               strokeWidth={2.5}
               isAnimationActive={false}
               shape={FrontierDot}
@@ -129,8 +135,8 @@ export default function ValueFrontierChart({ models, frontier }) {
 function FrontierDot({ cx, cy, payload }) {
   return (
     <g>
-      <circle cx={cx} cy={cy} r={14} fill="none" stroke="#66c4b8" strokeWidth={2} strokeDasharray="2 3" />
-      <circle cx={cx} cy={cy} r={6} fill="#66c4b8" stroke="#4a9c91" strokeWidth={2} />
+      <circle cx={cx} cy={cy} r={14} fill="none" stroke={COLOR_FRONTIER} strokeWidth={2} strokeDasharray="2 3" />
+      <circle cx={cx} cy={cy} r={6} fill={COLOR_FRONTIER} stroke={COLOR_FRONTIER_STROKE} strokeWidth={2} />
     </g>
   );
 }

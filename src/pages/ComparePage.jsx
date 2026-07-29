@@ -69,10 +69,33 @@ export default function ComparePage() {
     updateIds(next);
   };
 
+  const coverage = useMemo(() => {
+    const total = allModels.length;
+    let benchmarked = 0;
+    for (const m of allModels) {
+      if ((m.benchmarks || []).length > 0) benchmarked++;
+    }
+    return { total, benchmarked, pending: total - benchmarked };
+  }, [allModels]);
+
   return (
     <div className="section fx-fade compare-page">
       <header className="fx-rise" style={{ marginBottom: 24 }}>
-        <h1>Compare models</h1>
+        <div className="compare-coverage">
+          <span className="compare-coverage__chip">
+            <strong>{coverage.total}</strong> models
+          </span>
+          <span className="compare-coverage__chip is-good">
+            <strong>{coverage.benchmarked}</strong> benchmarked
+          </span>
+          <span
+            className="compare-coverage__chip is-pending"
+            title="Newly-released models often take weeks to accumulate Arena votes and Open LLM Leaderboard data."
+          >
+            <strong>{coverage.pending}</strong> benchmarks pending
+          </span>
+        </div>
+        <h1 style={{ marginTop: 14 }}>Compare models</h1>
         <p style={{ color: "var(--clay-ink-soft)", marginTop: 6, maxWidth: 640 }}>
           Pick up to {MAX_SLOTS} models. Architecture, raw benchmarks, and pricing side by side — no composites, no blending.
         </p>

@@ -10,7 +10,12 @@ import {
   ResponsiveContainer
 } from "recharts";
 import { fmtPrice } from "../lib/format";
+import { CB_PALETTE } from "../lib/palette";
 import "./CostBarChart.css";
+
+const COLOR_INPUT = CB_PALETTE[4];    // blue
+const COLOR_OUTPUT = CB_PALETTE[2];   // bluish green
+const COLOR_BLENDED = CB_PALETTE[5];  // vermilion
 
 /**
  * Horizontal-grouped bar of input / output / blended cost per 1M tokens.
@@ -89,9 +94,9 @@ export default function CostBarChart({ models }) {
             />
             <Tooltip content={<CostTooltip />} cursor={{ fill: "rgba(140, 120, 180, 0.08)" }} />
             <Legend iconType="square" iconSize={10} wrapperStyle={{ fontSize: 12, paddingTop: 6 }} />
-            <Bar dataKey="input" name="Input" fill="#8b7cf6" radius={[0, 6, 6, 0]} isAnimationActive={false} />
-            <Bar dataKey="output" name="Output" fill="#66c4b8" radius={[0, 6, 6, 0]} isAnimationActive={false} />
-            <Bar dataKey="blended" name="Blended 25/75" fill="#ff9aa8" radius={[0, 6, 6, 0]} isAnimationActive={false} />
+            <Bar dataKey="input" name="Input" fill={COLOR_INPUT} radius={[0, 6, 6, 0]} isAnimationActive={false} />
+            <Bar dataKey="output" name="Output" fill={COLOR_OUTPUT} radius={[0, 6, 6, 0]} isAnimationActive={false} />
+            <Bar dataKey="blended" name="Blended 25/75" fill={COLOR_BLENDED} radius={[0, 6, 6, 0]} isAnimationActive={false} />
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -115,17 +120,17 @@ function CostTooltip({ active, payload }) {
     <div className="costbar__tooltip">
       <div className="costbar__tooltipTitle">{row?.name}</div>
       <div className="costbar__tooltipRow">
-        <span className="costbar__tooltipDot" style={{ background: "#8b7cf6" }} />
+        <span className="costbar__tooltipDot" style={{ background: COLOR_INPUT }} />
         <span>Input</span>
         <span className="costbar__tooltipVal">{row?._hasInput ? fmtPrice(row.input) : "—"}</span>
       </div>
       <div className="costbar__tooltipRow">
-        <span className="costbar__tooltipDot" style={{ background: "#66c4b8" }} />
+        <span className="costbar__tooltipDot" style={{ background: COLOR_OUTPUT }} />
         <span>Output</span>
         <span className="costbar__tooltipVal">{row?._hasOutput ? fmtPrice(row.output) : "—"}</span>
       </div>
       <div className="costbar__tooltipRow">
-        <span className="costbar__tooltipDot" style={{ background: "#ff9aa8" }} />
+        <span className="costbar__tooltipDot" style={{ background: COLOR_BLENDED }} />
         <span>Blended</span>
         <span className="costbar__tooltipVal">{row?._hasBlended ? `$${row.blended.toFixed(3)}` : "—"}</span>
       </div>

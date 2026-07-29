@@ -87,3 +87,10 @@ favicon.zip
 /tmp/
 /scratch/
 docs/
+
+# --- Dev throwaway screenshots / debug captures --------------------
+/public/tmp_check-*.png
+/public/tmp_*.png
+/public/check_*.png
+/public/debug_*.png
+/public/screenshot-*.png

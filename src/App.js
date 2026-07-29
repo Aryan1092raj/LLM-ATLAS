@@ -12,6 +12,10 @@ import CompanyPage from "./pages/CompanyPage";
 import ModelDetailPage from "./pages/ModelDetailPage";
 import ComparePage from "./pages/ComparePage";
 import MethodologyPage from "./pages/MethodologyPage";
+import FamiliesPage from "./pages/FamiliesPage";
+import FamilyExplainerPage from "./pages/FamilyExplainerPage";
+import TimelinePage from "./pages/TimelinePage";
+import ChangelogPage from "./pages/ChangelogPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import { DataContext } from "./context/DataContext";
 
@@ -55,13 +59,19 @@ function Shell() {
   const navItems = [
     { id: "home", label: "Home", onClick: () => navigate("/") },
     { id: "compare", label: "Compare", onClick: () => navigate("/compare") },
-    { id: "methodology", label: "Methodology", onClick: () => navigate("/methodology") }
+    { id: "families", label: "Families", onClick: () => navigate("/families") },
+    { id: "timeline", label: "Timeline", onClick: () => navigate("/timeline") },
+    { id: "methodology", label: "Methodology", onClick: () => navigate("/methodology") },
+    { id: "changelog", label: "Changelog", onClick: () => navigate("/changelog") }
   ];
 
   const activeId = (() => {
     const p = location.pathname;
     if (p.startsWith("/compare")) return "compare";
+    if (p.startsWith("/families") || p.startsWith("/family/")) return "families";
+    if (p.startsWith("/timeline")) return "timeline";
     if (p.startsWith("/methodology")) return "methodology";
+    if (p.startsWith("/changelog")) return "changelog";
     if (p === "/" || p === "") return "home";
     return "";
   })();
@@ -101,7 +111,11 @@ function Shell() {
           <Route path="/company/:companyKey" element={<CompanyPage />} />
           <Route path="/model/:modelId" element={<ModelDetailPage />} />
           <Route path="/compare" element={<ComparePage />} />
+          <Route path="/families" element={<FamiliesPage />} />
+          <Route path="/family/:familyId" element={<FamilyExplainerPage />} />
+          <Route path="/timeline" element={<TimelinePage />} />
           <Route path="/methodology" element={<MethodologyPage />} />
+          <Route path="/changelog" element={<ChangelogPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

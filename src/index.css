@@ -24,6 +24,13 @@
   --clay-danger: #e76f7d;
   --clay-pending: #b39bd8;
 
+  /* --- Colorblind-safe family palette (Wong 2011) --------------------*/
+  --cb-dense:     #0072B2; /* blue */
+  --cb-moe:       #D55E00; /* vermilion */
+  --cb-hybrid:    #009E73; /* bluish green */
+  --cb-looped:    #CC79A7; /* reddish purple */
+  --cb-multimodal:#E69F00; /* orange */
+
   /* --- Shadows (the heart of clay) ----------------------------------*/
   --clay-shadow-out:
     9px 9px 22px rgba(160, 152, 195, 0.45),
