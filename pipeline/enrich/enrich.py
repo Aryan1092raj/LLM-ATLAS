@@ -147,6 +147,29 @@ class NewModelDraft:
     pricing: list[dict]
 
 
+OPEN_WEIGHT_VENDORS = {
+    "meta", "meta-llama", "qwen", "mistral", "mistralai", "deepseek", "deepseek-ai",
+    "google-open", "falcon", "tiiuae", "nanbeige", "microsoft",
+    "01-ai", "nousresearch", "allenai", "bytedance", "bigcode", "stability", "rwkv"
+}
+
+OPEN_WEIGHT_KEYWORDS = [
+    "llama", "qwen", "mistral", "mixtral", "deepseek", "gemma", "falcon",
+    "phi-", "phi3", "phi4", "yi-", "starcoder", "hermes", "nanbeige", "rwkv", "mamba", "vicuna"
+]
+
+CLOSED_OVERRIDE_KEYWORDS = ["gpt-", "claude-", "gemini-1", "gemini-2", "o1-", "o3-", "glm-"]
+
+
+def is_open_weight_model(raw_id: str, name: str, vendor: str) -> bool:
+    rid = (raw_id or "").lower()
+    nm = (name or "").lower()
+    v = (vendor or "").lower()
+    if any(c in rid or c in nm for c in CLOSED_OVERRIDE_KEYWORDS) and not any(k in rid or k in nm for k in ("llama", "gemma", "qwen", "deepseek", "mistral")):
+        return False
+    return v in OPEN_WEIGHT_VENDORS or any(k in rid or k in nm for k in OPEN_WEIGHT_KEYWORDS)
+
+
 def build_draft(candidate: dict, idx_data: dict) -> NewModelDraft:
     raw_id = candidate["raw_id"]
     name = candidate["name"]
@@ -158,6 +181,14 @@ def build_draft(candidate: dict, idx_data: dict) -> NewModelDraft:
     if config is not None:
         config["_model_id"] = raw_id
         specs = extract_specs(config, fetched_at)
+        disclosure = "open_weight"
+    elif is_open_weight_model(raw_id, name, vendor):
+        specs = {
+            "disclosure": "open_weight",
+            "context_window": None,
+            "license": "Open Source / Check Repo",
+            "fetched_at": fetched_at,
+        }
         disclosure = "open_weight"
     else:
         specs = {
