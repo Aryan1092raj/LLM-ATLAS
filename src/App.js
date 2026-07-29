@@ -76,6 +76,18 @@ function Shell() {
     return "";
   })();
 
+  useEffect(() => {
+    const p = location.pathname;
+    if (p.startsWith("/timeline")) document.title = "LLM Timeline & Milestones — LLM Atlas";
+    else if (p.startsWith("/family/")) document.title = `${p.split("/family/")[1].replace(/_/g, " ").toUpperCase()} Architecture — LLM Atlas`;
+    else if (p.startsWith("/families")) document.title = "Architecture Families — LLM Atlas";
+    else if (p.startsWith("/compare")) document.title = "Compare LLMs Side-by-Side — LLM Atlas";
+    else if (p.startsWith("/methodology")) document.title = "Methodology & Scoring — LLM Atlas";
+    else if (p.startsWith("/changelog")) document.title = "Ingestion Pipeline Log & Changelog — LLM Atlas";
+    else if (p.startsWith("/model/")) document.title = `${decodeURIComponent(p.replace("/model/", ""))} — LLM Atlas`;
+    else document.title = "LLM Atlas — Architecture & Benchmarks, Honestly";
+  }, [location.pathname]);
+
   if (loading) return <LoadingScreen />;
   if (error) {
     return (
