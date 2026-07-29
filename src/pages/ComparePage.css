@@ -1,3 +1,18 @@
+.compare-coverage {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: -4px;
+}
+.compare-coverage__chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  background: var(--clay-surface-raised);
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--clay-ink-soft);
+  box-shadow: var(--clay-shadow-out-sm);
+}
+.compare-coverage__chip.is-good { color: #1f7a55; background: #cdeedb; }
+.compare-coverage__chip.is-pending { color: #5e4b87; background: #e0d6f3; cursor: help; }
+
 .compare-slot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
