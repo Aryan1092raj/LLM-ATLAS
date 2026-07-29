@@ -115,7 +115,7 @@ export default function ModelDetailPage() {
 
       <section className="fx-reveal">
         <h2 style={{ marginBottom: 12 }}>Architecture diagram</h2>
-        <DiagramSlot name={model.name} />
+        <DiagramSlot model={model} />
       </section>
 
       {/* Compare CTA */}
@@ -145,23 +145,22 @@ function Metric({ label, value, hint }) {
 }
 
 /**
- * DiagramSlot — best-effort load of the original React Flow component
- * from the forked repo. If it doesn't exist for this model, we render
- * a graceful fallback so the page never looks broken (TRD NFR-6).
+ * DiagramSlot — loads the interactive architecture diagram component
+ * from DiagramRegistry. Guaranteed coverage for all models across families.
  */
-function DiagramSlot({ name }) {
+function DiagramSlot({ model }) {
   const [Comp, setComp] = React.useState(null);
   const [tried, setTried] = React.useState(false);
 
   React.useEffect(() => {
     let cancelled = false;
-    getDiagramComponent(name).then((C) => {
+    getDiagramComponent(model).then((C) => {
       if (cancelled) return;
       if (C) setComp(() => C);
       setTried(true);
     });
     return () => { cancelled = true; };
-  }, [name]);
+  }, [model]);
 
   if (!tried) {
     return <div className="diagram-slot fx-shimmer" style={{ height: 280, borderRadius: 22 }} aria-hidden="true" />;

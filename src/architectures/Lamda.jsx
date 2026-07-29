@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactFlow, { MiniMap, Controls, Background, MarkerType } from 'react-flow-renderer';
+import ReactFlow, { MiniMap, Controls, Background, MarkerType } from 'reactflow';
 
 const initialNodes = [
   { id: '1', type: 'input', data: { label: 'Text Input' }, position: { x: -50, y: 0 }, 
