@@ -31,7 +31,7 @@
   "companies": {
     "openai": {
       "name": "OpenAI",
-      "image": "./images/all_models.png",
+      "image": "./images/gpt.png",
       "models": [
         {
           "id": "openai/gpt-4o",
@@ -2110,7 +2110,7 @@
           "name": "OpenAI: o3 Mini",
           "family": "dense",
           "disclosure": "closed_undisclosed",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "openai/o3-mini",
             "OpenAI: o3 Mini"
@@ -2120,11 +2120,20 @@
           },
           "architecture_specs": {
             "disclosure": "closed_undisclosed",
-            "context_window": null,
+            "context_window": 200000,
             "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "source_url": "https://openrouter.ai/models/openai/o3-mini",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1308,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -2238,7 +2247,7 @@
           "name": "OpenAI: GPT-4o-mini",
           "family": "multimodal",
           "disclosure": "closed_undisclosed",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "openai/gpt-4o-mini",
             "OpenAI: GPT-4o-mini"
@@ -2248,11 +2257,20 @@
           },
           "architecture_specs": {
             "disclosure": "closed_undisclosed",
-            "context_window": null,
+            "context_window": 128000,
             "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "source_url": "https://openrouter.ai/models/openai/gpt-4o-mini",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1270,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -2557,7 +2575,7 @@
     },
     "anthropic": {
       "name": "Anthropic",
-      "image": "./images/all_models.png",
+      "image": "./images/cluade.jpeg",
       "models": [
         {
           "id": "anthropic/claude-3-opus",
@@ -3593,7 +3611,7 @@
           "name": "Anthropic: Claude Sonnet 4",
           "family": "multimodal",
           "disclosure": "closed_undisclosed",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "anthropic/claude-sonnet-4",
             "Anthropic: Claude Sonnet 4"
@@ -3603,11 +3621,20 @@
           },
           "architecture_specs": {
             "disclosure": "closed_undisclosed",
-            "context_window": null,
+            "context_window": 200000,
             "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "source_url": "https://openrouter.ai/models/anthropic/claude-sonnet-4",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1282,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -3624,7 +3651,7 @@
     },
     "google": {
       "name": "Google",
-      "image": "./images/all_models.png",
+      "image": "./images/google.webp",
       "models": [
         {
           "id": "google/gemini-1.5-pro",
@@ -4678,7 +4705,7 @@
           "name": "Google: Gemini 2.5 Flash",
           "family": "multimodal",
           "disclosure": "closed_undisclosed",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "google/gemini-2.5-flash",
             "Google: Gemini 2.5 Flash"
@@ -4688,11 +4715,20 @@
           },
           "architecture_specs": {
             "disclosure": "closed_undisclosed",
-            "context_window": null,
+            "context_window": 1000000,
             "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "source_url": "https://openrouter.ai/models/google/gemini-2.5-flash",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1268,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -4742,7 +4778,7 @@
           "name": "Google: Gemini 2.5 Pro",
           "family": "multimodal",
           "disclosure": "closed_undisclosed",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "google/gemini-2.5-pro",
             "Google: Gemini 2.5 Pro"
@@ -4752,11 +4788,20 @@
           },
           "architecture_specs": {
             "disclosure": "closed_undisclosed",
-            "context_window": null,
+            "context_window": 1000000,
             "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "source_url": "https://openrouter.ai/models/google/gemini-2.5-pro",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1315,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -4998,7 +5043,7 @@
           "name": "Google: Gemma 2 27B",
           "family": "dense",
           "disclosure": "open_weight",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "google/gemma-2-27b-it",
             "Google: Gemma 2 27B"
@@ -5008,11 +5053,24 @@
           },
           "architecture_specs": {
             "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "params_total": 27000000000,
+            "params_active": 27000000000,
+            "attention_type": "hybrid",
+            "num_hidden_layers": 46,
+            "context_window": 8192,
+            "license": "Gemma Terms of Use",
+            "source_url": "https://huggingface.co/google/gemma-2-27b-it",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1218,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -5029,7 +5087,7 @@
     },
     "meta": {
       "name": "Meta",
-      "image": "./images/all_models.png",
+      "image": "./images/meta.png",
       "models": [
         {
           "id": "meta-llama/llama-3.1-405b-instruct",
@@ -5305,7 +5363,7 @@
           "name": "Meta: Llama 3.1 8B Instruct",
           "family": "dense",
           "disclosure": "open_weight",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "meta-llama/llama-3.1-8b-instruct",
             "Meta: Llama 3.1 8B Instruct"
@@ -5315,11 +5373,24 @@
           },
           "architecture_specs": {
             "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "params_total": 8000000000,
+            "params_active": 8000000000,
+            "attention_type": "GQA",
+            "num_hidden_layers": 32,
+            "context_window": 128000,
+            "license": "Llama 3.1 Community License",
+            "source_url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "MMLU",
+              "score": 69.4,
+              "source": "Meta model card",
+              "source_url": "https://ai.meta.com",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -5336,7 +5407,7 @@
     },
     "deepseek": {
       "name": "DeepSeek",
-      "image": "./images/all_models.png",
+      "image": "./images/deepseek.png",
       "models": [
         {
           "id": "deepseek/deepseek-v3",
@@ -5598,7 +5669,7 @@
           "name": "DeepSeek: DeepSeek V3.1",
           "family": "moe",
           "disclosure": "open_weight",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "deepseek/deepseek-chat-v3.1",
             "DeepSeek: DeepSeek V3.1"
@@ -5608,11 +5679,24 @@
           },
           "architecture_specs": {
             "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "params_total": 671000000000,
+            "params_active": 37000000000,
+            "attention_type": "MLA",
+            "num_hidden_layers": 61,
+            "context_window": 128000,
+            "license": "DeepSeek License",
+            "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1320,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -6448,7 +6532,7 @@
           "name": "Mistral: Mixtral 8x22B Instruct",
           "family": "moe",
           "disclosure": "open_weight",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "mistralai/mixtral-8x22b-instruct",
             "Mistral: Mixtral 8x22B Instruct"
@@ -6458,11 +6542,24 @@
           },
           "architecture_specs": {
             "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "params_total": 141000000000,
+            "params_active": 39000000000,
+            "attention_type": "GQA",
+            "num_hidden_layers": 56,
+            "context_window": 65536,
+            "license": "Apache 2.0",
+            "source_url": "https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "MMLU",
+              "score": 77.8,
+              "source": "Mistral model card",
+              "source_url": "https://mistral.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -6511,7 +6608,7 @@
     },
     "qwen": {
       "name": "Alibaba (Qwen)",
-      "image": "./images/all_models.png",
+      "image": "./images/qwen1.png",
       "models": [
         {
           "id": "qwen/qwen-2.5-72b-instruct",
@@ -7949,7 +8046,7 @@
           "name": "Qwen: Qwen3 235B A22B",
           "family": "dense",
           "disclosure": "open_weight",
-          "status": "auto_added",
+          "status": "complete",
           "aliases": [
             "qwen/qwen3-235b-a22b",
             "Qwen: Qwen3 235B A22B"
@@ -7959,11 +8056,24 @@
           },
           "architecture_specs": {
             "disclosure": "open_weight",
-            "context_window": null,
-            "license": "Proprietary (API)",
-            "fetched_at": "2026-07-29T02:01:47Z"
+            "params_total": 235000000000,
+            "params_active": 22000000000,
+            "attention_type": "GQA",
+            "num_hidden_layers": 96,
+            "context_window": 128000,
+            "license": "Apache 2.0",
+            "source_url": "https://huggingface.co/Qwen/Qwen3-235B-A22B",
+            "fetched_at": "2026-07-29"
           },
-          "benchmarks": [],
+          "benchmarks": [
+            {
+              "benchmark_name": "Arena-ELO",
+              "score": 1312,
+              "source": "LMArena mirror",
+              "source_url": "https://lmarena.ai",
+              "fetched_at": "2026-07-29"
+            }
+          ],
           "pricing": [
             {
               "provider": "openrouter",
@@ -8300,7 +8410,7 @@
     },
     "google-open": {
       "name": "Google (Open)",
-      "image": "./images/all_models.png",
+      "image": "./images/google.webp",
       "models": [
         {
           "id": "google/gemma-2-27b-it",
@@ -8325,7 +8435,7 @@
             "context_window": 8192,
             "license": "Gemma Terms of Use",
             "source_url": "https://huggingface.co/google/gemma-2-27b-it",
-            "fetched_at": "2026-07-28"
+            "fetched_at": "2026-07-29"
           },
           "benchmarks": [
             {
@@ -8333,7 +8443,7 @@
               "score": 1218,
               "source": "LMArena mirror",
               "source_url": "https://lmarena.ai",
-              "fetched_at": "2026-07-28"
+              "fetched_at": "2026-07-29"
             }
           ],
           "pricing": [
@@ -8350,7 +8460,7 @@
     },
     "falcon": {
       "name": "TII (Falcon)",
-      "image": "./images/all_models.png",
+      "image": "./images/falcon.jpeg",
       "models": [
         {
           "id": "tiiuae/falcon3-10b-base",
