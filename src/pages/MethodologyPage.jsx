@@ -1,6 +1,9 @@
 import React from "react";
+import { useRevealLive } from "../hooks/useReveal";
+import "./MethodologyPage.css";
 
 export default function MethodologyPage() {
+  useRevealLive();
   return (
     <div className="section fx-fade">
       <header className="fx-rise" style={{ marginBottom: 32 }}>
