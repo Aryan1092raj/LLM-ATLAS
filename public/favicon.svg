@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="LLM Atlas">
+  <defs>
+    <!-- Pastel gradient matching the site's body backdrop -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c9bef0"/>
+      <stop offset="55%" stop-color="#a8e6da"/>
+      <stop offset="100%" stop-color="#ffc1ad"/>
+    </linearGradient>
+
+    <!-- Highlight on top-left, shadow on bottom-right (claymorphism dual shadow) -->
+    <filter id="clay" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="shadow1"/>
+      <feOffset in="shadow1" dx="8" dy="10" result="shadow1off"/>
+      <feComponentTransfer in="shadow1off" result="shadow1dark">
+        <feFuncA type="linear" slope="0.55"/>
+      </feComponentTransfer>
+
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="shadow2"/>
+      <feOffset in="shadow2" dx="-6" dy="-7" result="shadow2off"/>
+      <feComponentTransfer in="shadow2off" result="shadow2light">
+        <feFuncA type="linear" slope="0.85"/>
+      </feComponentTransfer>
+
+      <feMerge>
+        <feMergeNode in="shadow1dark"/>
+        <feMergeNode in="shadow2light"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Inner glow for the L mark -->
+    <linearGradient id="mark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0eaff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Claymorphism pill -->
+  <g filter="url(#clay)">
+    <rect x="40" y="40" width="432" height="432" rx="118" ry="118" fill="url(#bg)"/>
+  </g>
+
+  <!-- Embossed "L" mark, centered -->
+  <g filter="url(#clay)">
+    <path d="M 200 152
+             L 200 360
+             L 312 360
+             L 312 326
+             L 232 326
+             L 232 152
+             Z"
+          fill="url(#mark)"/>
+  </g>
+
+  <!-- Subtle inner highlight stroke for crispness at small sizes -->
+  <rect x="40.5" y="40.5" width="431" height="431" rx="117.5" ry="117.5"
+        fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1"/>
+</svg>

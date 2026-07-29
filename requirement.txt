@@ -1,4 +1,15 @@
-huggingface_hub
-datasets
-requests
-pandas
+# LLM Atlas ingestion pipeline dependencies.
+#
+# Only stdlib is required to run the fetchers + resolve (the heaviest
+# deps are optional and gracefully degrade if missing).
+
+# Required: stdlib only — nothing to install.
+
+# Optional: full leaderboard parsing needs these.
+# Uncomment if you want /pipeline/fetchers/leaderboard.py to read parquet files.
+# pandas>=2.0
+# pyarrow>=12.0
+
+# Optional: richer fuzzy matching (we use difflib by default to stay
+# dependency-free; switch by editing resolve/normalize.py).
+# rapidfuzz>=3.0
