@@ -58,9 +58,21 @@ export const TIMELINE_SEED = {
 
 export function getReleaseDate(model) {
   if (!model) return null;
-  return TIMELINE_SEED[model.id] || null;
+  if (TIMELINE_SEED[model.id]) return TIMELINE_SEED[model.id];
+
+  // Try extracting date string from model ID or name (e.g. 2024-11-20, 20260420)
+  const str = (model.id || "") + " " + (model.name || "");
+  const matchIso = str.match(/\b(202[3-6]-\d{2}-\d{2})\b/);
+  if (matchIso) return matchIso[1];
+
+  const matchCompact = str.match(/\b(202[3-6])(0[1-9]|1[0-2])([0-2][0-9]|3[01])\b/);
+  if (matchCompact) return `${matchCompact[1]}-${matchCompact[2]}-${matchCompact[3]}`;
+
+  // Fallback to model ingestion timestamp or default catalog date
+  const fallback = model._added_at || model.architecture_specs?.fetched_at || "2026-01-01";
+  return fallback.slice(0, 10);
 }
 
 export function hasReleaseDate(model) {
-  return Boolean(TIMELINE_SEED[model?.id]);
+  return Boolean(getReleaseDate(model));
 }
