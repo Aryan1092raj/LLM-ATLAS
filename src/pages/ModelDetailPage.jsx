@@ -59,7 +59,6 @@ export default function ModelDetailPage() {
 
       {model.why && (
         <div className="model-detail__why clay fx-rise">
-          <div className="model-detail__why-icon" aria-hidden="true">💡</div>
           <p>{model.why}</p>
         </div>
       )}

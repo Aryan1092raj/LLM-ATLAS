@@ -21,11 +21,10 @@ export default function ArchitecturePanel({ model }) {
 
       {closed ? (
         <div className="arch-disclosure-banner">
-          <div className="arch-disclosure-banner__icon" aria-hidden="true">🔒</div>
           <div>
             <strong>Architecture not publicly disclosed.</strong>{" "}
             <span style={{ color: "var(--clay-ink-faint)" }}>
-              Per TRD §5.4.1, we do not populate architecture fields from third-party leaks. Only officially confirmed specs are shown below.
+              Official architecture specifications have not been disclosed by the vendor. To maintain strict data integrity, LLM Atlas only records verified provider specs and does not populate fields from unverified leaks or estimates.
             </span>
           </div>
         </div>
