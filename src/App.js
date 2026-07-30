@@ -137,7 +137,7 @@ function Shell() {
 
 export default function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
+    <BrowserRouter>
       <Shell />
     </BrowserRouter>
   );

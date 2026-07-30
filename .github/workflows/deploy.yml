@@ -43,5 +43,8 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID || vars.CLOUDFLARE_ACCOUNT_ID }}
           projectName: llm-atlas
           directory: ./build
+          branch: main
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
 
 
