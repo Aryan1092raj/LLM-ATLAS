@@ -12,10 +12,20 @@ export async function onRequest(context) {
     return env.ASSETS.fetch(request);
   }
 
-  // Fetch index.html static asset from Cloudflare Pages ASSETS binding
+  // Fetch root static asset from Cloudflare Pages ASSETS binding
+  const assetUrl = new URL('/', request.url);
   const response = await env.ASSETS.fetch(
-    new Request(new URL('/index.html', request.url), request)
+    new Request(assetUrl, {
+      method: request.method,
+      headers: request.headers
+    })
   );
+
+  // Safeguard: If assets fetch returns a redirect, pass request directly to prevent 308 loop
+  if (response.status >= 300 && response.status < 400) {
+    return env.ASSETS.fetch(request);
+  }
+
 
   let title = "LLM Atlas — Architecture & Benchmarks, Honestly";
   let description = "Every LLM, explained honestly. Architecture, raw benchmarks, and cost — side by side, never blended.";
