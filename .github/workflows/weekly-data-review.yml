@@ -37,6 +37,10 @@ jobs:
           fi
 
           ISSUE_TITLE="📋 Weekly Data Quality Audit ($(date -u +%Y-%m-%d))"
+          
+          # Ensure label exists in repo
+          gh label create data-review --color "cbd5e1" --description "Weekly data quality audit report" || true
+
           EXISTING_ISSUE=$(gh issue list --label "data-review" --state open --json number --jq '.[] | .number' | head -n 1)
 
           if [ -n "$EXISTING_ISSUE" ] && [ "$EXISTING_ISSUE" != "null" ]; then
