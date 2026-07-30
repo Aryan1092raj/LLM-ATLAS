@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import ReactFlow, { MiniMap, Controls, Background } from 'reactflow';
-import 'reactflow/dist/style.css';
 
 const ParametricArchitecture = ({ model, specs: propsSpecs }) => {
   const specs = propsSpecs || model?.architecture_specs || {};
