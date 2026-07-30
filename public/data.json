@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-07-29",
+  "last_updated": "2026-07-30T06:10:50Z",
   "sources": {
     "primary": [
       {
@@ -16,7 +16,7 @@
         "url": "https://openrouter.ai/api/v1/models"
       },
       {
-        "name": "Epoch AI \u2014 Notable Models",
+        "name": "Epoch AI — Notable Models",
         "url": "https://epochai.org/data/notable-models"
       }
     ]
@@ -3745,7 +3745,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Balanced tier \u2014 middle of the Claude family on both axes."
+          "why": "Balanced tier — middle of the Claude family on both axes."
         },
         {
           "id": "anthropic/claude-3-haiku",
@@ -5238,7 +5238,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Among cheapest credible closed models with very long context \u2014 strong on the value axis."
+          "why": "Among cheapest credible closed models with very long context — strong on the value axis."
         },
         {
           "id": "google/gemini-3.6-flash",
@@ -6731,6 +6731,252 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
+        },
+        {
+          "id": "google/gemma-2-9b",
+          "name": "google/gemma-2-9b",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-2-9b",
+            "google/gemma-2-9b"
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:53Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 20.398320899657357,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 34.09681853589784,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 13.444108761329304,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 10.514541387024611,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 14.297656250000001,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 34.48027482269504,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:53Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "google/gemma-2b",
+          "name": "google/gemma-2b",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-2b",
+            "google/gemma-2b"
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:03Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 20.375825033134305,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 8.246263426638125,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 3.0211480362537766,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.6711409395973182,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 7.555989583333336,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 4.061391843971631,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:03Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "google/gemma-2-2b",
+          "name": "google/gemma-2-2b",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "google/gemma-2-2b",
+            "google/gemma-2-2b"
+          ],
+          "features": {
+            "Developer": "Google"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:06Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 19.931226922343825,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 11.755807532236112,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 2.8700906344410875,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.6778523489932917,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 11.430468750000001,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 13.111332742316787,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 20.176021844262113,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 12.497306228573644,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 3.0211480362537766,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.6778523489932917,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 11.267708333333333,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 13.51765661938534,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:06Z",
+          "_added_from": "huggingface"
         }
       ]
     },
@@ -7156,7 +7402,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Mix of local and sliding-window attention \u2014 strong efficiency at 27B."
+          "why": "Mix of local and sliding-window attention — strong efficiency at 27B."
         }
       ]
     },
@@ -7913,6 +8159,346 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
+        },
+        {
+          "id": "meta-llama/Llama-3.2-1B",
+          "name": "meta-llama/Llama-3.2-1B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "meta-llama/Llama-3.2-1B",
+            "meta-llama/Llama-3.2-1B"
+          ],
+          "features": {
+            "Developer": "Meta"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:48Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 14.777900415342401,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 4.366029656556756,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.2084592145015105,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 2.5578125000000003,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 2.2606382978723394,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:48Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "meta-llama/Llama-3.1-8B",
+          "name": "meta-llama/Llama-3.1-8B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "meta-llama/Llama-3.1-8B",
+            "meta-llama/Llama-3.1-8B"
+          ],
+          "features": {
+            "Developer": "Meta"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:48Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 12.459828809780273,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 25.30447063475493,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 6.570996978851963,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 8.05369127516779,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 8.715104166666668,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 25.42109929078014,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:48Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "meta-llama/Llama-2-13b-chat-hf",
+          "name": "meta-llama/Llama-2-13b-chat-hf",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "meta-llama/Llama-2-13b-chat-hf",
+            "meta-llama/Llama-2-13b-chat-hf"
+          ],
+          "features": {
+            "Developer": "Meta"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:52Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 39.8472719052115,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 7.155379968626988,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.3595166163141994,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 8.1578125,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 10.257830969267138,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:52Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "meta-llama/Llama-2-7b-chat-hf",
+          "name": "meta-llama/Llama-2-7b-chat-hf",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "meta-llama/Llama-2-7b-chat-hf",
+            "meta-llama/Llama-2-7b-chat-hf"
+          ],
+          "features": {
+            "Developer": "Meta"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:57Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 39.86478100329349,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 4.459171645959485,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.9637462235649545,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.44742729306487633,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.27734375,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 7.644429669030731,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:57Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "meta-llama/Llama-2-7b-hf",
+          "name": "meta-llama/Llama-2-7b-hf",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "meta-llama/Llama-2-7b-hf",
+            "meta-llama/Llama-2-7b-hf"
+          ],
+          "features": {
+            "Developer": "Meta"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:59Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 25.18938638368418,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 10.35141665784897,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.7371601208459215,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 2.2371364653243813,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.7578125,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 9.56523345153664,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:59Z",
+          "_added_from": "huggingface"
         }
       ]
     },
@@ -7962,7 +8548,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "MoE with ~5.5% active params \u2014 explains why hosted price is far below dense frontier peers at comparable Arena ELO."
+          "why": "MoE with ~5.5% active params — explains why hosted price is far below dense frontier peers at comparable Arena ELO."
         },
         {
           "id": "deepseek/deepseek-r1",
@@ -8529,6 +9115,414 @@
           "why": "Auto-added by ingestion pipeline from huggingface.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "huggingface"
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+          "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:54Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 34.63410417691725,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 4.729119207646243,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 16.91842900302115,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.7829977628635317,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 2.9656249999999993,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 2.0759456264775418,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:54Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+          "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:54Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 40.3768667136531,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 7.882702983365756,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 19.561933534743204,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 3.9149888143176734,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.5518229166666675,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 14.681220449172578,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:54Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "deepseek-ai/deepseek-llm-7b-chat",
+          "name": "deepseek-ai/deepseek-llm-7b-chat",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek-ai/deepseek-llm-7b-chat",
+            "deepseek-ai/deepseek-llm-7b-chat"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:01Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 41.70822307034224,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 11.258949371501748,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 2.0392749244712993,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 2.1252796420581683,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 19.21302083333333,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 12.594193262411347,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:01Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "deepseek-ai/deepseek-moe-16b-base",
+          "name": "deepseek-ai/deepseek-moe-16b-base",
+          "family": "moe",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek-ai/deepseek-moe-16b-base",
+            "deepseek-ai/deepseek-moe-16b-base"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:02Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 24.497444558216642,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 8.355555779389382,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 2.416918429003021,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.5592841163310973,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.3559895833333346,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 5.612810283687943,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:02Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+          "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:09Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 43.81651795015004,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 40.69076685552542,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 57.02416918429003,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 18.34451901565996,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 28.711458333333326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 40.74135638297872,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:09Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+          "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+            "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
+          ],
+          "features": {
+            "Developer": "Deepseek"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:09Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 41.86314534324481,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 17.149673765590364,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 17.069486404833835,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 4.5861297539149914,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 16.1421875,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 40.962987588652474,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:09Z",
+          "_added_from": "huggingface"
         }
       ]
     },
@@ -8548,7 +9542,7 @@
           ],
           "features": {
             "Developer": "Mistral AI",
-            "Architecture": "Sparse MoE, 8 experts \u00d7 7B."
+            "Architecture": "Sparse MoE, 8 experts × 7B."
           },
           "architecture_specs": {
             "disclosure": "open_weight",
@@ -8578,7 +9572,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "Apache-licensed MoE \u2014 high efficiency score because active params are ~13B but quality approaches 70B dense."
+          "why": "Apache-licensed MoE — high efficiency score because active params are ~13B but quality approaches 70B dense."
         },
         {
           "id": "mistralai/mistral-medium-3-5",
@@ -12099,6 +13093,346 @@
           "why": "Auto-added by ingestion pipeline from huggingface.",
           "_added_at": "2026-07-29T02:01:48Z",
           "_added_from": "huggingface"
+        },
+        {
+          "id": "Qwen/Qwen2.5-0.5B",
+          "name": "Qwen/Qwen2.5-0.5B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "Qwen/Qwen2.5-0.5B",
+            "Qwen/Qwen2.5-0.5B"
+          ],
+          "features": {
+            "Developer": "Qwen"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:53Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 16.271714606133948,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 6.953961634882263,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 3.927492447129909,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 2.0833333333333326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 10.0639036643026,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:53Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "Qwen/Qwen2.5-1.5B",
+          "name": "Qwen/Qwen2.5-1.5B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "Qwen/Qwen2.5-1.5B",
+            "Qwen/Qwen2.5-1.5B"
+          ],
+          "features": {
+            "Developer": "Qwen"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:53Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 26.743041795768562,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 16.660465167691854,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 9.138972809667674,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 4.697986577181204,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 5.265885416666666,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 20.609855200945624,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:53Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "Qwen/Qwen1.5-MoE-A2.7B",
+          "name": "Qwen/Qwen1.5-MoE-A2.7B",
+          "family": "moe",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "Qwen/Qwen1.5-MoE-A2.7B",
+            "Qwen/Qwen1.5-MoE-A2.7B"
+          ],
+          "features": {
+            "Developer": "Qwen"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:03Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 26.598203876824606,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 18.837858500547185,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 9.290030211480364,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.230425055928408,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 7.967968750000003,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 19.751034278959807,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:03Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "Qwen/Qwen2.5-3B",
+          "name": "Qwen/Qwen2.5-3B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "Qwen/Qwen2.5-3B",
+            "Qwen/Qwen2.5-3B"
+          ],
+          "features": {
+            "Developer": "Qwen"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:07Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 26.895415275912356,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 24.304241726371686,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 14.803625377643503,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 6.375838926174497,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 11.758333333333335,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 24.479166666666664,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:07Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "Qwen/Qwen2.5-7B",
+          "name": "Qwen/Qwen2.5-7B",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "Qwen/Qwen2.5-7B",
+            "Qwen/Qwen2.5-7B"
+          ],
+          "features": {
+            "Developer": "Qwen"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:07Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 33.74479713825982,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 35.81347328754777,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 25.075528700906347,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 9.955257270693513,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 14.13671875,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 37.38918439716312,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:07Z",
+          "_added_from": "huggingface"
         }
       ]
     },
@@ -12192,7 +13526,7 @@
               "fetched_at": "2026-07-28"
             }
           ],
-          "why": "One of the few public hybrid SSM+attention releases \u2014 useful for understanding long-context tradeoffs vs. pure attention."
+          "why": "One of the few public hybrid SSM+attention releases — useful for understanding long-context tradeoffs vs. pure attention."
         }
       ]
     },
@@ -12386,6 +13720,320 @@
           ],
           "why": "Auto-added by ingestion pipeline from huggingface.",
           "_added_at": "2026-07-29T02:01:47Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "microsoft/Phi-3-mini-4k-instruct",
+          "name": "microsoft/Phi-3-mini-4k-instruct",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "microsoft/Phi-3-mini-4k-instruct",
+            "microsoft/Phi-3-mini-4k-instruct"
+          ],
+          "features": {
+            "Developer": "Microsoft"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:50Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 56.12884923115112,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 39.2693352377728,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 11.63141993957704,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 9.284116331096197,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 7.644270833333336,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 31.848404255319146,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 54.76746144673909,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 36.55985530518785,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 16.389728096676738,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 10.96196868008949,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 13.118749999999997,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 33.57528073286053,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:50Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "microsoft/Phi-4-mini-instruct",
+          "name": "microsoft/Phi-4-mini-instruct",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "microsoft/Phi-4-mini-instruct",
+            "microsoft/Phi-4-mini-instruct"
+          ],
+          "features": {
+            "Developer": "Microsoft"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:50Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 73.77923908562614,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 38.73553611173529,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 16.993957703927492,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 7.941834451901568,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 6.446093750000002,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 32.5779403073286,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:50Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "microsoft/Phi-3-mini-128k-instruct",
+          "name": "microsoft/Phi-3-mini-128k-instruct",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "microsoft/Phi-3-mini-128k-instruct",
+            "microsoft/Phi-3-mini-128k-instruct"
+          ],
+          "features": {
+            "Developer": "Microsoft"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:04Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 59.76331688807919,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 37.09976663224031,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 14.04833836858006,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 9.060402684563762,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 7.710937500000003,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 30.38009751773049,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:04Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "microsoft/Phi-3.5-mini-instruct",
+          "name": "microsoft/Phi-3.5-mini-instruct",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "microsoft/Phi-3.5-mini-instruct",
+            "microsoft/Phi-3.5-mini-instruct"
+          ],
+          "features": {
+            "Developer": "Microsoft"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:06Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 57.74500547436358,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 36.74585390851661,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 19.637462235649547,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 11.968680089485462,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 10.098958333333334,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 32.91038711583924,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:06Z",
           "_added_from": "huggingface"
         }
       ]
@@ -12988,7 +14636,7 @@
           ],
           "features": {
             "Developer": "Nanbeige",
-            "Architecture": "Looped transformer \u2014 recurrent application of a shared block."
+            "Architecture": "Looped transformer — recurrent application of a shared block."
           },
           "architecture_specs": {
             "disclosure": "open_weight",
@@ -13019,7 +14667,7 @@
             }
           ],
           "pricing": [],
-          "why": "Looped transformer with num_loops=2 \u2014 unusual architecture; benchmarks pending (recent release)."
+          "why": "Looped transformer with num_loops=2 — unusual architecture; benchmarks pending (recent release)."
         }
       ]
     },
@@ -17982,6 +19630,74 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
+        },
+        {
+          "id": "allenai/OLMoE-1B-7B-0125",
+          "name": "allenai/OLMoE-1B-7B-0125",
+          "family": "moe",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "allenai/OLMoE-1B-7B-0125",
+            "allenai/OLMoE-1B-7B-0125"
+          ],
+          "features": {
+            "Developer": "Allenai"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:09Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 21.847143357402803,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 8.308106894895777,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.6616314199395772,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.565625000000001,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 8.216976950354608,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:09Z",
+          "_added_from": "huggingface"
         }
       ]
     },
@@ -18570,6 +20286,74 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
+        },
+        {
+          "id": "NousResearch/Yarn-Llama-2-7b-128k",
+          "name": "NousResearch/Yarn-Llama-2-7b-128k",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "NousResearch/Yarn-Llama-2-7b-128k",
+            "NousResearch/Yarn-Llama-2-7b-128k"
+          ],
+          "features": {
+            "Developer": "Nousresearch"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:00Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 14.847825990593847,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 6.1446917129934855,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.5105740181268883,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.342281879194629,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 8.253906250000004,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 8.789524231678488,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:00Z",
+          "_added_from": "huggingface"
         }
       ]
     },
@@ -18829,6 +20613,74 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
+        },
+        {
+          "id": "anthracite-org/magnum-v4-12b",
+          "name": "anthracite-org/magnum-v4-12b",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "anthracite-org/magnum-v4-12b",
+            "anthracite-org/magnum-v4-12b"
+          ],
+          "features": {
+            "Developer": "Anthracite-Org"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:04:07Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 33.9296400218088,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 30.503902266484772,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 11.782477341389729,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 6.152125279642054,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 10.360156249999996,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 28.930260047281326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:07Z",
+          "_added_from": "huggingface"
         }
       ]
     },
@@ -18988,6 +20840,1398 @@
           "why": "Auto-added by ingestion pipeline from openrouter.",
           "_added_at": "2026-07-29T02:01:47Z",
           "_added_from": "openrouter"
+        }
+      ]
+    },
+    "openai-community": {
+      "name": "Openai-Community",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "openai-community/gpt2",
+          "name": "openai-community/gpt2",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "openai-community/gpt2",
+            "openai-community/gpt2"
+          ],
+          "features": {
+            "Developer": "Openai-Community"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:03:46Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 17.925327021192658,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 2.674981367986987,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.22658610271903326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.1185682326621946,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 15.348177083333335,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.7712027186761226,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 17.795449407571912,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 2.8159113095085133,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.5287009063444109,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.1185682326621946,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 13.910937500000001,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.8358451536643017,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:46Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "tinyllama": {
+      "name": "Tinyllama",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+          "name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+            "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+          ],
+          "features": {
+            "Developer": "Tinyllama"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:47Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 14.78543597654224,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.3630106739393377,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.6042296072507553,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.9049479166666674,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.087839834515365,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 16.336653412944322,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.4076909375697055,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.3776435045317221,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.565625000000001,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.0693705673758855,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 15.742119797692347,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.390370709512531,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.5861027190332326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.1185682326621946,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 2.2773437500000004,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.6511524822695034,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 5.957636848007731,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 4.013396848486799,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.5105740181268883,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 4.306770833333336,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.124778368794326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:47Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "TinyLlama/TinyLlama-1.1B-Chat-v0.6",
+          "name": "TinyLlama/TinyLlama-1.1B-Chat-v0.6",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "TinyLlama/TinyLlama-1.1B-Chat-v0.6",
+            "TinyLlama/TinyLlama-1.1B-Chat-v0.6"
+          ],
+          "features": {
+            "Developer": "Tinyllama"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:50Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 14.78543597654224,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.3630106739393377,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.6042296072507553,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.9049479166666674,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.087839834515365,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 16.336653412944322,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.4076909375697055,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.3776435045317221,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.565625000000001,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.0693705673758855,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 15.742119797692347,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.390370709512531,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.5861027190332326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.1185682326621946,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 2.2773437500000004,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.6511524822695034,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "IFEval",
+              "score": 5.957636848007731,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 4.013396848486799,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.5105740181268883,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 4.306770833333336,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.124778368794326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:50Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "bigcode": {
+      "name": "Bigcode",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "bigcode/starcoder2-7b",
+          "name": "bigcode/starcoder2-7b",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "bigcode/starcoder2-7b",
+            "bigcode/starcoder2-7b"
+          ],
+          "features": {
+            "Developer": "Bigcode"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:03:52Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 22.09193827932109,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 11.395110106503443,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 3.096676737160121,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.22371364653244186,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 5.8166666666666655,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 7.1365248226950335,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:52Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "maziyarpanahi": {
+      "name": "Maziyarpanahi",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "MaziyarPanahi/calme-3.2-instruct-78b",
+          "name": "MaziyarPanahi/calme-3.2-instruct-78b",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "MaziyarPanahi/calme-3.2-instruct-78b",
+            "MaziyarPanahi/calme-3.2-instruct-78b"
+          ],
+          "features": {
+            "Developer": "Maziyarpanahi"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:03:53Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 80.62607215521483,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 62.609443282901594,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 40.33232628398791,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 20.3579418344519,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 38.52890624999999,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 70.03361406619385,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:53Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "distilbert": {
+      "name": "Distilbert",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "distilbert/distilgpt2",
+          "name": "distilbert/distilgpt2",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "distilbert/distilgpt2",
+            "distilbert/distilgpt2"
+          ],
+          "features": {
+            "Developer": "Distilbert"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:03:57Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 6.110010328151527,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 2.835219845513963,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.6042296072507553,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.230425055928408,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 11.1578125,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 2.0759456264775418,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:57Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "facebook": {
+      "name": "Facebook",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "facebook/opt-1.3b",
+          "name": "facebook/opt-1.3b",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "facebook/opt-1.3b",
+            "facebook/opt-1.3b"
+          ],
+          "features": {
+            "Developer": "Facebook"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:03:58Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 23.83298536771322,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.6480520895226785,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.906344410876133,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 2.0833333333333326,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.1894208037825047,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:58Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "bigscience": {
+      "name": "Bigscience",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "bigscience/bloom-560m",
+          "name": "bigscience/bloom-560m",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "bigscience/bloom-560m",
+            "bigscience/bloom-560m"
+          ],
+          "features": {
+            "Developer": "Bigscience"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:03:58Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 6.202431769926019,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 2.885363608028119,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 0.3776435045317221,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 1.5659955257270708,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 8.185416666666667,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.8266105200945615,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:03:58Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "open-orca": {
+      "name": "Open-Orca",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "Open-Orca/Mistral-7B-OpenOrca",
+          "name": "Open-Orca/Mistral-7B-OpenOrca",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "Open-Orca/Mistral-7B-OpenOrca",
+            "Open-Orca/Mistral-7B-OpenOrca"
+          ],
+          "features": {
+            "Developer": "Open-Orca"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:00Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 49.77659277384008,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 25.840025395269805,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 3.5498489425981874,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 2.9082774049216997,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 5.889322916666667,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 18.36583924349882,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:00Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "01-ai": {
+      "name": "01-Ai",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "01-ai/Yi-6B-Chat",
+          "name": "01-ai/Yi-6B-Chat",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "01-ai/Yi-6B-Chat",
+            "01-ai/Yi-6B-Chat"
+          ],
+          "features": {
+            "Developer": "01-Ai"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:01Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 33.95213588833185,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 17.00016656742376,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.3595166163141994,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 5.92841163310962,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 3.5656250000000003,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 22.90004432624113,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:01Z",
+          "_added_from": "huggingface"
+        },
+        {
+          "id": "01-ai/Yi-1.5-9B-Chat",
+          "name": "01-ai/Yi-1.5-9B-Chat",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "01-ai/Yi-1.5-9B-Chat",
+            "01-ai/Yi-1.5-9B-Chat"
+          ],
+          "features": {
+            "Developer": "01-Ai"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:04Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 60.455258713546726,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 36.95293138417893,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 22.58308157099698,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 11.297539149888143,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 12.838281249999996,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 33.05814125295508,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:05Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "failspy": {
+      "name": "Failspy",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "failspy/Llama-3-70B-Instruct-abliterated-v3",
+          "name": "failspy/Llama-3-70B-Instruct-abliterated-v3",
+          "family": "dense",
+          "disclosure": "open_weight",
+          "status": "auto_added",
+          "aliases": [
+            "failspy/Llama-3-70B-Instruct-abliterated-v3",
+            "failspy/Llama-3-70B-Instruct-abliterated-v3"
+          ],
+          "features": {
+            "Developer": "Failspy"
+          },
+          "architecture_specs": {
+            "disclosure": "open_weight",
+            "context_window": null,
+            "license": "Open Source / Check Repo",
+            "fetched_at": "2026-07-30T06:04:05Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 80.23389052159382,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 48.93981832466943,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 24.3202416918429,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 5.257270693512303,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 10.528385416666671,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 46.06050531914893,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:05Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "sao10k": {
+      "name": "Sao10K",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "Sao10K/L3-8B-Stheno-v3.2",
+          "name": "Sao10K/L3-8B-Stheno-v3.2",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "Sao10K/L3-8B-Stheno-v3.2",
+            "Sao10K/L3-8B-Stheno-v3.2"
+          ],
+          "features": {
+            "Developer": "Sao10K"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:04:05Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 68.72841837435782,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 32.02159792407502,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 9.290030211480364,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 8.05369127516779,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 6.453906249999996,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 30.758717494089833,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:05Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "huggingfacetb": {
+      "name": "Huggingfacetb",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "HuggingFaceTB/SmolLM2-135M",
+          "name": "HuggingFaceTB/SmolLM2-135M",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "HuggingFaceTB/SmolLM2-135M",
+            "HuggingFaceTB/SmolLM2-135M"
+          ],
+          "features": {
+            "Developer": "Huggingfacetb"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:04:07Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 18.177657504310783,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 3.70807758683998,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 1.2084592145015105,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 0.0,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 10.030468749999999,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 1.0509013002364058,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:07Z",
+          "_added_from": "huggingface"
+        }
+      ]
+    },
+    "lgai-exaone": {
+      "name": "Lgai-Exaone",
+      "image": "./images/all_models.png",
+      "models": [
+        {
+          "id": "LGAI-EXAONE/EXAONE-3.5-32B-Instruct",
+          "name": "LGAI-EXAONE/EXAONE-3.5-32B-Instruct",
+          "family": "dense",
+          "disclosure": "closed_undisclosed",
+          "status": "auto_added",
+          "aliases": [
+            "LGAI-EXAONE/EXAONE-3.5-32B-Instruct",
+            "LGAI-EXAONE/EXAONE-3.5-32B-Instruct"
+          ],
+          "features": {
+            "Developer": "Lgai-Exaone"
+          },
+          "architecture_specs": {
+            "disclosure": "closed_undisclosed",
+            "context_window": null,
+            "license": "Unknown",
+            "fetched_at": "2026-07-30T06:04:08Z"
+          },
+          "benchmarks": [
+            {
+              "benchmark_name": "IFEval",
+              "score": 83.91833668000905,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "BBH",
+              "score": 39.82420331711213,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MATH",
+              "score": 51.283987915407856,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "GPQA",
+              "score": 5.033557046979867,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MUSR",
+              "score": 5.150000000000001,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            },
+            {
+              "benchmark_name": "MMLU-Pro",
+              "score": 40.40890957446809,
+              "source": "hf-leaderboard",
+              "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+              "fetched_at": "2026-07-30T05:56:15+00:00"
+            }
+          ],
+          "pricing": [],
+          "why": "Auto-added by ingestion pipeline from huggingface.",
+          "_added_at": "2026-07-30T06:04:08Z",
+          "_added_from": "huggingface"
         }
       ]
     }

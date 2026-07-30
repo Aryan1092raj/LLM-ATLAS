@@ -86,7 +86,7 @@ def fetch_hf_config(model_id: str) -> dict | None:
         return None
     url = f"https://huggingface.co/{model_id}/resolve/main/config.json"
     try:
-        return json.loads(http_get(url, retries=2))
+        return json.loads(http_get(url, timeout=3, retries=1))
     except Exception:
         return None
 
@@ -326,48 +326,58 @@ def main() -> int:
 
     added = 0
     skipped_ghost = 0
-    for cand in new_candidates:
+
+    from concurrent.futures import ThreadPoolExecutor
+
+    def process_cand(cand: dict) -> tuple[dict, NewModelDraft | None, Exception | None]:
         try:
             draft = build_draft(cand, canonical)
-
-            # Per Phase 2 brief: only auto-add models with at least one of
-            # arch specs / pricing / benchmarks. Pure name ghosts (HF test
-            # checkpoints, experimental models with no catalog data) are
-            # dropped to avoid polluting the UI.
-            has_arch = draft.disclosure == "open_weight" and (
-                draft.specs.get("num_hidden_layers") or draft.specs.get("params_total")
-            )
-            has_data = has_arch or bool(draft.pricing) or bool(draft.benchmarks)
-            if not has_data:
-                skipped_ghost += 1
-                continue
-
-            vendor_key = cand.get("vendor") or "unknown"
-            vendor_label = vendor_key.title()
-            ck = _ensure_company(canonical, vendor_key, vendor_label)
-            model_id = draft.raw_id or f"{vendor_key}/{normalize_name(draft.name)}"
-            model = {
-                "id": model_id,
-                "name": draft.name,
-                "family": draft.family,
-                "disclosure": draft.disclosure,
-                "status": _status(draft),
-                "aliases": [draft.raw_id, draft.name],
-                "features": {"Developer": vendor_label},
-                "architecture_specs": draft.specs,
-                "benchmarks": draft.benchmarks,
-                "pricing": draft.pricing,
-                "why": f"Auto-added by ingestion pipeline from {draft.source}.",
-                "_added_at": now(),
-                "_added_from": draft.source,
-            }
-            # De-dupe by id.
-            if any(m.get("id") == model_id for m in canonical["companies"][ck]["models"]):
-                continue
-            canonical["companies"][ck]["models"].append(model)
-            added += 1
+            return cand, draft, None
         except Exception as e:
-            stats.add_error(f"{cand.get('raw_id')}: {type(e).__name__}: {e}")
+            return cand, None, e
+
+    with ThreadPoolExecutor(max_workers=20) as pool:
+        results = list(pool.map(process_cand, new_candidates))
+
+    for cand, draft, err in results:
+        if err:
+            stats.add_error(f"{cand.get('raw_id')}: {type(err).__name__}: {err}")
+            continue
+        if not draft:
+            continue
+
+        has_arch = draft.disclosure == "open_weight" and (
+            draft.specs.get("num_hidden_layers") or draft.specs.get("params_total")
+        )
+        has_data = has_arch or bool(draft.pricing) or bool(draft.benchmarks)
+        if not has_data:
+            skipped_ghost += 1
+            continue
+
+        vendor_key = cand.get("vendor") or "unknown"
+        vendor_label = vendor_key.title()
+        ck = _ensure_company(canonical, vendor_key, vendor_label)
+        model_id = draft.raw_id or f"{vendor_key}/{normalize_name(draft.name)}"
+        model = {
+            "id": model_id,
+            "name": draft.name,
+            "family": draft.family,
+            "disclosure": draft.disclosure,
+            "status": _status(draft),
+            "aliases": [draft.raw_id, draft.name],
+            "features": {"Developer": vendor_label},
+            "architecture_specs": draft.specs,
+            "benchmarks": draft.benchmarks,
+            "pricing": draft.pricing,
+            "why": f"Auto-added by ingestion pipeline from {draft.source}.",
+            "_added_at": now(),
+            "_added_from": draft.source,
+        }
+        # De-dupe by id.
+        if any(m.get("id") == model_id for m in canonical["companies"][ck]["models"]):
+            continue
+        canonical["companies"][ck]["models"].append(model)
+        added += 1
 
     canonical["last_updated"] = now()
     write_json(CANONICAL_PATH, canonical)

@@ -18,6 +18,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from typing import Any
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from lib import (
@@ -105,7 +107,8 @@ def main() -> int:
     except Exception as e:
         stats.add_error(f"{type(e).__name__}: {e}")
         write_run(stats)
-        return 1
+        # Optional mirror unavailability should not fail the overall pipeline cron job
+        return 0
     write_run(stats)
     return 0
 

@@ -45,47 +45,60 @@ from lib import (
 
 BASE_URL = "https://huggingface.co/api/models"
 # Filters to keep payload small and the catalog focused on real LLMs.
-TEXT_GEN_ONLY = "text-generation"
-MAX_PAGES = 30  # 30 × 100 = 3000 entries, more than enough for daily delta
+PIPELINE_TAGS = ["text-generation", "image-text-to-text"]
+MAX_PAGES_PER_TAG = 20
 PAGE_SIZE = 100
 
 # Matches the cursor embedded in the `link: <…?cursor=…>; rel="next"` header.
 LINK_NEXT_RE = re.compile(r'<([^>]+)>;\s*rel="next"')
 
 
-def fetch_page_raw(*, cursor: str | None = None) -> tuple[list, str | None]:
+def fetch_page_raw(*, pipeline_tag: str = "text-generation", cursor: str | None = None) -> tuple[list, str | None]:
     """Fetch one page; returns (models, next_cursor)."""
-    url = f"{BASE_URL}?limit={PAGE_SIZE}&full=false&pipeline_tag={TEXT_GEN_ONLY}"
+    url = f"{BASE_URL}?limit={PAGE_SIZE}&full=false&pipeline_tag={pipeline_tag}"
     if cursor:
         url += f"&cursor={cursor}"
     req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=30) as resp:
-        link = resp.headers.get("link", "")
-        body = resp.read()
-    next_cursor = None
-    m = LINK_NEXT_RE.search(link)
-    if m:
-        # Extract cursor=... from the next URL.
-        next_url = m.group(1)
-        cm = re.search(r"cursor=([^&]+)", next_url)
-        if cm:
-            next_cursor = cm.group(1)
-    import json as _json
-    return _json.loads(body), next_cursor
+    last_err = None
+    for attempt in range(3):
+        try:
+            with urlopen(req, timeout=30) as resp:
+                link = resp.headers.get("link", "")
+                body = resp.read()
+            next_cursor = None
+            m = LINK_NEXT_RE.search(link)
+            if m:
+                next_url = m.group(1)
+                cm = re.search(r"cursor=([^&]+)", next_url)
+                if cm:
+                    next_cursor = cm.group(1)
+            import json as _json
+            return _json.loads(body), next_cursor
+        except Exception as e:
+            last_err = e
+            import time
+            time.sleep(1)
+    raise RuntimeError(f"HF fetch page failed: {last_err}")
 
 
 def fetch_all() -> list[dict]:
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     seen: list[dict] = []
-    cursor: str | None = None
-    for _ in range(MAX_PAGES):
-        models, cursor = fetch_page_raw(cursor=cursor)
-        if not models:
-            break
-        for m in models:
-            seen.append(normalize(m, now))
-        if not cursor:
-            break
+    seen_ids: set[str] = set()
+    for tag in PIPELINE_TAGS:
+        cursor: str | None = None
+        for _ in range(MAX_PAGES_PER_TAG):
+            models, cursor = fetch_page_raw(pipeline_tag=tag, cursor=cursor)
+            if not models:
+                break
+            for m in models:
+                norm = normalize(m, now)
+                mid = norm.get("id")
+                if mid and mid not in seen_ids:
+                    seen_ids.add(mid)
+                    seen.append(norm)
+            if not cursor:
+                break
     return seen
 
 

@@ -39,61 +39,49 @@ from lib import (
 # Direct parquet URLs from the leaderboard results dataset. We pick the latest
 # "results_*.parquet" file via the dataset listing API to avoid hard-coding a
 # filename that gets rotated.
-DATASET_API = "https://huggingface.co/api/datasets/open-llm-leaderboard/results/tree/main"
+DATASET_API = "https://huggingface.co/api/datasets/open-llm-leaderboard/contents/tree/main/data"
 
-# Columns that contain benchmark scores in the parquet schema.
 BENCHMARK_COLUMNS = [
     "IFEval",
     "BBH",
     "MATH",
+    "MATH Lvl 5",
     "GPQA",
     "MUSR",
     "MMLU-Pro",
+    "MMLU-PRO",
 ]
+
+PARQUET_FALLBACK_URL = "https://huggingface.co/datasets/open-llm-leaderboard/contents/resolve/main/data/train-00000-of-00001.parquet"
 
 
 def fetch_parquet_url() -> str | None:
-    """Pick the latest results parquet from the dataset tree.
-
-    Note: the dataset is organized as <author>/<model>/results*.parquet rather
-    than a single top-level file. We therefore skip the parquet fast-path and
-    fall back to the rows API below. (See TRD §5.4 — benchmarks pending is
-    expected, not an error.)
-    """
+    """Pick parquet file from open-llm-leaderboard dataset or return fallback."""
     try:
         tree = fetch_json(DATASET_API)
+        candidates = [
+            f.get("path", "")
+            for f in tree
+            if f.get("type") == "file" and f.get("path", "").endswith(".parquet")
+        ]
+        if candidates:
+            return f"https://huggingface.co/datasets/open-llm-leaderboard/contents/resolve/main/{candidates[0]}"
     except Exception:
-        return None
-    candidates = [
-        f.get("path", "")
-        for f in tree
-        if f.get("type") == "file" and f.get("path", "").endswith(".parquet")
-    ]
-    # Prefer a top-level "results*.parquet" if one exists in future snapshots.
-    candidates = [c for c in candidates if "/" not in c and c.startswith("results") and "raw_" not in c]
-    if not candidates:
-        return None
-    candidates.sort()
-    return f"https://huggingface.co/datasets/open-llm-leaderboard/results/resolve/main/{candidates[-1]}"
+        pass
+    return PARQUET_FALLBACK_URL
 
 
 def fetch_via_dataset_api() -> list[dict]:
-    """Fallback: use the dataset's row-level API endpoint (slow for full sweep).
-
-    The HF Datasets server exposes a /rows endpoint that returns paginated JSON.
-    We sample the first page only as a smoke signal — the parquet path is the
-    authoritative fetcher in production.
-    """
-    # The dataset is organized as <author>/<model>/…; the viewer API needs a
-    # specific config/split. We try the most common canonical one.
+    """Fallback: use HF Datasets server rows API endpoint."""
     urls = [
+        "https://datasets-server.huggingface.co/rows?dataset=open-llm-leaderboard%2Fcontents&config=default&split=train&offset=0&length=100",
         "https://datasets-server.huggingface.co/rows?dataset=open-llm-leaderboard%2Fresults&config=default&split=train&offset=0&length=100",
-        "https://datasets-server.huggingface.co/rows?dataset=open-llm-leaderboard%2Fresults&config=results&split=train&offset=0&length=100",
     ]
     for url in urls:
         try:
             payload = fetch_json(url)
-            return payload.get("rows", [])
+            if payload and "rows" in payload:
+                return payload["rows"]
         except Exception:
             continue
     return []
@@ -103,67 +91,64 @@ def fetch() -> list[dict]:
     """Fetch and normalize leaderboard results. Returns list of score rows."""
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     parquet_url = fetch_parquet_url()
-    if not parquet_url:
-        log = __import__("logging").getLogger("pipeline")
-        log.warning("no parquet found, falling back to rows API (partial)")
-        return [_normalize_row(r, now) for r in fetch_via_dataset_api()]
+    log = __import__("logging").getLogger("pipeline")
 
-    raw = http_get(parquet_url)
-    # Lazy-import pandas + pyarrow so the pipeline doesn't require them unless
-    # the leaderboard fetcher is actually invoked (graceful degradation).
-    try:
-        import io
-        import pandas as pd
-    except ImportError as e:
-        log = __import__("logging").getLogger("pipeline")
-        log.error("pandas/pyarrow required for leaderboard parsing: %s", e)
-        return []
+    if parquet_url:
+        try:
+            raw = http_get(parquet_url)
+            import io
+            import pandas as pd
+            df = pd.read_parquet(io.BytesIO(raw))
+            out: list[dict] = []
+            cols = [c for c in BENCHMARK_COLUMNS if c in df.columns]
+            if cols:
+                for _, row in df.iterrows():
+                    model_id = row.get("fullname") or row.get("Model") or row.get("model_id") or row.get("model") or row.get("name")
+                    if not model_id:
+                        continue
+                    for col in cols:
+                        score = row.get(col)
+                        if score is None or (isinstance(score, float) and score != score):
+                            continue
+                        bench_name = "MMLU-Pro" if col == "MMLU-PRO" else ("MATH" if col == "MATH Lvl 5" else col)
+                        out.append({
+                            "model_id": str(model_id),
+                            "benchmark_name": bench_name,
+                            "score": float(score),
+                            "source": "hf-leaderboard",
+                            "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+                            "fetched_at": now,
+                        })
+                if out:
+                    return out
+        except Exception as e:
+            log.warning("parquet parsing failed (%s), falling back to rows API", e)
 
-    df = pd.read_parquet(io.BytesIO(raw))
-    out: list[dict] = []
-    cols = [c for c in BENCHMARK_COLUMNS if c in df.columns]
-    if not cols:
-        return []
-    for _, row in df.iterrows():
-        model_id = row.get("model_id") or row.get("model") or row.get("name")
-        if not model_id:
-            continue
-        for col in cols:
-            score = row.get(col)
-            if score is None or (isinstance(score, float) and score != score):
-                continue
-            out.append({
-                "model_id": model_id,
-                "benchmark_name": col,
-                "score": float(score),
-                "source": "hf-leaderboard",
-                "source_url": (
-                    "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard"
-                ),
-                "fetched_at": now,
-            })
-    return out
+    log.warning("falling back to rows API")
+    return [_normalize_row(r, now) for r in fetch_via_dataset_api()]
 
 
 def _normalize_row(row: dict, now: str) -> dict:
     """Normalize a /rows API response row."""
     row_obj = row.get("row", row) if isinstance(row, dict) else {}
     out = []
-    model_id = row_obj.get("model_id") or row_obj.get("model")
+    model_id = row_obj.get("fullname") or row_obj.get("Model") or row_obj.get("model_id") or row_obj.get("model")
     if not model_id:
         return {}
     for col in BENCHMARK_COLUMNS:
         if col in row_obj and row_obj[col] is not None:
-            out.append({
-                "model_id": model_id,
-                "benchmark_name": col,
-                "score": float(row_obj[col]),
-                "source": "hf-leaderboard",
-                "source_url": (
-                    "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard"
-                ),
-                "fetched_at": now,
-            })
+            bench_name = "MMLU-Pro" if col == "MMLU-PRO" else ("MATH" if col == "MATH Lvl 5" else col)
+            try:
+                out.append({
+                    "model_id": str(model_id),
+                    "benchmark_name": bench_name,
+                    "score": float(row_obj[col]),
+                    "source": "hf-leaderboard",
+                    "source_url": "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard",
+                    "fetched_at": now,
+                })
+            except (ValueError, TypeError):
+                continue
     return {"_bundle": out}
 
 

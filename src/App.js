@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { HashRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import "./index.css";
 import "./styles/animations.css";
 import "./App.css";
@@ -137,8 +137,8 @@ function Shell() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL || ""}>
       <Shell />
-    </HashRouter>
+    </BrowserRouter>
   );
 }

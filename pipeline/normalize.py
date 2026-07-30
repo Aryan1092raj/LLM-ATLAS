@@ -118,6 +118,13 @@ VENDOR_HINTS = {
     "qwen/": "qwen",
     "tiiuae/": "falcon",
     "nanbeige/": "nanbeige",
+    "xai/": "xai",
+    "cohere/": "cohere",
+    "stabilityai/": "stability",
+    "bytedance/": "bytedance",
+    "01-ai/": "01-ai",
+    "nousresearch/": "nousresearch",
+    "allenai/": "allenai",
 }
 
 
@@ -138,7 +145,6 @@ def vendor_key_for(source: str, raw_id: str, name: str) -> str:
 DERIVATIVE_SUFFIXES = (
     "-ft", "-distill", "-distilled",
     "-abliterated", "-uncensored",
-    "-it",  # instruct — NOT excluded, instruct variants are legitimate
 )
 
 
@@ -226,7 +232,7 @@ def main() -> int:
 
     aggregated = {"matched": [], "new": [], "skipped": []}
     sources_processed: list[str] = []
-    for source in ("openrouter", "huggingface", "leaderboard", "arena"):
+    for source in ("openrouter", "huggingface"):
         records = load_latest_raw(source)
         if not records:
             continue

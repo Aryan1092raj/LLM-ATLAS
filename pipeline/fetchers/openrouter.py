@@ -48,7 +48,7 @@ def normalize(model: dict, now: str) -> dict:
     return {
         "id": model.get("id") or model.get("slug"),
         "name": model.get("name") or model.get("id"),
-        "context_window": arch.get("input_modalities") and model.get("top_provider", {}).get("max_completion_tokens"),
+        "context_window": model.get("context_length") or model.get("top_provider", {}).get("context_length"),
         "modality": arch.get("input_modalities"),
         "pricing_prompt_per_m": p_in,
         "pricing_completion_per_m": p_out,

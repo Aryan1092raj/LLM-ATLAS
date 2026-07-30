@@ -48,7 +48,14 @@ PROVIDER_PREFIX = re.compile(
     r"mistral/|"
     r"qwen/|"
     r"tiiuae/|"
-    r"nanbeige/"
+    r"nanbeige/|"
+    r"xai/|"
+    r"cohere/|"
+    r"stabilityai/|"
+    r"bytedance/|"
+    r"01-ai/|"
+    r"nousresearch/|"
+    r"allenai/"
     r")",
     re.IGNORECASE,
 )

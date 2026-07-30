@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "./Logo";
+import { DataContext } from "../context/DataContext";
 import "./Footer.css";
 
 export default function Footer() {
   const navigate = useNavigate();
+  const { allModels = [], companies = [] } = useContext(DataContext) || {};
+
+  const modelCount = allModels.length;
+  const providerCount = companies.length;
 
   return (
     <footer className="footer-section">
@@ -22,16 +27,16 @@ export default function Footer() {
                 <span>LLM Atlas</span>
               </button>
               <p className="footer-about__text">
-                LLM Atlas is an open-source atlas tracking large language models across architecture family 
+                LLM Atlas is an open-source platform tracking large language models across architecture families 
                 (Dense, MoE, Hybrid SSM, Looped, Multimodal), raw benchmarks (Arena ELO, MMLU-Pro, GPQA, MATH-500), 
-                and hosted token economics. Designed for transparent, side-by-side model evaluation without blended scores.
+                and token economics. Designed for transparent, side-by-side evaluation without blended scores.
               </p>
             </div>
 
             {/* Social / Connect Section */}
             <div className="footer-connect">
               <h3 className="footer-connect__title">Connect & Contribute</h3>
-              <p className="footer-connect__sub">Explore code repositories and connect with the maintainers.</p>
+              <p className="footer-connect__sub">Explore code repositories and connect with maintainers.</p>
               <div className="footer-social-links">
                 {/* UPDATE YOUR GITHUB URL HERE */}
                 <a
@@ -66,8 +71,8 @@ export default function Footer() {
 
           <div className="footer-bottom">
             <span>LLM Atlas · Open Source (MIT)</span>
-            <span className="footer-pill">398 Models Tracked</span>
-            <span className="footer-pill">53 Providers</span>
+            <span className="footer-pill">{modelCount} Models Tracked</span>
+            <span className="footer-pill">{providerCount} Providers</span>
           </div>
         </div>
       </div>
