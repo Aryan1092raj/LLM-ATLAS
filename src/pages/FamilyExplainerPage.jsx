@@ -35,11 +35,13 @@ export default function FamilyExplainerPage() {
         <button className="family-explainer__back" onClick={() => navigate("/families")}>
           ← All families
         </button>
-        <div className="clay clay--lg" style={{ padding: 32, textAlign: "center" }}>
-          <h2>Family not found</h2>
-          <p style={{ color: "var(--clay-ink-soft)", marginTop: 8 }}>
-            We don't have an explainer for "{familyId}" yet.
+        <div className="clay clay--lg fx-pop" style={{ padding: 48, textAlign: "center", maxWidth: 540, margin: "40px auto" }}>
+          <div style={{ fontSize: "3.5rem", marginBottom: 16 }} aria-hidden="true">🧬</div>
+          <h2>Architecture Family Not Found</h2>
+          <p style={{ color: "var(--clay-ink-soft)", marginTop: 12, lineHeight: 1.6, fontSize: "1.05rem" }}>
+            This architecture family did not come into existence yet... or it is hiding from us in novel research papers.
           </p>
+          <button onClick={() => navigate("/families")} className="btn btn--accent" style={{ marginTop: 24 }}>Browse All Families</button>
         </div>
       </div>
     );

@@ -13,10 +13,14 @@ export default function CompanyPage() {
   const company = companies.find((c) => c.key === companyKey);
   if (!company) {
     return (
-      <div className="section">
-        <div className="clay clay--lg" style={{ padding: 32, textAlign: "center" }}>
-          <h2>Vendor not found</h2>
-          <Link to="/" className="btn btn--accent" style={{ marginTop: 16 }}>← Back home</Link>
+      <div className="section fx-fade">
+        <div className="clay clay--lg fx-pop" style={{ padding: 48, textAlign: "center", maxWidth: 540, margin: "60px auto" }}>
+          <div style={{ fontSize: "3.5rem", marginBottom: 16 }} aria-hidden="true">🏢</div>
+          <h2>Vendor Not Found</h2>
+          <p style={{ color: "var(--clay-ink-soft)", marginTop: 12, lineHeight: 1.6, fontSize: "1.05rem" }}>
+            This LLM vendor did not come into existence yet... or it is hiding from us in stealth mode.
+          </p>
+          <Link to="/" className="btn btn--accent" style={{ marginTop: 24 }}>← Return to Atlas</Link>
         </div>
       </div>
     );
