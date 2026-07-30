@@ -1,0 +1,48 @@
+name: 🐛 Model Data Correction Request
+description: Report an inaccurate parameter, missing spec, or broken benchmark citation in data.json.
+labels: ["data-correction", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep LLM Atlas accurate and transparent! Please provide details and official citation links below.
+
+  - type: input
+    id: model_id
+    attributes:
+      label: Model ID or Name
+      description: Which model has incorrect data? (e.g. meta-llama/llama-3.1-405b-instruct or openai/gpt-4o)
+      placeholder: e.g. meta-llama/llama-3.1-405b-instruct
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Correction Category
+      options:
+        - Architecture Spec (Layers, Heads, Context Window, Attention Type)
+        - Benchmark Score (MMLU, Arena ELO, MATH, HumanEval)
+        - Pricing / Token Economics
+        - Missing System Card / Citation Link
+        - Alias or Vendor Categorization
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_vs_expected
+    attributes:
+      label: Current Value vs Expected Correct Value
+      description: Describe what is currently listed and what the correct value should be.
+      placeholder: Current: Context window is 128k. Expected: Context window is 200k.
+    validations:
+      required: true
+
+  - type: input
+    id: citation_url
+    attributes:
+      label: Official Citation URL
+      description: Link to official technical report, Hugging Face repo, system card, or blog post.
+      placeholder: https://huggingface.co/meta-llama/Llama-3.1-405B/blob/main/config.json
+    validations:
+      required: true

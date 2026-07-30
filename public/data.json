@@ -37,6 +37,7 @@
           "id": "openai/gpt-4o",
           "name": "GPT-4o",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -92,6 +93,7 @@
           "id": "openai/gpt-4o-mini",
           "name": "GPT-4o Mini",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -144,6 +146,7 @@
           "id": "openai/o1-preview",
           "name": "o1-preview",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -197,6 +200,7 @@
           "id": "openai/o1-mini",
           "name": "o1-mini",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -241,6 +245,7 @@
           "id": "openai/o3-mini",
           "name": "o3-mini",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -293,6 +298,7 @@
           "id": "openai/gpt-5.5-pro",
           "name": "GPT-5.5 Pro",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -330,6 +336,7 @@
           "id": "openai/gpt-5.6-terra-pro",
           "name": "GPT-5.6 Terra Pro",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -366,6 +373,7 @@
           "id": "openai/gpt-5.6-sol-pro",
           "name": "GPT-5.6 Sol Pro",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -402,6 +410,7 @@
           "id": "openai/gpt-5.6-luna-pro",
           "name": "GPT-5.6 Luna Pro",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -453,6 +462,7 @@
           "id": "anthropic/claude-3.5-sonnet",
           "name": "Claude 3.5 Sonnet",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -506,6 +516,7 @@
           "id": "anthropic/claude-3.5-haiku",
           "name": "Claude 3.5 Haiku",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -550,6 +561,7 @@
           "id": "anthropic/claude-sonnet-4",
           "name": "Claude Sonnet 4",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -586,6 +598,7 @@
           "id": "anthropic/claude-sonnet-4.5",
           "name": "Claude Sonnet 4.5",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -622,6 +635,7 @@
           "id": "anthropic/claude-sonnet-5",
           "name": "Claude Sonnet 5",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -658,6 +672,7 @@
           "id": "anthropic/claude-opus-4.5",
           "name": "Claude Opus 4.5",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -694,6 +709,7 @@
           "id": "anthropic/claude-opus-5",
           "name": "Claude Opus 5",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -730,6 +746,7 @@
           "id": "anthropic/claude-3.7-sonnet",
           "name": "Claude 3.7 Sonnet",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -781,6 +798,7 @@
           "id": "anthropic/claude-3-opus",
           "name": "Claude 3 Opus",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -826,6 +844,7 @@
           "id": "anthropic/claude-3-sonnet",
           "name": "Claude 3 Sonnet",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -869,6 +888,7 @@
           "id": "anthropic/claude-3-haiku",
           "name": "Claude 3 Haiku",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -918,6 +938,7 @@
           "id": "google/gemini-2.0-flash",
           "name": "Gemini 2.0 Flash",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -971,6 +992,7 @@
           "id": "google/gemini-2.5-pro",
           "name": "Gemini 2.5 Pro",
           "family": "moe",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -1022,6 +1044,7 @@
           "id": "google/gemini-1.5-flash",
           "name": "Gemini 1.5 Flash",
           "family": "moe",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -1071,6 +1094,7 @@
           "id": "meta-llama/llama-3.3-70b-instruct",
           "name": "Llama 3.3 70B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1126,6 +1150,7 @@
           "id": "meta-llama/llama-3.1-405b-instruct",
           "name": "Llama 3.1 405B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1180,6 +1205,7 @@
           "id": "meta-llama/llama-3.1-70b-instruct",
           "name": "Llama 3.1 70B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1224,6 +1250,7 @@
           "id": "meta-llama/llama-3.1-8b-instruct",
           "name": "Llama 3.1 8B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1267,6 +1294,7 @@
           "id": "meta-llama/llama-3.2-3b-instruct",
           "name": "Llama 3.2 3B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1310,6 +1338,7 @@
           "id": "meta-llama/llama-3.2-11b-vision-instruct",
           "name": "Llama 3.2 11B Vision Instruct",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1359,6 +1388,7 @@
           "id": "deepseek/deepseek-v3",
           "name": "DeepSeek V3",
           "family": "moe",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1406,6 +1436,7 @@
           "id": "deepseek/deepseek-r1",
           "name": "DeepSeek R1",
           "family": "moe",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1457,6 +1488,7 @@
           "id": "deepseek/deepseek-r1-distill-llama-70b",
           "name": "DeepSeek R1 Distill Llama 70B",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1507,6 +1539,7 @@
           "id": "deepseek/deepseek-r1-distill-qwen-32b",
           "name": "DeepSeek R1 Distill Qwen 32B",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1563,6 +1596,7 @@
           "id": "mistralai/mixtral-8x7b-instruct",
           "name": "Mixtral 8x7B Instruct",
           "family": "moe",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1607,6 +1641,7 @@
           "id": "mistralai/mistral-large-2411",
           "name": "Mistral Large 2",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1658,6 +1693,7 @@
           "id": "mistralai/codestral-2501",
           "name": "Codestral 25B",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1708,6 +1744,7 @@
           "id": "qwen/qwen-2.5-72b-instruct",
           "name": "Qwen 2.5 72B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1753,6 +1790,7 @@
           "id": "qwen/qwen-2.5-coder-32b-instruct",
           "name": "Qwen 2.5 Coder 32B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1804,6 +1842,7 @@
           "id": "qwen/qwen-qwq-32b",
           "name": "QwQ 32B Preview",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1854,6 +1893,7 @@
           "id": "qwen/qwen-2.5-7b-instruct",
           "name": "Qwen 2.5 7B Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1903,6 +1943,7 @@
           "id": "google/gemma-2-27b-it",
           "name": "Gemma 2 27B IT",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1948,6 +1989,7 @@
           "id": "google/gemma-2-9b-it",
           "name": "Gemma 2 9B IT",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -1997,6 +2039,7 @@
           "id": "ai21/jamba-1.5-large",
           "name": "Jamba 1.5 Large",
           "family": "hybrid_attention_ssm",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2049,6 +2092,7 @@
           "id": "ai21/jamba-1.5-mini",
           "name": "Jamba 1.5 Mini",
           "family": "hybrid_attention_ssm",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2098,6 +2142,7 @@
           "id": "x-ai/grok-4.5",
           "name": "Grok 4.5",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -2134,6 +2179,7 @@
           "id": "x-ai/grok-4.3",
           "name": "Grok 4.3",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -2170,6 +2216,7 @@
           "id": "x-ai/grok-4.20",
           "name": "Grok 4.20",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -2206,6 +2253,7 @@
           "id": "x-ai/grok-2",
           "name": "Grok-2",
           "family": "multimodal",
+          "confidence": "undisclosed",
           "disclosure": "closed_undisclosed",
           "status": "complete",
           "aliases": [
@@ -2256,6 +2304,7 @@
           "id": "microsoft/phi-4",
           "name": "Phi-4 14B",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2297,6 +2346,7 @@
           "id": "microsoft/phi-3.5-mini-instruct",
           "name": "Phi-3.5 Mini Instruct",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2370,6 +2420,7 @@
           "id": "microsoft/phi-3.5-moe-instruct",
           "name": "Phi-3.5 MoE Instruct",
           "family": "moe",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2449,6 +2500,7 @@
           "id": "tiiuae/falcon3-mamba-7b-base",
           "name": "Falcon3 Mamba 7B Base",
           "family": "hybrid_attention_ssm",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2498,6 +2550,7 @@
           "id": "nanbeige/nanbeige4.2-3b",
           "name": "Nanbeige4.2-3B",
           "family": "looped",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "auto_added",
           "aliases": [
@@ -2534,6 +2587,7 @@
           "id": "z-ai/glm-5",
           "name": "GLM-5",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2577,6 +2631,7 @@
           "id": "z-ai/glm-5.1",
           "name": "GLM 5.1",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [
@@ -2613,6 +2668,7 @@
           "id": "z-ai/glm-5.2",
           "name": "GLM 5.2",
           "family": "dense",
+          "confidence": "undisclosed",
           "disclosure": "open_weight",
           "status": "complete",
           "aliases": [

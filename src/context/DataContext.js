@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 
 export const DataContext = createContext({
   data: null,
@@ -6,3 +6,5 @@ export const DataContext = createContext({
   allModels: [],
   findModel: () => null
 });
+
+export const useData = () => useContext(DataContext);

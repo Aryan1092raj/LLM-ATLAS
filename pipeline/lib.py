@@ -49,15 +49,57 @@ def now() -> str:
 # HTTP
 # ---------------------------------------------------------------------------
 
-def http_get(url: str, *, timeout: int = DEFAULT_TIMEOUT, retries: int = 3) -> bytes:
-    """Fetch URL with retries + exponential backoff. Raises on final failure."""
+ETAG_CACHE_PATH = DATA_PROCESSED / "etag_cache.json"
+
+
+def _load_etag_cache() -> dict[str, dict[str, str]]:
+    if ETAG_CACHE_PATH.exists():
+        try:
+            return json.loads(ETAG_CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def _save_etag_cache(cache: dict[str, dict[str, str]]) -> None:
+    try:
+        ETAG_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        ETAG_CACHE_PATH.write_text(json.dumps(cache, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def http_get(url: str, *, timeout: int = DEFAULT_TIMEOUT, retries: int = 3, use_cache: bool = True) -> bytes:
+    """Fetch URL with retries, exponential backoff, and ETag/If-None-Match caching."""
     last_err: Exception | None = None
+    cache = _load_etag_cache() if use_cache else {}
+    cached_entry = cache.get(url, {})
+    etag = cached_entry.get("etag")
+    cached_body_hex = cached_entry.get("body_hex")
+
+    headers = {"User-Agent": USER_AGENT}
+    if etag:
+        headers["If-None-Match"] = etag
+
     for attempt in range(retries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=timeout) as resp:
-                return resp.read()
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, ConnectionError) as e:
+                body = resp.read()
+                new_etag = resp.headers.get("ETag")
+                if use_cache and new_etag and body:
+                    cache[url] = {"etag": new_etag, "body_hex": body.hex()}
+                    _save_etag_cache(cache)
+                return body
+        except urllib.error.HTTPError as e:
+            if e.code == 304 and cached_body_hex:
+                log.info("GET %s returned 304 Not Modified (using cached response)", url)
+                return bytes.fromhex(cached_body_hex)
+            last_err = e
+            wait = 2 ** attempt
+            log.warning("GET %s failed (attempt %d/%d): %s. Retrying in %ds", url, attempt + 1, retries, e, wait)
+            time.sleep(wait)
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
             last_err = e
             wait = 2 ** attempt
             log.warning("GET %s failed (attempt %d/%d): %s. Retrying in %ds", url, attempt + 1, retries, e, wait)

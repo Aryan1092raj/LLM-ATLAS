@@ -1,5 +1,9 @@
 # LLM Atlas
 
+[![Daily Ingestion Pipeline](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/daily-pipeline.yml/badge.svg)](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/daily-pipeline.yml)
+[![Pipeline CI](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/pipeline-ci.yml/badge.svg)](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/pipeline-ci.yml)
+[![Weekly Data Review](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/weekly-data-review.yml/badge.svg)](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/weekly-data-review.yml)
+
 > Every LLM, explained honestly. Architecture specs, raw benchmark scores, and hosted token economics — side-by-side, never blended.
 
 **LLM Atlas** is an open-source interactive atlas and automated tracking engine for Large Language Model (LLM) architectures. It covers dense models, Mixture-of-Experts (MoE), Hybrid Attention-SSM (Mamba/Jamba), Looped architectures, and Multimodal foundation models.
@@ -9,10 +13,11 @@
 ## 🌟 Key Features
 
 - **Side-by-Side Model Comparison**: Compare parameter counts (active vs total), context windows, attention mechanisms (GQA/MLA/SSM), hosted pricing, and raw benchmark scores.
-- **Interactive React Flow Visualizers**: Detailed component-level architecture flow diagrams for over 50+ major model families.
-- **Automated Data Ingestion Pipeline**: Python engine fetching daily model releases, specs, pricing, and benchmark scores from OpenRouter, Hugging Face Hub, and Open LLM Leaderboards.
-- **Entity Resolution Engine**: Automatic model deduplication, alias normalization, instruct variant preservation, and vendor inference.
-- **Cloudflare Pages Deployment**: Built-in Cloudflare Pages Function (`functions/[[path]].js`) with dynamic OpenGraph meta tag rewriting via `HTMLRewriter`.
+- **Parametric & Interactive Visualizers**: Dynamic React Flow architecture flow diagrams for over 50+ major model families, auto-generated from Hugging Face configs.
+- **LLM Pricing & Cost Calculator**: Interactive token volume calculator to estimate monthly API costs and filter by quality thresholds.
+- **Automated Data Ingestion Pipeline**: Python engine fetching daily model releases, specs, pricing, and benchmark scores from OpenRouter, Hugging Face Hub, Open LLM Leaderboards, and Artificial Analysis.
+- **Entity Resolution & Provenance**: Automatic model deduplication, alias normalization, and visual confidence badges (🟢 Verified ground truth, 🟡 Reported, ⚪ Undisclosed).
+- **Public Versioned API & RSS Feed**: Serverless `/api/v1/models.json` endpoint and `/feed.xml` RSS feed.
 
 ---
 

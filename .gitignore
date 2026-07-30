@@ -77,6 +77,8 @@ skills-lock.json
 data/raw/
 data/processed/20*/
 data/processed/alias_index.json
+data/processed/etag_cache.json
+data/processed/weekly_audit.md
 
 # --- Loose asset bundles (re-generate via tooling, don't commit) ---
 favicon.zip

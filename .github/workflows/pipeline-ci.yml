@@ -1,0 +1,33 @@
+name: pipeline-ci
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install pipeline dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas pyarrow
+
+      - name: run pipeline unit tests
+        run: |
+          python -m unittest discover -s pipeline/tests
+
+      - name: validate curated model ids
+        run: |
+          python scripts/validate_curated_ids.py

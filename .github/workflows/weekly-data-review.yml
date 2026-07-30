@@ -1,0 +1,48 @@
+name: weekly-data-review
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"  # Every Monday at 08:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: run weekly audit script
+        run: |
+          python pipeline/weekly_checklist.py
+
+      - name: open or update github issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPORT_FILE="data/processed/weekly_audit.md"
+          if [ ! -f "$REPORT_FILE" ]; then
+            echo "Audit report file not found"
+            exit 1
+          fi
+
+          ISSUE_TITLE="📋 Weekly Data Quality Audit ($(date -u +%Y-%m-%d))"
+          EXISTING_ISSUE=$(gh issue list --label "data-review" --state open --json number --jq '.[0].number')
+
+          if [ -n "$EXISTING_ISSUE" ]; then
+            echo "Updating existing open data-review issue #$EXISTING_ISSUE"
+            gh issue edit "$EXISTING_ISSUE" --title "$ISSUE_TITLE" --body-file "$REPORT_FILE"
+          else
+            echo "Opening new data-review issue"
+            gh issue create --title "$ISSUE_TITLE" --body-file "$REPORT_FILE" --label "data-review"
+          fi

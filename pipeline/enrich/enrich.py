@@ -177,6 +177,15 @@ OPEN_WEIGHT_KEYWORDS = [
 CLOSED_OVERRIDE_KEYWORDS = ["gpt-", "claude-", "gemini-1", "gemini-2", "o1-", "o3-", "glm-"]
 
 
+def compute_confidence(disclosure: str, specs: dict, source_url: str | None = None) -> str:
+    if disclosure == "open_weight" and (specs.get("num_hidden_layers") or specs.get("params_total")):
+        return "verified"
+    url = source_url or specs.get("source_url") or ""
+    if url and "openrouter.ai" not in url:
+        return "reported"
+    return "undisclosed"
+
+
 def is_open_weight_model(raw_id: str, name: str, vendor: str) -> bool:
     rid = (raw_id or "").lower()
     nm = (name or "").lower()
@@ -374,11 +383,13 @@ def main() -> int:
         vendor_label = vendor_key.title()
         ck = _ensure_company(canonical, vendor_key, vendor_label)
         model_id = draft.raw_id or f"{vendor_key}/{normalize_name(draft.name)}"
+        conf = compute_confidence(draft.disclosure, draft.specs, draft.specs.get("source_url"))
         model = {
             "id": model_id,
             "name": draft.name,
             "family": draft.family,
             "disclosure": draft.disclosure,
+            "confidence": conf,
             "status": _status(draft),
             "aliases": [draft.raw_id, draft.name],
             "features": {"Developer": vendor_label},

@@ -16,6 +16,7 @@ import FamiliesPage from "./pages/FamiliesPage";
 import FamilyExplainerPage from "./pages/FamilyExplainerPage";
 import TimelinePage from "./pages/TimelinePage";
 import ChangelogPage from "./pages/ChangelogPage";
+import CalculatorPage from "./pages/CalculatorPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import { DataContext } from "./context/DataContext";
 
@@ -59,6 +60,7 @@ function Shell() {
   const navItems = [
     { id: "home", label: "Home", onClick: () => navigate("/") },
     { id: "compare", label: "Compare", onClick: () => navigate("/compare") },
+    { id: "calculator", label: "Calculator", onClick: () => navigate("/calculator") },
     { id: "families", label: "Families", onClick: () => navigate("/families") },
     { id: "timeline", label: "Timeline", onClick: () => navigate("/timeline") },
     { id: "methodology", label: "Methodology", onClick: () => navigate("/methodology") }
@@ -67,6 +69,7 @@ function Shell() {
   const activeId = (() => {
     const p = location.pathname;
     if (p.startsWith("/compare")) return "compare";
+    if (p.startsWith("/calculator")) return "calculator";
     if (p.startsWith("/families") || p.startsWith("/family/")) return "families";
     if (p.startsWith("/timeline")) return "timeline";
     if (p.startsWith("/methodology")) return "methodology";
@@ -77,7 +80,8 @@ function Shell() {
 
   useEffect(() => {
     const p = location.pathname;
-    if (p.startsWith("/timeline")) document.title = "LLM Timeline & Milestones — LLM Atlas";
+    if (p.startsWith("/calculator")) document.title = "LLM Pricing & Cost Calculator — LLM Atlas";
+    else if (p.startsWith("/timeline")) document.title = "LLM Timeline & Milestones — LLM Atlas";
     else if (p.startsWith("/family/")) document.title = `${p.split("/family/")[1].replace(/_/g, " ").toUpperCase()} Architecture — LLM Atlas`;
     else if (p.startsWith("/families")) document.title = "Architecture Families — LLM Atlas";
     else if (p.startsWith("/compare")) document.title = "Compare LLMs Side-by-Side — LLM Atlas";
@@ -122,6 +126,7 @@ function Shell() {
           <Route path="/company/:companyKey" element={<CompanyPage />} />
           <Route path="/model/:modelId" element={<ModelDetailPage />} />
           <Route path="/compare" element={<ComparePage />} />
+          <Route path="/calculator" element={<CalculatorPage />} />
           <Route path="/families" element={<FamiliesPage />} />
           <Route path="/family/:familyId" element={<FamilyExplainerPage />} />
           <Route path="/timeline" element={<TimelinePage />} />
