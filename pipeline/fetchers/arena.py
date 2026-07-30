@@ -1,23 +1,15 @@
 """
-LMArena fetcher (via sanctioned mirror, per TRD §7).
+LMArena fetcher (via official Hugging Face dataset lmarena-ai/leaderboard-dataset).
 
-The mirror at api.wulong.dev exposes JSON snapshots of LMArena rankings.
-Per TRD §7 we do NOT scrape lmarena.ai directly — only the JSON mirror
-(which is published under open-llm-leaderboards) is sanctioned.
-
-Endpoint shape (best-effort; we don't pin specific query params because
-the mirror may rotate them):
-    GET https://api.wulong.dev/...
-
-We try a small list of known-good paths and take whichever returns 200.
+Pulls direct parquet files from HF datasets repo for fast, rate-limit-free retrieval.
 """
 from __future__ import annotations
 
+import io
 import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
-
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -32,66 +24,55 @@ from lib import (
     write_run,
 )
 
-
-CANDIDATE_PATHS = [
-    "https://api.wulong.dev/arena",
-    "https://api.wulong.dev/leaderboard",
-    "https://api.wulong.dev/v1/leaderboard",
-]
-
-
+DATASET_REPO = "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/resolve/main"
+CONFIGS = ["text", "vision", "agent", "webdev"]
 SOURCE_URL = "https://lmarena.ai"
 
 
 def fetch() -> list[dict]:
-    """Fetch Arena leaderboard snapshot. Returns normalized list of model rows."""
+    """Fetch Arena leaderboard snapshot from lmarena-ai/leaderboard-dataset on HF via Parquet."""
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    payload = None
-    last_err: Exception | None = None
-    for url in CANDIDATE_PATHS:
-        try:
-            payload = fetch_json(url)
-            if payload:
-                break
-        except Exception as e:
-            last_err = e
-            continue
-    if payload is None:
-        raise RuntimeError(f"arena mirror unreachable ({last_err})")
-
-    rows = _extract_rows(payload)
     out: list[dict] = []
-    for row in rows:
-        if not isinstance(row, dict):
+    seen_models: set[str] = set()
+    log = __import__("logging").getLogger("pipeline")
+
+    import pandas as pd
+
+    for config_name in CONFIGS:
+        parquet_url = f"{DATASET_REPO}/{config_name}/latest-00000-of-00001.parquet"
+        try:
+            raw_bytes = http_get(parquet_url)
+            df = pd.read_parquet(io.BytesIO(raw_bytes))
+            for _, row in df.iterrows():
+                name = row.get("model_name") or row.get("name")
+                score = row.get("rating") or row.get("score") or row.get("elo")
+                if not name or score is None or (isinstance(score, float) and score != score):
+                    continue
+
+                key = f"{name}:{config_name}"
+                if key in seen_models:
+                    continue
+                seen_models.add(key)
+
+                bench_name = "Arena-ELO" if config_name == "text" else f"Arena-ELO-{config_name.title()}"
+                out.append({
+                    "model_name": str(name),
+                    "benchmark_name": bench_name,
+                    "score": round(float(score), 2),
+                    "rank": float(row.get("rank", 0)) if row.get("rank") is not None else None,
+                    "category": str(row.get("category", "")),
+                    "organization": str(row.get("organization", "")),
+                    "source": "lmarena-hf",
+                    "source_url": SOURCE_URL,
+                    "fetched_at": now,
+                })
+        except Exception as e:
+            log.warning("failed fetching parquet for config %s (%s)", config_name, e)
             continue
-        name = row.get("model_name") or row.get("name") or row.get("model")
-        score = row.get("score") or row.get("elo") or row.get("rating")
-        if not name or score is None:
-            continue
-        out.append({
-            "model_name": name,
-            "benchmark_name": "Arena-ELO",
-            "score": float(score),
-            "source": "arena-mirror",
-            "source_url": SOURCE_URL,
-            "fetched_at": now,
-        })
+
+    if not out:
+        raise RuntimeError("No arena records could be fetched from lmarena-ai/leaderboard-dataset parquet")
     return out
-
-
-def _extract_rows(payload: Any) -> list[Any]:
-    """Tolerant shape detection — mirror schemas vary by snapshot."""
-    if isinstance(payload, list):
-        return payload
-    if isinstance(payload, dict):
-        for key in ("data", "leaderboard", "models", "rows", "results"):
-            if key in payload and isinstance(payload[key], list):
-                return payload[key]
-        # Some mirrors wrap rows as a dict keyed by model name.
-        first = next(iter(payload.values()), None)
-        if isinstance(first, list):
-            return first
-    return []
 
 
 def main() -> int:
@@ -107,7 +88,6 @@ def main() -> int:
     except Exception as e:
         stats.add_error(f"{type(e).__name__}: {e}")
         write_run(stats)
-        # Optional mirror unavailability should not fail the overall pipeline cron job
         return 0
     write_run(stats)
     return 0

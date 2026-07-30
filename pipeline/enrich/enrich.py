@@ -95,17 +95,30 @@ def extract_specs(config: dict, fetched_at: str) -> dict:
     """Map HF config.json → our architecture_specs schema."""
     total = config.get("num_parameters") or config.get("n_params")
     active = total  # dense default; MoE handled below.
-    if config.get("num_local_experts"):
-        total = config.get("num_parameters") or (config.get("num_local_experts", 0) * config.get("num_experts_per_tok", 1) * 7_000_000_000)
+    num_experts = config.get("num_local_experts") or config.get("num_experts") or config.get("n_routed_experts")
+    if num_experts:
+        total = config.get("num_parameters") or (num_experts * config.get("num_experts_per_tok", 1) * 7_000_000_000)
         active_params = config.get("num_experts_per_tok", 2) * config.get("expert_hidden_size", 0) * 8
-        # Fallback: when we can't compute precisely, leave active None to be honest.
         active = active_params if active_params else None
+
+    n_heads = config.get("num_attention_heads") or config.get("n_head")
+    n_kv_heads = config.get("num_key_value_heads") or config.get("n_kv_head")
+    rope = config.get("rope_theta")
+    if rope is None and isinstance(config.get("rope_scaling"), dict):
+        rope = config.get("rope_scaling", {}).get("factor")
+
     return {
         "disclosure": "open_weight",
         "params_total": total,
         "params_active": active,
-        "attention_type": _attention_type(config),
+        "model_type": config.get("model_type"),
+        "attention_type": _attention_type(config, n_heads, n_kv_heads),
+        "num_attention_heads": n_heads,
+        "num_key_value_heads": n_kv_heads,
         "num_hidden_layers": config.get("num_hidden_layers") or config.get("n_layer"),
+        "hidden_size": config.get("hidden_size") or config.get("d_model") or config.get("n_embd"),
+        "num_local_experts": num_experts,
+        "rope_theta": rope,
         "num_loops": config.get("num_loops"),
         "context_window": config.get("max_position_embeddings") or config.get("n_positions"),
         "tokenizer_vocab_size": config.get("vocab_size"),
@@ -115,18 +128,21 @@ def extract_specs(config: dict, fetched_at: str) -> dict:
     }
 
 
-def _attention_type(config: dict) -> str | None:
+def _attention_type(config: dict, n_heads: int | None = None, n_kv_heads: int | None = None) -> str | None:
     t = (config.get("model_type") or "").lower()
-    if "gemma" in t and "sliding" in t:
-        return "hybrid"
-    if "llama" in t:
-        return "GQA"
-    if "qwen" in t or "mistral" in t:
-        return "GQA"
-    if "deepseek" in t:
-        return "MLA"
-    if "mamba" in t:
+    if "mamba" in t or "ssm" in t:
         return "SSM"
+    if "deepseek" in t or "mla" in t:
+        return "MLA"
+    if n_heads and n_kv_heads:
+        if n_kv_heads == 1:
+            return "MQA"
+        if n_kv_heads < n_heads:
+            return "GQA"
+        if n_kv_heads == n_heads:
+            return "MHA"
+    if "llama" in t or "qwen" in t or "mistral" in t or "gemma" in t:
+        return "GQA"
     return None
 
 

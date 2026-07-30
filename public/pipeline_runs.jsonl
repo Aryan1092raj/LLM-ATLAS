@@ -29,3 +29,13 @@
 {"source": "arena", "started_at": "2026-07-30T06:07:35Z", "finished_at": "2026-07-30T06:07:59Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: arena mirror unreachable (GET https://api.wulong.dev/v1/leaderboard failed after 3 attempts: HTTP Error 404: Not Found)"]}
 {"source": "normalize", "started_at": "2026-07-30T06:07:59Z", "finished_at": "2026-07-30T06:08:11Z", "new_models_found": 1675, "matched_to_existing": 494, "errors": []}
 {"source": "enrich", "started_at": "2026-07-30T06:08:11Z", "finished_at": "2026-07-30T06:10:50Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T10:45:14Z", "finished_at": "2026-07-30T10:46:23Z", "new_models_found": 0, "matched_to_existing": 381, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T10:45:45Z", "finished_at": "2026-07-30T10:46:29Z", "new_models_found": 0, "matched_to_existing": 381, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T10:46:10Z", "finished_at": "2026-07-30T10:46:40Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: No arena records could be fetched from lmarena-ai/leaderboard-dataset"]}
+{"source": "arena", "started_at": "2026-07-30T10:47:37Z", "finished_at": "2026-07-30T10:47:44Z", "new_models_found": 0, "matched_to_existing": 668, "errors": []}
+{"source": "openrouter", "started_at": "2026-07-30T10:53:00Z", "finished_at": "2026-07-30T10:53:00Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-30T10:53:00Z", "finished_at": "2026-07-30T10:53:28Z", "new_models_found": 0, "matched_to_existing": 4000, "errors": []}
+{"source": "leaderboard", "started_at": "2026-07-30T10:53:28Z", "finished_at": "2026-07-30T10:53:30Z", "new_models_found": 0, "matched_to_existing": 27456, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T10:53:31Z", "finished_at": "2026-07-30T10:53:37Z", "new_models_found": 0, "matched_to_existing": 668, "errors": []}
+{"source": "normalize", "started_at": "2026-07-30T10:53:37Z", "finished_at": "2026-07-30T10:53:38Z", "new_models_found": 2131, "matched_to_existing": 41, "errors": []}
+{"source": "enrich", "started_at": "2026-07-30T10:53:38Z", "finished_at": "2026-07-30T10:57:24Z", "new_models_found": 413, "matched_to_existing": 0, "errors": []}

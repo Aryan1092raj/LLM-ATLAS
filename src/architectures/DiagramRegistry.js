@@ -1,10 +1,7 @@
-/**
- * DiagramRegistry — maps canonical models to interactive React Flow diagram
- * components. Guaranteed 100% diagram coverage for all models across Dense,
- * MoE, Hybrid SSM, Looped, and Multimodal families.
- */
+import ParametricArchitecture from "./ParametricArchitecture";
 
 const REGISTRY = {
+  ParametricArchitecture: () => Promise.resolve({ default: ParametricArchitecture }),
   Claude2: () => import("./Claude2"),
   Claude35Haiku: () => import("./Claude35Haiku"),
   Claude3Haiku: () => import("./Claude3Haiku"),
@@ -62,7 +59,6 @@ const cache = new Map();
 export function resolveDiagramKey(modelOrName) {
   let name = "";
   let mId = "";
-  let fam = "";
 
   if (typeof modelOrName === "string") {
     name = modelOrName.toLowerCase();
@@ -70,10 +66,9 @@ export function resolveDiagramKey(modelOrName) {
   } else if (modelOrName && typeof modelOrName === "object") {
     name = (modelOrName.name || "").toLowerCase();
     mId = (modelOrName.id || "").toLowerCase();
-    fam = modelOrName.family || "";
   }
 
-  // Exact & pattern heuristics
+  // Exact & pattern heuristics for flagship models
   if (name.includes("gpt-4o") || mId.includes("gpt-4o")) return "GPT-4o";
   if (name.includes("o1-mini") || mId.includes("o1-mini")) return "GPT-o1-mini";
   if (
@@ -158,12 +153,8 @@ export function resolveDiagramKey(modelOrName) {
   if (name.includes("whisper") || mId.includes("whisper")) return "WhisperArchitecture";
   if (name.includes("embed") || mId.includes("embed")) return "EmbeddingModelsArchitecture";
 
-  // Family-based fallbacks
-  if (fam === "moe") return "DeepSeek-V3";
-  if (fam === "hybrid_attention_ssm") return "Falcon3_Mamba_7BArchitecture";
-  if (fam === "multimodal") return "GPT-4o";
-  if (fam === "looped") return "QwenBaseArchitecture";
-  return "Llama";
+  // Fallback to ParametricArchitecture for any other model
+  return "ParametricArchitecture";
 }
 
 export default async function getDiagramComponent(modelOrName) {
@@ -172,20 +163,21 @@ export default async function getDiagramComponent(modelOrName) {
 
   const loader = REGISTRY[key];
   if (!loader) {
-    cache.set(key, null);
-    return null;
+    // If not found in registry, default to ParametricArchitecture
+    cache.set(key, ParametricArchitecture);
+    return ParametricArchitecture;
   }
 
   try {
     const mod = await loader();
     const comp = mod.default || mod[Object.keys(mod)[0]];
-    cache.set(key, comp || null);
-    return comp || null;
+    cache.set(key, comp || ParametricArchitecture);
+    return comp || ParametricArchitecture;
   } catch (e) {
     if (process.env.NODE_ENV !== "production") {
       console.warn(`Diagram load failed for key ${key}:`, e?.message);
     }
-    cache.set(key, null);
-    return null;
+    cache.set(key, ParametricArchitecture);
+    return ParametricArchitecture;
   }
 }

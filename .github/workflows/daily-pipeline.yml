@@ -36,6 +36,8 @@ jobs:
 
       - name: run pipeline
         id: run
+        env:
+          ARTIFICIAL_ANALYSIS_API_KEY: ${{ secrets.ARTIFICIAL_ANALYSIS_API_KEY }}
         run: |
           cd pipeline
           python run.py
