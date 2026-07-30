@@ -37,9 +37,9 @@ jobs:
           fi
 
           ISSUE_TITLE="📋 Weekly Data Quality Audit ($(date -u +%Y-%m-%d))"
-          EXISTING_ISSUE=$(gh issue list --label "data-review" --state open --json number --jq '.[0].number')
+          EXISTING_ISSUE=$(gh issue list --label "data-review" --state open --json number --jq '.[] | .number' | head -n 1)
 
-          if [ -n "$EXISTING_ISSUE" ]; then
+          if [ -n "$EXISTING_ISSUE" ] && [ "$EXISTING_ISSUE" != "null" ]; then
             echo "Updating existing open data-review issue #$EXISTING_ISSUE"
             gh issue edit "$EXISTING_ISSUE" --title "$ISSUE_TITLE" --body-file "$REPORT_FILE"
           else
