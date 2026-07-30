@@ -16,9 +16,6 @@
     "recharts": "^3.10.1",
     "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
-  },
   "scripts": {
     "start": "react-scripts start",
     "validate-ids": "python3 scripts/validate_curated_ids.py",
@@ -26,8 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "seed": "node scripts/seed-data.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "jest": {
