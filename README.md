@@ -1,57 +1,89 @@
 # LLM Atlas
 
-> Every LLM, explained honestly. Architecture + raw benchmarks + cost — side by side, never blended.
+> Every LLM, explained honestly. Architecture specs, raw benchmark scores, and hosted token economics — side-by-side, never blended.
 
-Open-source atlas of large language models. Tracks flagship + notable open-weight models
-across architecture family (dense / MoE / hybrid-SSM / looped), benchmark scores
-(Arena ELO, MMLU-Pro, GPQA, …), and hosted pricing.
+**LLM Atlas** is an open-source interactive atlas and automated tracking engine for Large Language Model (LLM) architectures. It covers dense models, Mixture-of-Experts (MoE), Hybrid Attention-SSM (Mamba/Jamba), Looped architectures, and Multimodal foundation models.
 
-Built as a **fork** of [Devisri-B/LLM-Architectures](https://github.com/Devisri-B/LLM-Architectures)
-(MIT) — we keep the React Flow architecture diagrams and extend them with a real data layer.
+---
 
-## Stack
+## 🌟 Key Features
 
-| Layer | Choice |
+- **Side-by-Side Model Comparison**: Compare parameter counts (active vs total), context windows, attention mechanisms (GQA/MLA/SSM), hosted pricing, and raw benchmark scores.
+- **Interactive React Flow Visualizers**: Detailed component-level architecture flow diagrams for over 50+ major model families.
+- **Automated Data Ingestion Pipeline**: Python engine fetching daily model releases, specs, pricing, and benchmark scores from OpenRouter, Hugging Face Hub, and Open LLM Leaderboards.
+- **Entity Resolution Engine**: Automatic model deduplication, alias normalization, instruct variant preservation, and vendor inference.
+- **Cloudflare Pages Deployment**: Built-in Cloudflare Pages Function (`functions/[[path]].js`) with dynamic OpenGraph meta tag rewriting via `HTMLRewriter`.
+
+---
+
+## 🛠️ Technology Stack
+
+| Layer | Technology |
 |---|---|
-| UI | React (CRA), HashRouter |
-| Diagrams | React Flow (forked upstream) |
-| Data | Flat JSON committed to repo (`public/data.json`) |
-| Style | Hand-rolled claymorphism design system in `src/index.css` |
-| Animation | Hand-rolled primitives in `src/styles/animations.css` |
+| **Frontend** | React 18, React Router (`BrowserRouter`), Claymorphism CSS |
+| **Diagrams** | React Flow 11 |
+| **Ingestion Pipeline** | Python 3.10+ (Zero-dependency stdlib core + pandas/pyarrow for parquet ingestion) |
+| **Data Storage** | Canonical JSON (`public/data.json`) & Line-delimited JSON run logs |
+| **Deployment** | Cloudflare Pages & GitHub Actions Cron Automation |
 
-## Quickstart
+---
+
+## 🚀 Quickstart
+
+### Prerequisites
+- Node.js `18+` or `20+`
+- Python `3.10+`
+
+### 1. Web Application
 
 ```bash
+# Install dependencies
 npm install
-npm start            # http://localhost:3000
-npm run build        # production build → build/
+
+# Start local dev server (http://localhost:3000)
+npm start
+
+# Create production build
+npm run build
 ```
 
-## Repo layout
+### 2. Ingestion Pipeline
 
-```
-src/
-  components/        # Navbar, ModelCard, ArchitecturePanel, BenchmarksTable, …
-  pages/             # HomePage, CompanyPage, ModelDetailPage, ComparePage, MethodologyPage, NotFoundPage
-  context/           # DataContext
-  hooks/             # useReveal (scroll-reveal via IntersectionObserver)
-  lib/               # format.js, metrics.js (Efficiency Score, Value Frontier)
-  styles/            # animations.css (keyframes + utility classes)
-  architectures/     # React Flow diagrams (forked upstream + DiagramRegistry)
-public/
-  data.json          # canonical model records
-scripts/             # seed-data.js (rebuilds data.json from scratch)
+```bash
+# Execute full ingestion flow (fetch → normalize → resolve → enrich → commit)
+python3 -m pipeline.run
+
+# Run entity resolution unit tests
+python3 pipeline/tests/test_resolve.py
+
+# Validate curated seed IDs against canonical data
+npm run validate-ids
 ```
 
-## Phase status
+---
 
-- [x] **Phase 0** — fork upstream, restructure, design system
-- [x] **Phase 1** — MVP with ~20 flagship models, scorecard UI
-- [ ] **Phase 2** — automated ingestion pipeline (Python)
-- [ ] **Phase 3** — comparison polish, Efficiency Score / Value Frontier live in compare table
-- [ ] **Phase 4** — architecture-family explainers + timeline
-- [ ] **Phase 5** — methodology + changelog pages, accessibility pass
+## 📁 Repository Structure
 
-## License
+```
+├── .github/workflows/      # Automated daily ingestion & deployment workflows
+├── functions/              # Cloudflare Pages Functions (HTMLRewriter SEO engine)
+├── pipeline/               # Ingestion & normalization engine
+│   ├── fetchers/           # OpenRouter, HuggingFace, Leaderboard, Arena fetchers
+│   ├── resolve/            # Levenshtein & alias entity resolution module
+│   ├── enrich/             # Spec extraction, benchmark matching & auto-promotion
+│   └── tests/              # Pipeline unit tests
+├── public/                 # Static assets & canonical dataset (public/data.json)
+├── scripts/                # Validation & seed maintenance utilities
+└── src/
+    ├── architectures/      # Interactive React Flow diagram components & registry
+    ├── components/         # Comparison tables, scorecards, charts, navbar, footer
+    ├── context/            # DataContext state provider
+    ├── lib/                # Value frontier, efficiency scoring & formatters
+    └── pages/              # Compare, Model Detail, Families, Timeline & Changelog
+```
 
-MIT — see [LICENSE](LICENSE). Forked from Devisri-B/LLM-Architectures (MIT).
+---
+
+## 📄 License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more details. Forked from [Devisri-B/LLM-Architectures](https://github.com/Devisri-B/LLM-Architectures) (MIT).
