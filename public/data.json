@@ -8534,7 +8534,7 @@
     },
     "mistral": {
       "name": "Mistral AI",
-      "image": "./images/meta.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "mistralai/mixtral-8x7b-instruct",
@@ -12198,7 +12198,7 @@
     },
     "microsoft": {
       "name": "Microsoft",
-      "image": "./images/google.webp",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "microsoft/phi-4",
@@ -12392,7 +12392,7 @@
     },
     "xai": {
       "name": "xAI",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "x-ai/grok-4.5",
@@ -12680,7 +12680,7 @@
     },
     "ai21": {
       "name": "AI21 Labs",
-      "image": "./images/google.webp",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "ai21/jamba-large-1.7",
@@ -12733,7 +12733,7 @@
     },
     "cohere": {
       "name": "Cohere",
-      "image": "./images/google.webp",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "cohere/north-mini-code:free",
@@ -12974,7 +12974,7 @@
     },
     "nanbeige": {
       "name": "Nanbeige (looped)",
-      "image": "./images/qwen1.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nanbeige/nanbeige4.2-3b",
@@ -13025,7 +13025,7 @@
     },
     "zai": {
       "name": "Z-AI (GLM)",
-      "image": "./images/qwen1.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "z-ai/glm-5.2",
@@ -13595,7 +13595,7 @@
     },
     "inclusionai": {
       "name": "Inclusionai",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "inclusionai/ling-3.0-flash:free",
@@ -13930,7 +13930,7 @@
     },
     "poolside": {
       "name": "Poolside",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "poolside/laguna-s-2.1",
@@ -14218,7 +14218,7 @@
     },
     "meituan": {
       "name": "Meituan",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "meituan/longcat-2.0",
@@ -14271,7 +14271,7 @@
     },
     "thinkingmachines": {
       "name": "Thinkingmachines",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "thinkingmachines/inkling",
@@ -14324,7 +14324,7 @@
     },
     "openrouter": {
       "name": "Openrouter",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "openrouter/auto-beta",
@@ -14612,7 +14612,7 @@
     },
     "moonshotai": {
       "name": "Moonshotai",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "moonshotai/kimi-k3",
@@ -14994,7 +14994,7 @@
     },
     "kwaipilot": {
       "name": "Kwaipilot",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "kwaipilot/kat-coder-air-v2.5",
@@ -15141,7 +15141,7 @@
     },
     "aion-labs": {
       "name": "Aion-Labs",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "aion-labs/aion-3.0-mini",
@@ -15288,7 +15288,7 @@
     },
     "tencent": {
       "name": "Tencent",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "tencent/hy3",
@@ -15482,7 +15482,7 @@
     },
     "nex-agi": {
       "name": "Nex-Agi",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nex-agi/nex-n2-mini",
@@ -15676,7 +15676,7 @@
     },
     "sakana": {
       "name": "Sakana",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "sakana/fugu-ultra",
@@ -15729,7 +15729,7 @@
     },
     "nvidia": {
       "name": "Nvidia",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nvidia/nemotron-3.5-content-safety:free",
@@ -16205,7 +16205,7 @@
     },
     "minimax": {
       "name": "Minimax",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "minimax/minimax-m3",
@@ -16634,7 +16634,7 @@
     },
     "stepfun": {
       "name": "Stepfun",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "stepfun/step-3.7-flash",
@@ -16734,7 +16734,7 @@
     },
     "perceptron": {
       "name": "Perceptron",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "perceptron/perceptron-mk1",
@@ -16787,7 +16787,7 @@
     },
     "ibm-granite": {
       "name": "Ibm-Granite",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "ibm-granite/granite-4.1-8b",
@@ -16887,7 +16887,7 @@
     },
     "~moonshotai": {
       "name": "~Moonshotai",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "~moonshotai/kimi-latest",
@@ -16940,7 +16940,7 @@
     },
     "xiaomi": {
       "name": "Xiaomi",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "xiaomi/mimo-v2.5-pro",
@@ -17040,7 +17040,7 @@
     },
     "arcee-ai": {
       "name": "Arcee-Ai",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "arcee-ai/trinity-large-thinking",
@@ -17140,7 +17140,7 @@
     },
     "rekaai": {
       "name": "Rekaai",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "rekaai/reka-edge",
@@ -17240,7 +17240,7 @@
     },
     "bytedance-seed": {
       "name": "Bytedance-Seed",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "bytedance-seed/seed-2.0-lite",
@@ -17434,7 +17434,7 @@
     },
     "inception": {
       "name": "Inception",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "inception/mercury-2",
@@ -17487,7 +17487,7 @@
     },
     "upstage": {
       "name": "Upstage",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "upstage/solar-pro-3",
@@ -17540,7 +17540,7 @@
     },
     "writer": {
       "name": "Writer",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "writer/palmyra-x5",
@@ -17593,7 +17593,7 @@
     },
     "relace": {
       "name": "Relace",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "relace/relace-search",
@@ -17693,7 +17693,7 @@
     },
     "amazon": {
       "name": "Amazon",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "amazon/nova-2-lite-v1",
@@ -17934,7 +17934,7 @@
     },
     "allenai": {
       "name": "Allenai",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "allenai/olmo-3-32b-think",
@@ -17987,7 +17987,7 @@
     },
     "deepcogito": {
       "name": "Deepcogito",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "deepcogito/cogito-v2.1-671b",
@@ -18040,7 +18040,7 @@
     },
     "perplexity": {
       "name": "Perplexity",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "perplexity/sonar-pro-search",
@@ -18281,7 +18281,7 @@
     },
     "thedrummer": {
       "name": "Thedrummer",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "thedrummer/cydonia-24b-v4.1",
@@ -18475,7 +18475,7 @@
     },
     "nousresearch": {
       "name": "Nousresearch",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "nousresearch/hermes-4-70b",
@@ -18575,7 +18575,7 @@
     },
     "bytedance": {
       "name": "Bytedance",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "bytedance/ui-tars-1.5-7b",
@@ -18628,7 +18628,7 @@
     },
     "morph": {
       "name": "Morph",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "morph/morph-v3-large",
@@ -18728,7 +18728,7 @@
     },
     "baidu": {
       "name": "Baidu",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "baidu/ernie-4.5-vl-424b-a47b",
@@ -18781,7 +18781,7 @@
     },
     "anthracite-org": {
       "name": "Anthracite-Org",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "anthracite-org/magnum-v4-72b",
@@ -18834,7 +18834,7 @@
     },
     "mancer": {
       "name": "Mancer",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "mancer/weaver",
@@ -18887,7 +18887,7 @@
     },
     "undi95": {
       "name": "Undi95",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "undi95/remm-slerp-l2-13b",
@@ -18940,7 +18940,7 @@
     },
     "gryphe": {
       "name": "Gryphe",
-      "image": "./images/gpt.png",
+      "image": "./images/all_models.png",
       "models": [
         {
           "id": "gryphe/mythomax-l2-13b",

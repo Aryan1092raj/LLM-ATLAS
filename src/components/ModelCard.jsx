@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Logo";
+import ModelIcon from "./ModelIcon";
 import { fmtParams, fmtContext, fmtPrice, familyLabel, disclosureLabel } from "../lib/format";
 import "./ModelCard.css";
 
@@ -45,7 +45,9 @@ export default function ModelCard({ model, onClick }) {
   return (
     <Wrapper className="model-card" {...wrapperProps}>
       <div className="model-card__head">
-        <div className="model-card__logo" aria-hidden="true"><Logo size={48} /></div>
+        <div className="model-card__logo" aria-hidden="true">
+          <ModelIcon model={model} size={44} />
+        </div>
         <StatusChip status={model.status} />
       </div>
 

@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 import { useRevealLive } from "../hooks/useReveal";
 import ModelCard from "../components/ModelCard";
+import ModelIcon from "../components/ModelIcon";
 
 export default function CompanyPage() {
   const { companyKey } = useParams();
@@ -27,11 +28,14 @@ export default function CompanyPage() {
         <Link to="/" style={{ color: "var(--clay-accent)" }}>Home</Link> <span>›</span> {company.name}
       </nav>
 
-      <header className="fx-rise" style={{ marginBottom: 24 }}>
-        <h1>{company.name}</h1>
-        <p style={{ color: "var(--clay-ink-soft)", marginTop: 6 }}>
-          {company.models.length} model{company.models.length === 1 ? "" : "s"} tracked.
-        </p>
+      <header className="fx-rise" style={{ marginBottom: 24, display: "flex", alignItems: "center", gap: 16 }}>
+        <ModelIcon model={company} size={60} />
+        <div>
+          <h1 style={{ margin: 0 }}>{company.name}</h1>
+          <p style={{ color: "var(--clay-ink-soft)", marginTop: 4 }}>
+            {company.models.length} model{company.models.length === 1 ? "" : "s"} tracked.
+          </p>
+        </div>
       </header>
 
       <div className="model-grid fx-stagger" role="list">

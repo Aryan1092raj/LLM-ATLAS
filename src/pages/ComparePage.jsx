@@ -13,7 +13,7 @@ import {
   disclosureLabel,
   fmtScore
 } from "../lib/format";
-import Logo from "../components/Logo";
+import ModelIcon from "../components/ModelIcon";
 import ComparisonDiagram from "../components/ComparisonDiagram";
 import BenchmarkRadar from "../components/BenchmarkRadar";
 import CostBarChart from "../components/CostBarChart";
@@ -113,10 +113,15 @@ export default function ComparePage() {
                   return (
                     <div key={m.id} className="compare-slot compare-slot--filled">
                       <button className="compare-slot__remove" onClick={() => removeAt(i)} aria-label={`Remove ${m.name}`}>×</button>
-                      <div className="compare-slot__title">{m.name}</div>
-                      <div className="compare-slot__org">{m.companyName}</div>
+                      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                        <ModelIcon model={m} size={36} />
+                        <div>
+                          <div className="compare-slot__title">{m.name}</div>
+                          <div className="compare-slot__org">{m.companyName}</div>
+                        </div>
+                      </div>
                       {frontier.has(m.id) && (
-                        <span className="chip chip--ok" style={{ marginTop: 8 }}>Value frontier</span>
+                        <span className="chip chip--ok" style={{ marginTop: 4 }}>Value frontier</span>
                       )}
                     </div>
                   );
@@ -393,7 +398,9 @@ function ModelPickerGrid({ allModels, selectedIds, onToggle, disabled }) {
               aria-pressed={isSel}
             >
               <div className="model-card__head">
-                <div className="model-card__logo" aria-hidden="true"><Logo size={48} /></div>
+                <div className="model-card__logo" aria-hidden="true">
+                  <ModelIcon model={m} size={44} />
+                </div>
                 {isSel && <span className="chip chip--ok">Selected</span>}
               </div>
               <div>

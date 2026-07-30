@@ -6,6 +6,7 @@ import ArchitecturePanel from "../components/ArchitecturePanel";
 import BenchmarksTable from "../components/BenchmarksTable";
 import PricingCard from "../components/PricingCard";
 import { StatusChip, FamilyChip, DisclosureChip } from "../components/ModelCard";
+import ModelIcon from "../components/ModelIcon";
 import { efficiencyScore, pickHeadlineBenchmark, blendedCost } from "../lib/format";
 import getDiagramComponent from "../architectures/DiagramRegistry";
 import "./ModelDetailPage.css";
@@ -45,14 +46,15 @@ export default function ModelDetailPage() {
         <span className="crumbs__current">{model.name}</span>
       </nav>
 
-      <header className="model-detail__header fx-rise">
+      <header className="model-detail__header fx-rise" style={{ display: "flex", alignItems: "center", gap: 16 }}>
+        <ModelIcon model={model} size={64} />
         <div>
           <div className="model-detail__chips">
             <StatusChip status={model.status} />
             <FamilyChip family={model.family} />
             <DisclosureChip d={model.architecture_specs?.disclosure} />
           </div>
-          <h1 style={{ marginTop: 10 }}>{model.name}</h1>
+          <h1 style={{ marginTop: 6, marginBottom: 0 }}>{model.name}</h1>
           <p style={{ color: "var(--clay-ink-soft)", marginTop: 4 }}>{model.companyName}</p>
         </div>
       </header>

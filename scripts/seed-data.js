@@ -507,42 +507,113 @@ const data = {
           aliases: ["phi-4"],
           features: { "Developer": "Microsoft", "Architecture": "Dense 14B model trained with synthetic data curation for math & reasoning." },
           architecture_specs: { disclosure: "open_weight", params_total: 14000000000, params_active: 14000000000, attention_type: "GQA", num_hidden_layers: 40, context_window: 16384, license: "MIT License", source_url: "https://huggingface.co/microsoft/phi-4", fetched_at: "2026-07-29" },
+      name: "Microsoft", image: "./images/all_models.png",
+      description: "Phi series — small language models trained on synthetic textbook-quality data (Phi-3, Phi-3.5, Phi-4).",
+      models: [
+        {
+          id: "microsoft/phi-3.5-mini-instruct",
+          name: "Phi-3.5 Mini Instruct",
+          family: "dense",
+          disclosure: "open_weight",
+          status: "complete",
+          aliases: ["phi-3.5-mini", "microsoft/phi-3.5-mini-instruct"],
+          why: "Microsoft's high-efficiency 3.8B parameter model featuring a 128K context window and Block-Sparse Attention.",
+          architecture_specs: {
+            disclosure: "open_weight",
+            params_total: 3800000000,
+            params_active: 3800000000,
+            num_hidden_layers: 32,
+            hidden_size: 3072,
+            num_attention_heads: 32,
+            num_key_value_heads: 32,
+            intermediate_size: 8192,
+            vocab_size: 32064,
+            context_window: 131072,
+            num_experts: null,
+            num_experts_per_tok: null,
+            expert_capacity_factor: null,
+            routing_mechanism: null,
+            attention_type: "mha",
+            rope_theta: 10000,
+            positional_embedding: "su_rope",
+            normalization: "rmsnorm",
+            activation_function: "silu",
+            tie_word_embeddings: false
+          },
           benchmarks: [
-            { benchmark_name: "Arena-ELO", score: 1245, source: "LMArena mirror", source_url: "https://lmarena.ai", fetched_at: "2026-07-29" },
-            { benchmark_name: "MATH-500", score: 84.8, source: "Microsoft Research", source_url: "https://huggingface.co", fetched_at: "2026-07-29" }
+            { benchmark_name: "MMLU", score: 69.0, source: "Microsoft Phi-3.5 Tech Report" },
+            { benchmark_name: "HumanEval", score: 62.8, source: "Microsoft Phi-3.5 Tech Report" },
+            { benchmark_name: "GSM8K", score: 84.6, source: "Microsoft Phi-3.5 Tech Report" }
           ],
-          pricing: [{ provider: "openrouter", input_price_per_m: 0.10, output_price_per_m: 0.10, fetched_at: "2026-07-29" }],
-          why: "Punches far above its weight class (14B) on math and reasoning."
+          pricing: [
+            { provider: "DeepInfra", input_price_per_m: 0.05, output_price_per_m: 0.05 },
+            { provider: "Together AI", input_price_per_m: 0.10, output_price_per_m: 0.10 }
+          ],
+          features: {
+            Developer: "Microsoft",
+            Architecture: "Dense Decoder Transformer with Su-scaled RoPE for 128K context",
+            "Total Parameters": "3.8B",
+            "Active Parameters": "3.8B",
+            "Attention Mechanism": "Multi-Head Attention with Block-Sparse Long-Context extension",
+            "Text Generation": "High reasoning density per parameter",
+            "Code Generation": "Strong algorithmic code generation",
+            License: "MIT License"
+          }
         },
         {
-          id: "microsoft/phi-3.5-mini-instruct", name: "Phi 3.5 Mini Instruct", family: "dense",
-          disclosure: "open_weight", status: "complete",
-          aliases: ["phi-3.5-mini"],
-          features: { "Developer": "Microsoft", "Architecture": "Compact 3.8B dense model." },
-          architecture_specs: { disclosure: "open_weight", params_total: 3800000000, params_active: 3800000000, attention_type: "MHA", num_hidden_layers: 32, context_window: 128000, license: "MIT License", source_url: "https://huggingface.co/microsoft/Phi-3.5-mini-instruct", fetched_at: "2026-07-29" },
-          benchmarks: [{ benchmark_name: "Arena-ELO", score: 1180, source: "LMArena mirror", source_url: "https://lmarena.ai", fetched_at: "2026-07-29" }],
-          pricing: [{ provider: "openrouter", input_price_per_m: 0.05, output_price_per_m: 0.05, fetched_at: "2026-07-29" }],
-          why: "Efficient small footprint model for edge and local use."
+          id: "microsoft/phi-3.5-moe-instruct",
+          name: "Phi-3.5 MoE Instruct",
+          family: "moe",
+          disclosure: "open_weight",
+          status: "complete",
+          aliases: ["phi-3.5-moe", "microsoft/phi-3.5-moe-instruct"],
+          why: "Microsoft's open MoE model combining 16 experts (2 active, 6.6B active out of 42B total) with 128K context.",
+          architecture_specs: {
+            disclosure: "open_weight",
+            params_total: 41900000000,
+            params_active: 6600000000,
+            num_hidden_layers: 32,
+            hidden_size: 4096,
+            num_attention_heads: 32,
+            num_key_value_heads: 32,
+            intermediate_size: 6400,
+            vocab_size: 32064,
+            context_window: 131072,
+            num_experts: 16,
+            num_experts_per_tok: 2,
+            expert_capacity_factor: null,
+            routing_mechanism: "top_2_gating",
+            attention_type: "mha",
+            rope_theta: 10000,
+            positional_embedding: "su_rope",
+            normalization: "rmsnorm",
+            activation_function: "silu",
+            tie_word_embeddings: false
+          },
+          benchmarks: [
+            { benchmark_name: "MMLU", score: 78.9, source: "Microsoft Phi-3.5 Tech Report" },
+            { benchmark_name: "HumanEval", score: 73.8, source: "Microsoft Phi-3.5 Tech Report" },
+            { benchmark_name: "GSM8K", score: 88.5, source: "Microsoft Phi-3.5 Tech Report" }
+          ],
+          pricing: [
+            { provider: "DeepInfra", input_price_per_m: 0.15, output_price_per_m: 0.15 },
+            { provider: "Together AI", input_price_per_m: 0.45, output_price_per_m: 0.45 }
+          ],
+          features: {
+            Developer: "Microsoft",
+            Architecture: "Sparse Mixture of Experts (SMoE) — 16 experts, top-2 routing",
+            "Total Parameters": "41.9B",
+            "Active Parameters": "6.6B per token",
+            "Attention Mechanism": "Multi-Head Attention with Su-RoPE",
+            "Text Generation": "High reasoning performance with low inference cost",
+            "Code Generation": "Strong multi-language code generation",
+            License: "MIT License"
+          }
         }
       ]
     },
     falcon: {
       name: "TII (Falcon)", image: "./images/falcon.jpeg",
-      models: [
-        {
-          id: "tiiuae/falcon3-10b-base", name: "Falcon3 10B Base", family: "dense",
-          disclosure: "open_weight", status: "complete",
-          aliases: ["falcon3-10b", "falcon-3-10b"],
-          features: { "Developer": "TII", "Architecture": "Dense, GQA." },
-          architecture_specs: { disclosure: "open_weight", params_total: 10000000000, params_active: 10000000000, attention_type: "GQA", num_hidden_layers: 40, context_window: 32768, license: "Apache 2.0", source_url: "https://huggingface.co/tiiuae/Falcon3-10B-Base", fetched_at: "2026-07-29" },
-          benchmarks: [{ benchmark_name: "MMLU", score: 62.3, source: "Open LLM Leaderboard", source_url: "https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard", fetched_at: "2026-07-29" }],
-          pricing: [{ provider: "openrouter", input_price_per_m: 0.25, output_price_per_m: 0.25, fetched_at: "2026-07-29" }],
-          why: "Multilingual focus, mid-size open model."
-        },
-        {
-          id: "tiiuae/falcon3-mamba-7b-base", name: "Falcon3 Mamba 7B Base", family: "hybrid_attention_ssm",
-          disclosure: "open_weight", status: "complete",
-          aliases: ["falcon3-mamba-7b", "falcon-mamba"],
           features: { "Developer": "TII", "Architecture": "Hybrid Mamba (SSM) + attention blocks." },
           architecture_specs: { disclosure: "open_weight", params_total: 7000000000, params_active: 7000000000, attention_type: "hybrid_ssm_attention", num_hidden_layers: 36, context_window: 32768, license: "Apache 2.0", source_url: "https://huggingface.co/tiiuae/Falcon3-Mamba-7B-Base", fetched_at: "2026-07-29" },
           benchmarks: [{ benchmark_name: "MMLU", score: 58.5, source: "TII model card", source_url: "https://huggingface.co/tiiuae/Falcon3-Mamba-7B-Base", fetched_at: "2026-07-29" }],

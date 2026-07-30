@@ -35,7 +35,7 @@ export default function Footer() {
               <div className="footer-social-links">
                 {/* UPDATE YOUR GITHUB URL HERE */}
                 <a
-                  href="https://github.com/your-username" 
+                  href="https://github.com/Aryan1092raj" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="footer-social-btn footer-social-btn--github"
@@ -49,7 +49,7 @@ export default function Footer() {
 
                 {/* UPDATE YOUR LINKEDIN URL HERE */}
                 <a
-                  href="https://linkedin.com/in/your-username" 
+                  href="https://www.linkedin.com/in/aryan-raj-iitmd" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="footer-social-btn footer-social-btn--linkedin"
