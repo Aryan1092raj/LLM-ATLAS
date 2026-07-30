@@ -40,3 +40,9 @@
 {"source": "normalize", "started_at": "2026-07-30T10:53:37Z", "finished_at": "2026-07-30T10:53:38Z", "new_models_found": 2131, "matched_to_existing": 41, "errors": []}
 {"source": "enrich", "started_at": "2026-07-30T10:53:38Z", "finished_at": "2026-07-30T10:57:24Z", "new_models_found": 413, "matched_to_existing": 0, "errors": []}
 {"source": "artificial_analysis", "started_at": "2026-07-30T11:18:37Z", "finished_at": "2026-07-30T11:18:37Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "openrouter", "started_at": "2026-07-30T12:31:01Z", "finished_at": "2026-07-30T12:31:02Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-30T12:31:02Z", "finished_at": "2026-07-30T12:31:26Z", "new_models_found": 0, "matched_to_existing": 4000, "errors": []}
+{"source": "leaderboard", "started_at": "2026-07-30T12:31:26Z", "finished_at": "2026-07-30T12:31:41Z", "new_models_found": 0, "matched_to_existing": 27456, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T12:31:41Z", "finished_at": "2026-07-30T12:31:48Z", "new_models_found": 0, "matched_to_existing": 668, "errors": []}
+{"source": "normalize", "started_at": "2026-07-30T12:31:48Z", "finished_at": "2026-07-30T12:31:50Z", "new_models_found": 2121, "matched_to_existing": 44, "errors": []}
+{"source": "enrich", "started_at": "2026-07-30T12:31:50Z", "finished_at": "2026-07-30T12:35:23Z", "new_models_found": 405, "matched_to_existing": 0, "errors": []}
