@@ -216,12 +216,37 @@ button { font-family: inherit; cursor: pointer; }
 /* --- Layout helpers -------------------------------------------------*/
 
 .container {
-  width: min(1240px, 92vw);
+  width: min(1280px, 94vw);
   margin: 0 auto;
-  padding: 0 var(--s-4);
+  padding: 0 clamp(12px, 3vw, 24px);
 }
 
-.section { padding: calc(var(--s-7) + 16px) 0 var(--s-7) 0; }
+.section { padding: clamp(24px, 5vw, 64px) 0; }
+
+/* Responsive table & scroll wrapper */
+.table-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--r-md);
+  box-shadow: var(--clay-shadow-in-sm);
+  margin-top: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+/* Touch-friendly target minimums for buttons & links on small screens */
+@media (max-width: 640px) {
+  .btn:not(.btn--sm) {
+    min-height: 44px;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0 14px;
+  }
+}
 
 /* --- Focus ring (accessibility) -------------------------------------*/
 
@@ -247,12 +272,12 @@ button { font-family: inherit; cursor: pointer; }
 
 /* --- Scrollbar (subtle) ---------------------------------------------*/
 
-::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
   background: rgba(160, 152, 195, 0.4);
   border-radius: var(--r-pill);
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   background-clip: padding-box;
 }
 ::-webkit-scrollbar-thumb:hover { background-color: rgba(160, 152, 195, 0.65); }

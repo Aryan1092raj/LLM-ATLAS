@@ -1,0 +1,31 @@
+{"source": "openrouter", "started_at": "2026-07-29T02:00:48Z", "finished_at": "2026-07-29T02:00:48Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-29T02:00:48Z", "finished_at": "2026-07-29T02:01:05Z", "new_models_found": 0, "matched_to_existing": 3000, "errors": []}
+{"source": "leaderboard", "started_at": "2026-07-29T02:01:05Z", "finished_at": "2026-07-29T02:01:22Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "arena", "started_at": "2026-07-29T02:01:22Z", "finished_at": "2026-07-29T02:01:46Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: arena mirror unreachable (GET https://api.wulong.dev/v1/leaderboard failed after 3 attempts: HTTP Error 404: Not Found)"]}
+{"source": "normalize", "started_at": "2026-07-29T02:01:46Z", "finished_at": "2026-07-29T02:01:47Z", "new_models_found": 1783, "matched_to_existing": 16, "errors": []}
+{"source": "enrich", "started_at": "2026-07-29T02:01:47Z", "finished_at": "2026-07-29T02:01:49Z", "new_models_found": 379, "matched_to_existing": 0, "errors": []}
+{"source": "openrouter", "started_at": "2026-07-30T05:51:23Z", "finished_at": "2026-07-30T05:51:23Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-30T05:51:23Z", "finished_at": "2026-07-30T05:51:37Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["IncompleteRead: IncompleteRead(133037 bytes read, 90518 more expected)"]}
+{"source": "leaderboard", "started_at": "2026-07-30T05:51:37Z", "finished_at": "2026-07-30T05:51:53Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T05:51:53Z", "finished_at": "2026-07-30T05:52:18Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: arena mirror unreachable (GET https://api.wulong.dev/v1/leaderboard failed after 3 attempts: HTTP Error 404: Not Found)"]}
+{"source": "normalize", "started_at": "2026-07-30T05:52:18Z", "finished_at": "2026-07-30T05:52:27Z", "new_models_found": 1382, "matched_to_existing": 422, "errors": []}
+{"source": "enrich", "started_at": "2026-07-30T05:52:27Z", "finished_at": "2026-07-30T05:52:29Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "openrouter", "started_at": "2026-07-30T05:53:47Z", "finished_at": "2026-07-30T05:53:48Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "openrouter", "started_at": "2026-07-30T05:53:53Z", "finished_at": "2026-07-30T05:53:53Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-30T05:53:53Z", "finished_at": "2026-07-30T05:54:17Z", "new_models_found": 0, "matched_to_existing": 4000, "errors": []}
+{"source": "leaderboard", "started_at": "2026-07-30T05:54:17Z", "finished_at": "2026-07-30T05:55:04Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T05:55:04Z", "finished_at": "2026-07-30T05:55:28Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: arena mirror unreachable (GET https://api.wulong.dev/v1/leaderboard failed after 3 attempts: HTTP Error 404: Not Found)"]}
+{"source": "normalize", "started_at": "2026-07-30T05:55:28Z", "finished_at": "2026-07-30T05:55:40Z", "new_models_found": 1720, "matched_to_existing": 447, "errors": []}
+{"source": "enrich", "started_at": "2026-07-30T05:55:40Z", "finished_at": "2026-07-30T05:55:42Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
+{"source": "openrouter", "started_at": "2026-07-30T05:55:50Z", "finished_at": "2026-07-30T05:55:50Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-30T05:55:50Z", "finished_at": "2026-07-30T05:56:15Z", "new_models_found": 0, "matched_to_existing": 4000, "errors": []}
+{"source": "leaderboard", "started_at": "2026-07-30T05:56:15Z", "finished_at": "2026-07-30T05:56:18Z", "new_models_found": 0, "matched_to_existing": 27456, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T05:56:18Z", "finished_at": "2026-07-30T05:56:42Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: arena mirror unreachable (GET https://api.wulong.dev/v1/leaderboard failed after 3 attempts: HTTP Error 404: Not Found)"]}
+{"source": "normalize", "started_at": "2026-07-30T06:03:27Z", "finished_at": "2026-07-30T06:03:38Z", "new_models_found": 1720, "matched_to_existing": 447, "errors": []}
+{"source": "enrich", "started_at": "2026-07-30T06:03:44Z", "finished_at": "2026-07-30T06:06:21Z", "new_models_found": 41, "matched_to_existing": 0, "errors": []}
+{"source": "openrouter", "started_at": "2026-07-30T06:07:07Z", "finished_at": "2026-07-30T06:07:07Z", "new_models_found": 0, "matched_to_existing": 367, "errors": []}
+{"source": "huggingface", "started_at": "2026-07-30T06:07:07Z", "finished_at": "2026-07-30T06:07:31Z", "new_models_found": 0, "matched_to_existing": 4000, "errors": []}
+{"source": "leaderboard", "started_at": "2026-07-30T06:07:31Z", "finished_at": "2026-07-30T06:07:35Z", "new_models_found": 0, "matched_to_existing": 27456, "errors": []}
+{"source": "arena", "started_at": "2026-07-30T06:07:35Z", "finished_at": "2026-07-30T06:07:59Z", "new_models_found": 0, "matched_to_existing": 0, "errors": ["RuntimeError: arena mirror unreachable (GET https://api.wulong.dev/v1/leaderboard failed after 3 attempts: HTTP Error 404: Not Found)"]}
+{"source": "normalize", "started_at": "2026-07-30T06:07:59Z", "finished_at": "2026-07-30T06:08:11Z", "new_models_found": 1675, "matched_to_existing": 494, "errors": []}
+{"source": "enrich", "started_at": "2026-07-30T06:08:11Z", "finished_at": "2026-07-30T06:10:50Z", "new_models_found": 0, "matched_to_existing": 0, "errors": []}
