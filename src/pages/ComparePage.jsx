@@ -365,14 +365,63 @@ function unionBenchmarks(models) {
 
 function ModelPickerGrid({ allModels, selectedIds, onToggle, disabled }) {
   const [q, setQ] = useState("");
+  const [companyTab, setCompanyTab] = useState("all");
+
+  const { minorCompanyKeys, companyTabs } = useMemo(() => {
+    const counts = new Map();
+    const names = new Map();
+    for (const m of allModels) {
+      const key = m.companyKey || "other";
+      const name = m.companyName || "Other";
+      counts.set(key, (counts.get(key) || 0) + 1);
+      names.set(key, name);
+    }
+
+    const major = [];
+    const minorKeys = new Set();
+    let minorTotal = 0;
+
+    for (const [key, cnt] of counts.entries()) {
+      if (cnt > 3) {
+        major.push({ key, name: names.get(key), count: cnt });
+      } else {
+        minorKeys.add(key);
+        minorTotal += cnt;
+      }
+    }
+    major.sort((a, b) => b.count - a.count);
+
+    const tabs = [
+      { id: "all", label: "All Companies", count: allModels.length },
+      ...major.map((c) => ({ id: c.key, label: c.name, count: c.count })),
+      ...(minorTotal > 0 ? [{ id: "others", label: "Others", count: minorTotal }] : [])
+    ];
+
+    return { minorCompanyKeys: minorKeys, companyTabs: tabs };
+  }, [allModels]);
+
   const filtered = useMemo(() => {
     const ql = q.trim().toLowerCase();
-    return allModels.filter((m) => !ql || m.name.toLowerCase().includes(ql) || m.companyName.toLowerCase().includes(ql));
-  }, [allModels, q]);
+    return allModels.filter((m) => {
+      if (companyTab !== "all") {
+        if (companyTab === "others") {
+          if (!minorCompanyKeys.has(m.companyKey)) return false;
+        } else if (m.companyKey !== companyTab) {
+          return false;
+        }
+      }
+      if (!ql) return true;
+      return (
+        m.name.toLowerCase().includes(ql) ||
+        m.companyName.toLowerCase().includes(ql) ||
+        (m.aliases || []).some((a) => a.toLowerCase().includes(ql))
+      );
+    });
+  }, [allModels, q, companyTab, minorCompanyKeys]);
 
   return (
     <>
-      <div className="filter-ribbon fx-rise" style={{ marginBottom: 20 }}>
+      <div className="filter-ribbon fx-rise" style={{ marginBottom: 12 }}>
         <div className="field filter-ribbon__search">
           <span aria-hidden="true" style={{ color: "var(--clay-ink-faint)" }}>⌕</span>
           <input
@@ -380,10 +429,28 @@ function ModelPickerGrid({ allModels, selectedIds, onToggle, disabled }) {
             placeholder="Search models to add…"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            aria-label="Search"
+            aria-label="Search models"
           />
         </div>
       </div>
+
+      {/* Company tabs for fast company filtering */}
+      <div className="company-ribbon fx-rise" style={{ marginBottom: 20 }} role="tablist" aria-label="Company categories">
+        {companyTabs.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            role="tab"
+            aria-selected={companyTab === t.id}
+            className={`company-tab ${companyTab === t.id ? "is-active" : ""}`}
+            onClick={() => setCompanyTab(t.id)}
+          >
+            <span>{t.label}</span>
+            <span className="company-tab__count">{t.count}</span>
+          </button>
+        ))}
+      </div>
+
       <div className="model-grid fx-stagger" role="list">
         {filtered.map((m) => {
           const isSel = selectedIds.includes(m.id);

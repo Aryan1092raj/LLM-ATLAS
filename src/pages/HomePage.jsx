@@ -1,4 +1,5 @@
 import React, { useContext, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 import { useRevealLive } from "../hooks/useReveal";
 import ModelCard from "../components/ModelCard";
@@ -95,7 +96,7 @@ export default function HomePage() {
           </p>
           <div className="hero__cta">
             <a href="#models" className="btn btn--accent">Browse models ↓</a>
-            <a href="/#/methodology" className="btn btn--ghost">How we score →</a>
+            <Link to="/methodology" className="btn btn--ghost">How we score →</Link>
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@ import React, { useContext, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 import { useRevealLive } from "../hooks/useReveal";
-import { FAMILY_CONTENT, FAMILY_ORDER } from "../data/familyContent";
+import { FAMILY_CONTENT, FAMILY_ORDER, getSignatureModels } from "../data/familyContent";
 import "./FamiliesPage.css";
 
 export default function FamiliesPage() {
@@ -34,6 +34,7 @@ export default function FamiliesPage() {
         {FAMILY_ORDER.map((familyId) => {
           const c = FAMILY_CONTENT[familyId];
           const count = counts.get(familyId) || 0;
+          const liveExamples = getSignatureModels(familyId, allModels);
           return (
             <button
               key={familyId}
@@ -50,8 +51,8 @@ export default function FamiliesPage() {
               <p className="family-card__subtitle">{c.subtitle}</p>
               <p className="family-card__summary">{c.summary}</p>
               <div className="family-card__examples">
-                {c.signatureModelIds.slice(0, 2).map((id) => (
-                  <span key={id} className="family-card__example-pill">{id.split("/").pop()}</span>
+                {liveExamples.slice(0, 3).map((m) => (
+                  <span key={m.id} className="family-card__example-pill">{m.name}</span>
                 ))}
               </div>
               <span className="family-card__cta">Read explainer →</span>

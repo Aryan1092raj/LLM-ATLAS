@@ -1,5 +1,5 @@
 import React, { useContext, useMemo } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 import { useRevealLive } from "../hooks/useReveal";
 import { getFamilyContent, getSignatureModels } from "../data/familyContent";
@@ -86,7 +86,7 @@ export default function FamilyExplainerPage() {
         <p style={{ color: "var(--clay-ink-soft)", maxWidth: 640, marginTop: 0 }}>
           Two or three real {familyLabel(familyId)} models from our dataset that illustrate the family in practice.
           {familyModels.length > signatureModels.length && (
-            <> {familyModels.length} total {familyLabel(familyId)} models tracked — see <a href="/#/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{ color: "var(--clay-accent)" }}>the full list</a>.</>
+            <> {familyModels.length} total {familyLabel(familyId)} models tracked — see <Link to="/" style={{ color: "var(--clay-accent)" }}>the full list</Link>.</>
           )}
         </p>
         <div className="family-explainer__models">
@@ -100,7 +100,7 @@ export default function FamilyExplainerPage() {
           {signatureModels.length === 0 && (
             <div className="clay" style={{ padding: 24, color: "var(--clay-ink-soft)" }}>
               No {familyLabel(familyId)} models in the dataset yet — try the
-              {" "}<a href="/#/" onClick={(e) => { e.preventDefault(); navigate("/"); }} style={{ color: "var(--clay-accent)" }}>home page</a> filter.
+              {" "}<Link to="/" style={{ color: "var(--clay-accent)" }}>home page</Link> filter.
             </div>
           )}
         </div>

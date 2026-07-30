@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useRevealLive } from "../hooks/useReveal";
 import "./MethodologyPage.css";
 
@@ -51,7 +52,7 @@ export default function MethodologyPage() {
           {" "}<strong>hybrid_attention_ssm</strong>, <strong>looped</strong>, or <strong>multimodal</strong>.
           The tag is set automatically during enrichment from <code>config.json</code> fields
           (e.g. <code>num_local_experts</code> → MoE, <code>mixer_type</code> → SSM hybrid) and corrected
-          manually for cases where the signal is ambiguous. See the <a href="/#/families" style={{ color: "var(--clay-accent)" }}>Families</a> page
+          manually for cases where the signal is ambiguous. See the <Link to="/families" style={{ color: "var(--clay-accent)" }}>Families</Link> page
           for a plain-English explanation of each.
         </p>
       </Section>
@@ -165,8 +166,7 @@ export default function MethodologyPage() {
         </p>
         <p>
           When a fetcher fails on a given day, last-good <code>data.json</code> stays live. The site never
-          goes down because of upstream problems. <a href="/#/changelog" style={{ color: "var(--clay-accent)" }}>Changelog</a> shows
-          the most recent runs and any errors.
+          goes down because of upstream problems. Daily ingestion pipeline runs automatically log any errors.
         </p>
       </Section>
     </div>
