@@ -133,17 +133,37 @@ export default function HomePage() {
           />
         </div>
         <div className="filter-ribbon__divider" />
-        {FAMILY_FILTERS.map((f) => (
-          <button
-            key={f.id}
-            type="button"
-            className={`filter-chip ${family === f.id ? "is-active" : ""}`}
-            onClick={() => setFamily(f.id)}
-            aria-pressed={family === f.id}
+        
+        {/* Desktop chips */}
+        <div className="filter-chips-desktop">
+          {FAMILY_FILTERS.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              className={`filter-chip ${family === f.id ? "is-active" : ""}`}
+              onClick={() => setFamily(f.id)}
+              aria-pressed={family === f.id}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile dropdown selector */}
+        <div className="filter-select-mobile">
+          <select
+            value={family}
+            onChange={(e) => setFamily(e.target.value)}
+            aria-label="Filter by Architecture Family"
+            className="filter-select"
           >
-            {f.label}
-          </button>
-        ))}
+            {FAMILY_FILTERS.map((f) => (
+              <option key={f.id} value={f.id}>
+                Family: {f.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Company Category Tabs */}
