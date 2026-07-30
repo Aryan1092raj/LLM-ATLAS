@@ -2,9 +2,8 @@ import React, { useMemo } from 'react';
 import ReactFlow, { MiniMap, Controls, Background } from 'reactflow';
 
 const ParametricArchitecture = ({ model, specs: propsSpecs }) => {
-  const specs = propsSpecs || model?.architecture_specs || {};
-
   const nodes = useMemo(() => {
+    const specs = propsSpecs || model?.architecture_specs || {};
     const layers = specs.num_hidden_layers || specs.n_layer || 'N';
     const hiddenSize = specs.hidden_size || specs.d_model || specs.n_embd;
     const heads = specs.num_attention_heads;
@@ -74,7 +73,7 @@ const ParametricArchitecture = ({ model, specs: propsSpecs }) => {
         style: { background: '#064e3b', color: '#a7f3d0', border: '1px solid #10b981', borderRadius: 8, padding: 10 }
       }
     ];
-  }, [specs, model]);
+  }, [propsSpecs, model]);
 
   const edges = useMemo(() => [
     { id: 'e1-2', source: '1', target: '2', animated: true, style: { stroke: '#3b82f6' } },
