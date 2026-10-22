@@ -89,6 +89,12 @@ npm run validate-ids
 
 ---
 
+## 🤝 Contributing
+
+New to open source? Issues labelled `good first issue` are a good place to start. Read [CONTRIBUTING.md](CONTRIBUTING.md) for a step-by-step first pull request, and follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+---
+
 ## 📄 License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more details. Forked from [Devisri-B/LLM-Architectures](https://github.com/Devisri-B/LLM-Architectures) (MIT).
