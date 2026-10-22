@@ -1,8 +1,6 @@
 # LLM Atlas
 
-[![Daily Ingestion Pipeline](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/daily-pipeline.yml/badge.svg)](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/daily-pipeline.yml)
-[![Pipeline CI](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/pipeline-ci.yml/badge.svg)](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/pipeline-ci.yml)
-[![Weekly Data Review](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/weekly-data-review.yml/badge.svg)](https://github.com/Aryan1092raj/LLM-ATLAS/actions/workflows/weekly-data-review.yml)
+[![Pipeline CI](https://github.com/Google-Developers-Group-IIT-MANDI/LLM-ATLAS/actions/workflows/ci.yml/badge.svg)](https://github.com/Google-Developers-Group-IIT-MANDI/LLM-ATLAS/actions/workflows/ci.yml)
 
 > Every LLM, explained honestly. Architecture specs, raw benchmark scores, and hosted token economics — side-by-side, never blended.
 
