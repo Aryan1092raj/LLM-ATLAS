@@ -250,7 +250,7 @@ const data = {
         {
           id: "google/gemini-2.0-flash", name: "Gemini 2.0 Flash", family: "multimodal",
           confidence: "undisclosed", disclosure: "closed_undisclosed", status: "complete",
-          aliases: ["gemini-2.0-flash", "google/gemini-2.0-flash-exp", "google/gemini-2.5-flash", "gemini-2.5-flash"],
+          aliases: ["gemini-2.0-flash", "google/gemini-2.0-flash-exp"],
           features: { "Developer": "Google DeepMind", "Architecture": "Multimodal Transformer with native speed & audio/video capability." },
           architecture_specs: { disclosure: "closed_undisclosed", params_total: null, params_active: null, attention_type: null, num_hidden_layers: null, context_window: 1048576, license: "Proprietary (API)", source_url: "https://openrouter.ai/models/google/gemini-2.0-flash", fetched_at: "2026-07-29" },
           benchmarks: [
@@ -263,9 +263,9 @@ const data = {
         {
           id: "google/gemini-2.5-pro", name: "Gemini 2.5 Pro", family: "moe",
           confidence: "undisclosed", disclosure: "closed_undisclosed", status: "complete",
-          aliases: ["gemini-2.5-pro", "google/gemini-1.5-pro"],
+          aliases: ["gemini-2.5-pro"],
           features: { "Developer": "Google DeepMind", "Architecture": "MoE-style multimodal transformer with 2M token context window." },
-          architecture_specs: { disclosure: "closed_undisclosed", params_total: null, params_active: null, attention_type: null, num_hidden_layers: null, context_window: 2000000, license: "Proprietary (API)", source_url: "https://openrouter.ai/models/google/gemini-2.5-pro", fetched_at: "2026-07-29" },
+          architecture_specs: { disclosure: "closed_undisclosed", params_total: null, params_active: null, attention_type: null, num_hidden_layers: null, context_window: 1048576, license: "Proprietary (API)", source_url: "https://openrouter.ai/models/google/gemini-2.5-pro", fetched_at: "2026-07-29" },
           benchmarks: [
             { benchmark_name: "Arena-ELO", score: 1310, source: "seed/manual", source_url: "https://lmarena.ai", fetched_at: "2026-07-29" },
             { benchmark_name: "MMLU-Pro", score: 79.2, source: "seed/manual", source_url: "https://ai.google", fetched_at: "2026-07-29" }
@@ -291,7 +291,7 @@ const data = {
         {
           id: "meta-llama/llama-3.3-70b-instruct", name: "Llama 3.3 70B Instruct", family: "dense",
           confidence: "undisclosed", disclosure: "open_weight", status: "complete",
-          aliases: ["llama-3.3-70b", "llama 3.3 70b", "meta-llama/llama-4-scout", "meta-llama/llama-4-maverick"],
+          aliases: ["llama-3.3-70b", "llama 3.3 70b"],
           features: { "Developer": "Meta", "Architecture": "Dense decoder-only transformer with Grouped-Query Attention (GQA).", "Parameters": "70B." },
           architecture_specs: { disclosure: "open_weight", params_total: 70000000000, params_active: 70000000000, attention_type: "GQA", num_hidden_layers: 80, context_window: 128000, tokenizer_vocab_size: 128256, license: "Llama 3.3 Community License", source_url: "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct", fetched_at: "2026-07-29" },
           benchmarks: [
@@ -362,9 +362,9 @@ const data = {
         {
           id: "deepseek/deepseek-v3", name: "DeepSeek V3", family: "moe",
           confidence: "undisclosed", disclosure: "open_weight", status: "complete",
-          aliases: ["deepseek-v3", "deepseek v3", "deepseek/deepseek-chat-v3.1", "deepseek-ai/DeepSeek-V4-Pro", "deepseek-ai/DeepSeek-V4-Flash"],
+          aliases: ["deepseek-v3", "deepseek v3", "deepseek/deepseek-chat-v3.1"],
           features: { "Developer": "DeepSeek", "Architecture": "MoE with Multi-head Latent Attention (MLA) and DeepSeekMoE routing." },
-          architecture_specs: { disclosure: "open_weight", params_total: 671000000000, params_active: 37000000000, attention_type: "MLA", num_hidden_layers: 61, context_window: 64000, license: "DeepSeek License", source_url: "https://huggingface.co/deepseek-ai/DeepSeek-V3", fetched_at: "2026-07-29" },
+          architecture_specs: { disclosure: "open_weight", params_total: 671000000000, params_active: 37000000000, attention_type: "MLA", num_hidden_layers: 61, context_window: 128000, license: "DeepSeek License", source_url: "https://huggingface.co/deepseek-ai/DeepSeek-V3", fetched_at: "2026-07-29" },
           benchmarks: [{ benchmark_name: "Arena-ELO", score: 1318, source: "seed/manual", source_url: "https://lmarena.ai", fetched_at: "2026-07-29" }],
           pricing: [{ provider: "openrouter", input_price_per_m: 0.27, output_price_per_m: 1.1, fetched_at: "2026-07-29" }],
           why: "MoE with ~5.5% active params — supreme per-token efficiency at frontier performance."
@@ -454,7 +454,7 @@ const data = {
         {
           id: "qwen/qwen-2.5-72b-instruct", name: "Qwen 2.5 72B Instruct", family: "dense",
           confidence: "undisclosed", disclosure: "open_weight", status: "complete",
-          aliases: ["qwen-2.5-72b", "qwen2.5-72b", "qwen/qwen3-235b-a22b"],
+          aliases: ["qwen-2.5-72b", "qwen2.5-72b"],
           features: { "Developer": "Alibaba", "Architecture": "Dense decoder, GQA." },
           architecture_specs: { disclosure: "open_weight", params_total: 72000000000, params_active: 72000000000, attention_type: "GQA", num_hidden_layers: 80, context_window: 128000, license: "Apache 2.0", source_url: "https://huggingface.co/Qwen/Qwen2.5-72B-Instruct", fetched_at: "2026-07-29" },
           benchmarks: [{ benchmark_name: "Arena-ELO", score: 1192, source: "seed/manual", source_url: "https://lmarena.ai", fetched_at: "2026-07-29" }],
@@ -464,7 +464,7 @@ const data = {
         {
           id: "qwen/qwen-2.5-coder-32b-instruct", name: "Qwen 2.5 Coder 32B Instruct", family: "dense",
           confidence: "undisclosed", disclosure: "open_weight", status: "complete",
-          aliases: ["qwen-2.5-coder-32b", "qwen/qwen3-next-80b-a3b-instruct"],
+          aliases: ["qwen-2.5-coder-32b"],
           features: { "Developer": "Alibaba", "Architecture": "Dense code specialist transformer with GQA." },
           architecture_specs: { disclosure: "open_weight", params_total: 32000000000, params_active: 32000000000, attention_type: "GQA", num_hidden_layers: 64, context_window: 128000, license: "Apache 2.0", source_url: "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct", fetched_at: "2026-07-29" },
           benchmarks: [
@@ -505,7 +505,7 @@ const data = {
         {
           id: "google/gemma-2-27b-it", name: "Gemma 2 27B IT", family: "dense",
           confidence: "undisclosed", disclosure: "open_weight", status: "complete",
-          aliases: ["gemma-2-27b", "gemma2-27b", "google/gemma-3-27b-it"],
+          aliases: ["gemma-2-27b", "gemma2-27b"],
           features: { "Developer": "Google", "Architecture": "Dense transformer with interleaved local sliding-window & global attention." },
           architecture_specs: { disclosure: "open_weight", params_total: 27000000000, params_active: 27000000000, attention_type: "hybrid", num_hidden_layers: 46, context_window: 8192, license: "Gemma Terms of Use", source_url: "https://huggingface.co/google/gemma-2-27b-it", fetched_at: "2026-07-29" },
           benchmarks: [{ benchmark_name: "Arena-ELO", score: 1218, source: "seed/manual", source_url: "https://lmarena.ai", fetched_at: "2026-07-29" }],
