@@ -93,12 +93,20 @@ def fetch_hf_config(model_id: str) -> dict | None:
 
 def extract_specs(config: dict, fetched_at: str) -> dict:
     """Map HF config.json → our architecture_specs schema."""
-    total = config.get("num_parameters") or config.get("n_params")
+    total = config.get("num_parameters")
+    if total is None:
+        total = config.get("n_params")
+    
     active = total  # dense default; MoE handled below.
-    num_experts = config.get("num_local_experts") or config.get("num_experts") or config.get("n_routed_experts")
+    num_experts = (config.get("num_local_experts") or config.get("num_experts") or config.get("n_routed_experts"))
+    
     if num_experts:
-        total = config.get("num_parameters") or (num_experts * config.get("num_experts_per_tok", 1) * 7_000_000_000)
-        active_params = config.get("num_experts_per_tok", 2) * config.get("expert_hidden_size", 0) * 8
+        # Do not estimate total parameters from expert activation counts.
+        # Without a reliable total, preserve the missing value as None.
+        total = config.get("num_parameters")
+        if total is None:
+            total = config.get("n_params")
+        active_params = (config.get("num_experts_per_tok", 2)*config.get("expert_hidden_size", 0)*8)
         active = active_params if active_params else None
 
     n_heads = config.get("num_attention_heads") or config.get("n_head")
