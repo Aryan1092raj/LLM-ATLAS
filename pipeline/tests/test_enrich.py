@@ -29,6 +29,8 @@ class TestEnrich(unittest.TestCase):
         specs = extract_specs(config, "2026-07-30")
         self.assertEqual(specs["num_local_experts"], 256)
         self.assertEqual(specs["attention_type"], "MLA")
+        self.assertIsNone(specs["params_total"])
+        self.assertIsNone(specs["params_active"])
 
     def test_classify_family(self):
         self.assertEqual(classify_family("Mixtral-8x7B", {"num_local_experts": 8}, None), "moe")
