@@ -49,12 +49,17 @@ export function efficiencyScore(model) {
  */
 export function pickHeadlineBenchmark(benchmarks) {
   if (!benchmarks?.length) return null;
-  const arena = benchmarks.find((b) => /arena[-_ ]?elo/i.test(b.benchmark_name));
+
+  // Arena-ELO is the preferred headline benchmark.
+  const arena = benchmarks.find((b) =>
+    /arena[-_ ]?elo/i.test(b.benchmark_name)
+  );
+
   if (arena) return arena.score;
-  const max = benchmarks.reduce((m, b) => (b.score > (m?.score ?? -Infinity) ? b : m), null);
-  if (!max) return null;
-  // Normalize likely 0-1 / 0-100 scores to 0-100 scale heuristically
-  return max.score <= 1 ? max.score * 100 : max.score;
+  // Scores from different benchmark families may use
+  // different scales and cannot safely be compared.
+  // Do not guess a scale based on the numerical value.
+  return null;
 }
 
 /**
