@@ -45,7 +45,12 @@ def fetch() -> list[dict]:
             df = pd.read_parquet(io.BytesIO(raw_bytes))
             for _, row in df.iterrows():
                 name = row.get("model_name") or row.get("name")
-                score = row.get("rating") or row.get("score") or row.get("elo")
+                score = row.get("rating")
+                if score is None:
+                    score = row.get("score")
+                if score is None:
+                    score = row.get("elo")
+
                 if not name or score is None or (isinstance(score, float) and score != score):
                     continue
 
