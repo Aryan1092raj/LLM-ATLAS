@@ -21,6 +21,11 @@ def main() -> int:
         print(f"ERROR: {data_path} missing")
         return 1
 
+    for required_path in (family_path, timeline_path):
+        if not required_path.exists():
+            print(f"ERROR: Required file missing: {required_path}")
+            return 1
+
     with open(data_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -60,6 +65,7 @@ def main() -> int:
 
     print("✅ All curated seed IDs in familyContent.js and timelineSeed.js match public/data.json!")
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
