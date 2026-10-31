@@ -39,7 +39,10 @@ def main() -> int:
         log.info("fetcher: %s", name)
         log.info("=" * 60)
         try:
-            fn()
+            fetcher_rc = fn()
+            if fetcher_rc:
+                log.warning("fetcher %s returned non-zero (%s)", name, fetcher_rc)
+                rc = rc or int(fetcher_rc)
         except SystemExit as e:
             if e.code:
                 log.warning("fetcher %s exited non-zero (%s)", name, e.code)
